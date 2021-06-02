@@ -1,20 +1,22 @@
-import React, { useState, useCallback, useEffect } from 'react';
-import { useRouter } from 'next/router';
-import Webcam from 'react-webcam';
+import React, { useState, useCallback, useEffect } from "react";
+import { useRouter } from "next/router";
+import Webcam from "react-webcam";
 
-export default function index({ data }) {
+export default function Index({ data }) {
   const router = useRouter();
   const { id } = router.query;
   const [state, setState] = useState(null);
   const [deviceId, setDeviceId] = React.useState({});
   const [devices, setDevices] = React.useState([]);
+  const [gender, setGender] = useState(null);
   const videoConstraints = {
-    facingMode: 'user',
+    facingMode: "user",
   };
+  const [route, setRoute] = useState(0);
 
   const handleDevices = React.useCallback(
     (mediaDevices) =>
-      setDevices(mediaDevices.filter(({ kind }) => kind === 'videoinput')),
+      setDevices(mediaDevices.filter(({ kind }) => kind === "videoinput")),
     [setDevices]
   );
 
@@ -30,9 +32,37 @@ export default function index({ data }) {
     setState(imageSrc);
   }, [webcamRef]);
 
-  return (
-    <section className="exercise-form-start">
-      <h1>Form</h1>
+  const submitPersonalInformationForm = (e) => {
+    e.preventDefault();
+    setRoute(1);
+  };
+
+  const renderNameForm = () => {
+    return (
+      <form
+        className="game__personal-form"
+        onSubmit={submitPersonalInformationForm}
+      >
+        <label htmlFor="username">Wat is jouw naam:</label>
+        <br />
+        <input type="text" id="username" name="username" />
+        <br />
+
+        <input type="radio" id="male" name="gender" value="male" />
+        <label htmlFor="male">Male</label>
+
+        <input type="radio" id="female" name="gender" value="female" />
+        <label htmlFor="female">Female</label>
+        <br />
+        <input type="radio" id="other" name="gender" value="other" />
+        <label htmlFor="other">Other</label>
+        <input type="submit" value="Submit" />
+      </form>
+    );
+  };
+
+  const renderImageForm = () => {
+    return (
       <form>
         <input
           type="file"
@@ -48,6 +78,7 @@ export default function index({ data }) {
         {state && (
           <button onClick={(event) => setState(null)}>Remove Image</button>
         )}
+        <img id="output" style={{ width: "50%" }} src={state} />
         <Webcam
           audio={false}
           screenshotFormat="image/jpeg"
@@ -55,22 +86,31 @@ export default function index({ data }) {
           ref={webcamRef}
           videoConstraints={{ deviceId: deviceId }}
         />
-        <img id="output" style={{ width: '50%' }} src={state} />
+
+        <>
+          <select
+            name="devices"
+            id="devices"
+            onChange={(e) => setDeviceId(e.currentTarget.value)}
+          >
+            {devices.map((device, key) => (
+              <option value={device.deviceId}>{device.label}</option>
+            ))}
+          </select>
+          <button onClick={capture}>Capture photo</button>
+        </>
+        <button onClick={(e) => setRoute(0)}>Previous</button>
       </form>
-      <>
-        <select
-          name="devices"
-          id="devices"
-          onChange={(e) => setDeviceId(e.currentTarget.value)}
-        >
-          {devices.map((device, key) => (
-            <option value={device.deviceId}>
-              {JSON.stringify(device.label)} {key + 1}
-            </option>
-          ))}
-        </select>
-        <button onClick={capture}>Capture photo</button>
-      </>
+    );
+  };
+
+  return (
+    <section className="exercise-form-start">
+      <h1 className="hidden">Form</h1>
+      <div className="exercise-form-first">
+        {route === 0 ? renderNameForm() : ""}
+      </div>
+      {route === 1 ? renderImageForm() : ""}
     </section>
   );
 }
