@@ -17,7 +17,7 @@ export default function index() {
         })
         .then((response) => {
           console.log(response.data);
-          setLink(response?.data?.link_id);
+          setLink(`http://localhost:3000/game/${response?.data?.link_id}`);
         });
     } catch (e) {
       console.log("Error: " + e);

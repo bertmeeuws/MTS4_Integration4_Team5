@@ -1,10 +1,11 @@
 import React, { useState, useCallback, useEffect } from "react";
 import { useRouter } from "next/router";
 import Webcam from "react-webcam";
+import axios from "axios";
 
-export default function Index({ data }) {
+export default function Index({ data, ctx, succes }) {
   const router = useRouter();
-  const { id } = router.query;
+
   const [state, setState] = useState(null);
   const [deviceId, setDeviceId] = React.useState({});
   const [devices, setDevices] = React.useState([]);
@@ -20,7 +21,7 @@ export default function Index({ data }) {
     [setDevices]
   );
 
-  React.useEffect(() => {
+  useEffect(() => {
     navigator.mediaDevices.enumerateDevices().then(handleDevices);
   }, [handleDevices]);
 
@@ -113,4 +114,30 @@ export default function Index({ data }) {
       {route === 1 ? renderImageForm() : ""}
     </section>
   );
+}
+
+export async function getServerSideProps(context) {
+  const { id } = context.params;
+
+  //Code that checks if game actually exists
+
+  const response = await axios.get(
+    `http://localhost:1337/links/?link_id=${id}`
+  );
+  console.log(response.data);
+  if (response?.data?.length === 1) {
+    console.log("Found a game");
+    return {
+      props: {
+        success: true,
+      },
+    };
+  }
+
+  return {
+    redirect: {
+      destination: "/",
+      permanent: false,
+    },
+  };
 }
