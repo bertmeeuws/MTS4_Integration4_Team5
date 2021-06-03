@@ -17,9 +17,8 @@
       "model": "user"
     },
     "link_id": {
-      "type": "string",
-      "required": true,
-      "unique": true
+      "type": "uid",
+      "required": true
     }
   }
 }
