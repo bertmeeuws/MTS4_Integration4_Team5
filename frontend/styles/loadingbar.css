@@ -1,0 +1,20 @@
+.loadingbar {
+  position: absolute;
+  left: 0;
+  height: 1rem;
+  width: 100vw;
+  background-color: lightgrey;
+  bottom: 0;
+}
+.loadingbar-progress {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 1rem;
+  background-color: rgb(0, 116, 0);
+}
+.loadingbar-label {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}

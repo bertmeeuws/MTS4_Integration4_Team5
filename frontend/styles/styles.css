@@ -1,0 +1,18 @@
+.h1 {
+  font-size: 4.8rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.alignVertically {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.introduction-container {
+  text-align: center;
+}
+.introduction {
+  height: 100%;
+}

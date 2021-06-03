@@ -1,6 +1,7 @@
 @import "./reset.css";
 @import "./teacher.css";
 @import "./styles.css";
+@import "./loadingbar.css";
 
 html,
 body {
@@ -8,6 +9,7 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  height: 100%;
 }
 
 a {
