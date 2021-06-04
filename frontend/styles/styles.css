@@ -4,6 +4,11 @@
   margin-bottom: 2rem;
 }
 
+.nav--item {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
 .alignVertically {
   display: flex;
   flex-direction: column;
@@ -15,4 +20,20 @@
 }
 .introduction {
   height: 100%;
+}
+.wrapper {
+  max-width: 120rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+.nav {
+  margin-top: 2rem;
+  width: 100%;
+}
+.nav__list {
+  width: 100%;
+}
+.nav__list .nav__list__item:last-child {
+  float: right;
+  text-align: right;
 }

@@ -12,6 +12,13 @@ body {
   height: 100%;
 }
 
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  height: 100%;
+  position: relative;
+}
+
 a {
   color: inherit;
   text-decoration: none;
