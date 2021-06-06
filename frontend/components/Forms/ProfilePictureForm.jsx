@@ -32,29 +32,27 @@ export default function ProfilePictureForm() {
 
   const uploadImage = async (e) => {
     e.preventDefault();
-    console.log(blob);
+    if (!blob) {
+      alert("Upload een foto");
+    } else {
+      console.log(blob);
+      let formData = new FormData(e.target);
+      formData.append("ref", "image");
+      formData.append("field", "image");
+      formData.append("files", blob);
 
-    const formData = new FormData(e.target);
-    formData.append("ref", "image");
-    formData.append("field", "image");
-
-    try {
       try {
         const postImageResponse = await axios.post(`${API_URL}/images`);
+        // creating an image content-type seems a good solution
+        const newImageId = postImageResponse.data.id;
+        formData.append("refId", newImageId);
+        const uploadHeaders = { "Content-Type": "multippart/form-data" };
+        axios.post(`${API_URL}/upload`, formData, {
+          headers: uploadHeaders,
+        });
       } catch (e) {
         console.log(e);
       }
-      // creating an image content-type seems a good solution
-      /*
-      const newImageId = postImageResponse.data.id;
-      formData.append("refId", newImageId);
-      const uploadHeaders = { "Content-Type": "multippart/form-data" };
-      axios.post(`${API_URL}/upload`, formData, {
-        headers: uploadHeaders,
-      });
-      */
-    } catch (e) {
-      console.log("error: " + e);
     }
   };
 
@@ -76,7 +74,14 @@ export default function ProfilePictureForm() {
       </form>
       <form>
         {state && (
-          <button onClick={(event) => setState(null)}>Remove Image</button>
+          <button
+            onClick={(event) => {
+              setState(null);
+              setBlob(null);
+            }}
+          >
+            Remove Image
+          </button>
         )}
         <img id="output" style={{ width: "50%" }} src={state} />
         <Webcam
