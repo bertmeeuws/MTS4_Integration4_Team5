@@ -4,6 +4,18 @@
   margin-bottom: 2rem;
 }
 
+.label-text {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.input-margin {
+  margin-bottom: 0.5rem;
+}
+.form__auth--button {
+  padding: 0.5rem 1.5rem;
+}
 .nav--item {
   font-size: 1.8rem;
   font-weight: 600;
@@ -25,6 +37,7 @@
   max-width: 120rem;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+  margin: 0 auto;
 }
 .nav {
   margin-top: 2rem;
@@ -36,4 +49,23 @@
 .nav__list .nav__list__item:last-child {
   float: right;
   text-align: right;
+}
+.form__register-container,
+.form__login-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+}
+.form__register,
+.form__login {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.form__generateLink {
+  margin-top: 3rem;
 }
