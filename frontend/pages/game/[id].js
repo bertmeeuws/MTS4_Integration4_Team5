@@ -4,6 +4,7 @@ import axios from "axios";
 import ProfilePictureForm from "../../components/Forms/ProfilePictureForm";
 import Introduction from "../../components/Introduction/Introduction";
 import Head from "next/head";
+import DragAndDrop from "../../components/Interactive/DragAndDrop";
 
 export default function Index({ data, ctx, succes, id }) {
   console.log(id);
@@ -23,6 +24,12 @@ export default function Index({ data, ctx, succes, id }) {
       action: "Foto uploaden",
       percent: 30,
       component: <ProfilePictureForm setRoute={setRoute} />,
+    },
+    {
+      id: 2,
+      action: "Foto uploaden",
+      percent: 30,
+      component: <DragAndDrop setRoute={setRoute} />,
     },
   ];
 

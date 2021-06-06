@@ -3,7 +3,7 @@ import Webcam from "react-webcam";
 import { API_URL } from "../../constants/index";
 import axios from "axios";
 
-export default function ProfilePictureForm() {
+export default function ProfilePictureForm({ setRoute }) {
   const [state, setState] = useState(null);
   const [deviceId, setDeviceId] = React.useState({});
   const [devices, setDevices] = React.useState([]);
@@ -50,6 +50,7 @@ export default function ProfilePictureForm() {
         axios.post(`${API_URL}/upload`, formData, {
           headers: uploadHeaders,
         });
+        setRoute(2);
       } catch (e) {
         console.log(e);
       }
