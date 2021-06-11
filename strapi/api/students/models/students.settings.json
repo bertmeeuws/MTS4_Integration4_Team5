@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "students",
+  "info": {
+    "name": "Students",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "private_chat": {
+      "type": "boolean"
+    },
+    "points": {
+      "via": "student",
+      "collection": "points"
+    },
+    "game": {
+      "via": "students",
+      "model": "games"
+    },
+    "image": {
+      "model": "image"
+    }
+  }
+}

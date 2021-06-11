@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "games",
+  "info": {
+    "name": "games",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "link": {
+      "type": "uid",
+      "required": true
+    },
+    "teacher": {
+      "model": "teachers",
+      "via": "games"
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "students": {
+      "via": "game",
+      "collection": "students"
+    }
+  }
+}

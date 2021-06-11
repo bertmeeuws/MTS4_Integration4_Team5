@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "points",
+  "info": {
+    "name": "Points",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "followers": {
+      "type": "integer"
+    },
+    "answers": {
+      "type": "json"
+    },
+    "student": {
+      "via": "points",
+      "model": "students"
+    }
+  }
+}
