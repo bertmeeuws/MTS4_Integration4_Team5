@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Head from "next/head";
+import Link from "next/link";
 
 export default function index() {
   const [email, setEmail] = useState("");
@@ -18,7 +19,11 @@ export default function index() {
   };
 
   return (
-    <div className="form__login-container">
+    <div
+      style={{ display: "flex", flexDirection: "column" }}
+      className="form__login-container"
+    >
+      <h1 className="h1">Register</h1>
       <form onSubmit={handleRegisterForm} className="form__login">
         <Head>
           <title>Login Leerkracht - BuddyGram</title>
@@ -52,6 +57,7 @@ export default function index() {
           className="input-margin"
         />
         <input className="form__auth--button" type="submit" />
+        <Link href="/register">Create an account</Link>
       </form>
     </div>
   );

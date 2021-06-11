@@ -1,8 +1,13 @@
 import Head from "next/head";
 import Nav from "../components/Layout/Nav";
 import styles from "../styles/Home.module.css";
+import { useStoreState } from "easy-peasy";
 
 export default function Home() {
+  const todos = useStoreState((state) => state.todos.items);
+
+  console.log(todos);
+
   return (
     <div className={styles.container}>
       <Head>
