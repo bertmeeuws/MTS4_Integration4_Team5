@@ -1,0 +1,21 @@
+MUTATIONS
+const addTodo = useStoreActions(actions => actions.todos.add);
+
+STATE
+const todos = useStoreState(state => state.todos.items);
+
+REHYDRATION
+import { useStoreRehydrated } from 'easy-peasy';
+const store = createStore(persist(model, { storage: asyncStorageEngine });
+
+function App() {
+const rehydrated = useStoreRehydrated();
+return (
+
+<div>
+<Header />
+{rehydrated ? <Main /> : <div>Loading...</div>}
+<Footer />
+</div>
+)
+}

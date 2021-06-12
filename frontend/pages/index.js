@@ -7,10 +7,6 @@ import { useStoreState } from "easy-peasy";
 export default function Home() {
   //DIT IS DE HOME PAGINA
 
-  const todos = useStoreState((state) => state.todos.items);
-
-  console.log(todos);
-
   return (
     <>
       <CustomCursor />
