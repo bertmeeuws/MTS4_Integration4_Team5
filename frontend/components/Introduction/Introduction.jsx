@@ -14,7 +14,7 @@ export default function Introduction({ title }) {
 
   return (
     <>
-      <section className="introduction">
+      <section className="introduction background-yellow stretch-container">
         <div className="introduction-container">
           <p>klas 2HAc</p>
           <h1 className="h1">Welkom op Buddy or Bully!</h1>

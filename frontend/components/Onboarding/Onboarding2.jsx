@@ -5,7 +5,7 @@ export default function Onboarding2() {
   const changeRoute = useStoreActions((actions) => actions.changeRoute);
 
   return (
-    <section className="introduction">
+    <section className="introduction background-yellow stretch-container">
       <div className="introduction-container">
         <h1 className="h1">Verdien volgers</h1>
         <p>

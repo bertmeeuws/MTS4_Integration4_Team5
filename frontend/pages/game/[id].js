@@ -7,6 +7,8 @@ import DragAndDrop from "../../components/Interactive/DragAndDrop";
 import { useStoreState } from "easy-peasy";
 import CustomCursor from "../../components/CustomCursor/CustomCursor";
 
+import { Dag1Routes } from "../../routes/Dag1";
+
 import Introduction from "../../components/Introduction/Introduction";
 
 import Onboarding1 from "../../components/Onboarding/Onboarding1";
@@ -16,36 +18,12 @@ import Onboarding4 from "../../components/Onboarding/Onboarding4";
 
 import Dag1 from "../../components/Dag1/Dag1";
 
-
 export default function Index({ data, ctx, succes, id }) {
   const routeId = useStoreState((state) => state.route);
 
   console.log(routeId);
 
   //Routes bepaald welke componenten er geladen worden
-
-  /*
-  const routes = [
-    {
-      id: 0,
-      action: "Star van het spel",
-      percent: 0,
-      component: <Introduction setRoute={setRoute} />,
-    },
-    {
-      id: 1,
-      action: "Foto uploaden",
-      percent: 30,
-      component: <ProfilePictureForm setRoute={setRoute} />,
-    },
-    {
-      id: 2,
-      action: "Foto uploaden",
-      percent: 30,
-      component: <DragAndDrop setRoute={setRoute} />,
-    },
-  ];
-  */
 
   const routes = [
     {
@@ -73,12 +51,10 @@ export default function Index({ data, ctx, succes, id }) {
       name: "Stap 4",
       component: <Onboarding4 title={"Stap 4"} />,
     },
-    {
-      id: 5,
-      name: "Dag 1",
-      component: <Dag1 title={"Dag 1"} />,
-    },
+    ...Dag1Routes,
   ];
+
+  console.log(routes);
 
   return (
     <>
