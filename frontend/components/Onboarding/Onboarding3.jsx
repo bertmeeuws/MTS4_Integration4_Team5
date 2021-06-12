@@ -11,6 +11,7 @@ export default function Onboarding3() {
         <p>Wanneer je een situatie niet correct inschat verlies je volgers.</p>
         <div className="introduction-list">
           <button
+            className="button-secondary-white"
             onClick={(e) => {
               changeRoute(2);
             }}
@@ -21,6 +22,7 @@ export default function Onboarding3() {
             onClick={(e) => {
               changeRoute(4);
             }}
+            className="button-primary-blue"
           >
             Kleuren kiezen
           </button>

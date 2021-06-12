@@ -10,6 +10,7 @@ export default function Onboarding4() {
         <p>Verander de kleuren van je account zoals jij het wil!</p>
         <div className="introduction-list">
           <button
+            className="button-secondary-white"
             onClick={(e) => {
               changeRoute(3);
             }}
@@ -17,6 +18,7 @@ export default function Onboarding4() {
             Stap terug
           </button>
           <button
+            className="button-primary-blue"
             onClick={(e) => {
               changeRoute(5);
             }}

@@ -35,6 +35,41 @@
   font-weight: 400;
 }
 
+.h1 marker {
+  background-color: var(--purple);
+  border-radius: 10rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  color: var(--white);
+}
+
+.button-primary-blue {
+  font-size: 2.4rem;
+  line-height: 3.6rem;
+  letter-spacing: 0.2rem;
+  text-align: center;
+  background-color: var(--blue);
+  border: 1rem solid black;
+  color: var(--white);
+  padding: 1.5rem 2.5rem;
+  box-shadow: -10px 9px 0px #000000;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+.button-secondary-white {
+  font-size: 2.4rem;
+  text-decoration: none;
+  line-height: 3.6rem;
+  letter-spacing: 0.2rem;
+  text-align: center;
+  color: var(--black);
+  background-color: var(--white);
+  border: 1rem solid black;
+  padding: 1.5rem 2.5rem;
+  box-shadow: -10px 9px 0px #000000;
+  box-sizing: border-box;
+}
 /*
 /////////////////
 /////////////////

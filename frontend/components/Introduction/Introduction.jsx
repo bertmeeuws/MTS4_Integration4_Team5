@@ -17,10 +17,13 @@ export default function Introduction({ title }) {
       <section className="introduction background-yellow stretch-container">
         <div className="introduction-container">
           <p>klas 2HAc</p>
-          <h1 className="h1">Welkom op Buddy or Bully!</h1>
+          <h1 className="h1">
+            Welkom op <marker>BuddyGram!</marker>
+          </h1>
           <p>Klik op je naam om door te gaan.</p>
           <div className="introduction-list">
             <button
+              className="button-secondary-white"
               onClick={(e) => {
                 chooseUser("Ahmed");
                 changeRoute(1);

@@ -1,7 +1,7 @@
 import React from "react";
 import { useStoreActions } from "easy-peasy";
 
-export default function Dag1() {
+export default function Dag1({ route }) {
   const changeRoute = useStoreActions((actions) => actions.changeRoute);
 
   return (
@@ -16,6 +16,7 @@ export default function Dag1() {
         </p>
 
         <button
+          className="button-primary-blue"
           onClick={(e) => {
             changeRoute(6);
           }}
