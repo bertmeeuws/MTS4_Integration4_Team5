@@ -17,7 +17,7 @@ export const model = {
   }),
 
   changeRoute: action((state, payload) => {
-    state.route.id = payload;
+    state.route = payload;
   }),
 
   addToDo: action((state, payload) => {
@@ -25,8 +25,11 @@ export const model = {
   }),
 };
 
+/*
 export const store = createStore(
   persist(model, {
     storage: "localStorage",
   })
 );
+*/
+export const store = createStore(model);

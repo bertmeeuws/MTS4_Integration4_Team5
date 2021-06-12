@@ -76,7 +76,6 @@ export default function CustomCursor() {
       <div className="secondary-cursor" ref={secondaryCursor}>
         <div className="cursor-background"></div>
       </div>
-      ;
     </div>
   );
 }

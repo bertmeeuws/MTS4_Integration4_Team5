@@ -2,20 +2,25 @@ import React, { useState } from "react";
 import LoadingBar from "../../components/LoadingBar/LoadingBar";
 import axios from "axios";
 import ProfilePictureForm from "../../components/Forms/ProfilePictureForm";
-import Introduction from "../../components/Introduction/Introduction";
 import Head from "next/head";
 import DragAndDrop from "../../components/Interactive/DragAndDrop";
 import { useStoreState } from "easy-peasy";
 import CustomCursor from "../../components/CustomCursor/CustomCursor";
 
-export default function Index({ data, ctx, succes, id }) {
-  console.log(id);
+import Introduction from "../../components/Introduction/Introduction";
 
-  const routeId = useStoreState((state) => state.route.id);
+import Onboarding1 from "../../components/Onboarding/Onboarding1";
+import Onboarding2 from "../../components/Onboarding/Onboarding2";
+import Onboarding3 from "../../components/Onboarding/Onboarding3";
+import Onboarding4 from "../../components/Onboarding/Onboarding4";
+
+import Dag1 from "../../components/Dag1/Dag1";
+
+
+export default function Index({ data, ctx, succes, id }) {
+  const routeId = useStoreState((state) => state.route);
 
   console.log(routeId);
-
-  const [route, setRoute] = useState(0);
 
   //Routes bepaald welke componenten er geladen worden
 
@@ -45,25 +50,44 @@ export default function Index({ data, ctx, succes, id }) {
   const routes = [
     {
       id: 0,
-      action: "Star van het spel",
-      percent: 0,
+      name: "Introductie",
       component: <Introduction title={"Introductie"} />,
     },
     {
       id: 1,
-      action: "Foto uploaden",
-      percent: 30,
-      component: <ProfilePictureForm setRoute={setRoute} />,
+      name: "Stap 1",
+      component: <Onboarding1 title={"Stap 1"} />,
+    },
+    {
+      id: 2,
+      name: "Stap 2",
+      component: <Onboarding2 title={"Stap 2"} />,
+    },
+    {
+      id: 3,
+      name: "Stap 3",
+      component: <Onboarding3 title={"Stap 3"} />,
+    },
+    {
+      id: 4,
+      name: "Stap 4",
+      component: <Onboarding4 title={"Stap 4"} />,
+    },
+    {
+      id: 5,
+      name: "Dag 1",
+      component: <Dag1 title={"Dag 1"} />,
     },
   ];
 
   return (
     <>
       <Head>
+        <title>{routes[routeId].name} - BuddyGram</title>
         <link rel="icon" href="/smiley.png" />
       </Head>
       <CustomCursor />
-      {routes[route].component}
+      {routes[routeId].component}
     </>
   );
 }
