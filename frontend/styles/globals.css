@@ -1,7 +1,9 @@
 @import "./reset.css";
+@import "./vars.css";
 @import "./teacher.css";
 @import "./styles.css";
 @import "./loadingbar.css";
+@import "./cursor.css";
 
 html,
 body {
