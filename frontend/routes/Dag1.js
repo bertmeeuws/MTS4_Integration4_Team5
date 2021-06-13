@@ -9,8 +9,6 @@ import Dag1_7 from "../components/Dag1/Dag1_7";
 import Dag1_8 from "../components/Dag1/Dag1_8";
 import Dag1_9 from "../components/Dag1/Dag1_9";
 
-const startIndex = 5;
-
 /*
 const renderRoutes = () => {
   let array = [];

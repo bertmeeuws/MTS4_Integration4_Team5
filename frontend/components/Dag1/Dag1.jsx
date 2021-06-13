@@ -1,8 +1,14 @@
 import React from "react";
-import { useStoreActions } from "easy-peasy";
+import { useStoreState, useStoreActions } from "easy-peasy";
 
 export default function Dag1({ route }) {
   const changeRoute = useStoreActions((actions) => actions.changeRoute);
+
+  const profile = useStoreState((state) => state.profile);
+
+  const [name, surname] = profile.split(" ");
+
+  console.log(name);
 
   return (
     <section className="introduction background-yellow stretch-container">
@@ -18,7 +24,7 @@ export default function Dag1({ route }) {
         <button
           className="button-primary-blue"
           onClick={(e) => {
-            changeRoute(6);
+            changeRoute(route++);
           }}
         >
           Start BuddyGram op

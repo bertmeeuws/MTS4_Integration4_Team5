@@ -1,0 +1,14 @@
+<svg width="142" height="40" viewBox="0 0 142 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect y="20" width="10" height="10" fill="black"/>
+<rect y="10" width="10" height="10" fill="black"/>
+<rect x="10" width="122" height="10" fill="black"/>
+<rect width="10" height="10" transform="matrix(-1 0 0 1 142 10)" fill="black"/>
+<rect width="10" height="10" transform="matrix(-1 0 0 1 142 20)" fill="black"/>
+<rect x="10" y="30" width="122" height="10" fill="black"/>
+<rect x="12" y="12" width="10" height="16" fill="#E23838"/>
+<rect x="24" y="12" width="10" height="16" fill="#E23838"/>
+<rect x="36" y="12" width="10" height="16" fill="#E23838"/>
+<rect x="48" y="12" width="10" height="16" fill="#E23838"/>
+<rect x="60" y="12" width="10" height="16" fill="#E23838"/>
+<path d="M95.452 23.838V25.014H90.762V23.824H94.262V20.338H90.762V15.648H96.614V16.838H93.114V19.148H95.452V20.324H96.614V23.838H95.452ZM104.976 23.838V25.014H100.286V23.838H99.1241V16.824H100.286V15.648H104.976V16.824H106.138V23.838H104.976ZM103.786 16.838H101.476V23.824H103.786V16.838ZM122.676 23.838V25.014H119.162V23.838H117.986V20.324H119.162V19.148H122.676V20.324H123.852V23.838H122.676ZM116.852 19.176V21.514H115.676V25.014H114.486V21.486H115.662V19.148H116.824V16.838H114.514V20.338H113.352V21.514H109.824V20.338H108.662V16.824H109.824V15.648H118.014V19.176H116.852ZM121.486 20.338H120.352V23.824H121.486V20.338ZM112.162 16.838H111.014V20.324H112.162V16.838Z" fill="black"/>
+</svg>

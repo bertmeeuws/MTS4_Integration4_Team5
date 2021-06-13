@@ -8,7 +8,6 @@ export default function Introduction({ title }) {
   const changeRoute = useStoreActions((actions) => actions.changeRoute);
 
   useEffect(() => {
-    chooseUser(null);
     changeRoute(0);
   }, []);
 
@@ -25,7 +24,7 @@ export default function Introduction({ title }) {
             <button
               className="button-secondary-white"
               onClick={(e) => {
-                chooseUser("Ahmed");
+                chooseUser("Ahmed Jipla");
                 changeRoute(1);
               }}
             >
