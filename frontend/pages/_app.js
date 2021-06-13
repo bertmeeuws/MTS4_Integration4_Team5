@@ -2,6 +2,7 @@ import "../styles/globals.css";
 import { Provider } from "next-auth/client";
 import { store } from "../store/store";
 import { StoreProvider } from "easy-peasy";
+import Head from "next/head";
 
 //Making an instance of our store
 

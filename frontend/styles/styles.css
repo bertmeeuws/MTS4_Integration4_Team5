@@ -75,6 +75,8 @@
   border-bottom: 1rem solid var(--black);
   max-width: 40rem;
   outline: none;
+  font-family: Poppins;
+  font-size: 1.4rem;
 }
 
 .button-primary-blue {

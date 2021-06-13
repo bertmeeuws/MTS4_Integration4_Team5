@@ -59,9 +59,9 @@
       "plugin": "users-permissions",
       "configurable": false
     },
-    "teachers": {
+    "teacher": {
       "via": "users_permissions_user",
-      "collection": "teachers"
+      "model": "teachers"
     }
   }
 }

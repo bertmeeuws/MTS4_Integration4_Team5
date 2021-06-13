@@ -17,8 +17,8 @@
       "required": true
     },
     "teacher": {
-      "model": "teachers",
-      "via": "games"
+      "via": "games",
+      "model": "teachers"
     },
     "name": {
       "type": "string",

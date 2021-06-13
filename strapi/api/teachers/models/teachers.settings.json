@@ -26,7 +26,7 @@
     "users_permissions_user": {
       "plugin": "users-permissions",
       "model": "user",
-      "via": "teachers"
+      "via": "teacher"
     },
     "image": {
       "model": "image",
