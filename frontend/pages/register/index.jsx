@@ -18,13 +18,24 @@ export default function index() {
 
   const handleRegisterForm = async (e) => {
     e.preventDefault();
-    const response = await axios.post(`${API_URL}`, {
-      username: email,
-      email: email,
-      confirmed: true,
-      password: password,
-    });
-    console.log(response.data);
+
+    if (password !== confirmPassword) {
+      alert("Wachtwoorden zijn niet hetzelfde");
+    } else {
+      axios
+        .post("http://localhost:1337/auth/local/register", {
+          username: "Kapman",
+          email: email,
+          password: password,
+        })
+        .then((response) => {
+          console.log("User profile", response.data.user);
+          console.log("User token", response.data.jwt);
+        })
+        .catch((error) => {
+          console.log("An error occurred:", error.response);
+        });
+    }
   };
 
   return (

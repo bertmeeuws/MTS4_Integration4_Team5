@@ -1,27 +1,27 @@
 import React, { useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
+import { signIn, useSession } from "next-auth/client";
+import { WEBSITE_URL } from "../../constants";
 
 export default function index() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
-  const [school, setSchool] = useState("");
 
   const [error, setError] = useState(null);
 
-  const [name, setName] = useState("");
-  const [surname, setSurname] = useState("");
-
-  const handleRegisterForm = async (e) => {
+  const handleLoginForm = async (e) => {
     e.preventDefault();
-    const response = await axios.post(`${API_URL}`, {
-      username: email,
-      email: email,
-      confirmed: true,
-      password: password,
-    });
-    console.log(response.data);
+
+    try {
+      signIn("credentials", {
+        email,
+        password,
+        callbackUrl: `${WEBSITE_URL}/dashboard`,
+      });
+    } catch (e) {
+      console.log(e);
+    }
   };
 
   return (
@@ -42,7 +42,7 @@ export default function index() {
         </h1>
         <form
           style={{ gridTemplateColumns: "1fr", maxWidth: "40rem" }}
-          onSubmit={handleRegisterForm}
+          onSubmit={handleLoginForm}
           className="form__login"
         >
           <Head>

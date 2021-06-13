@@ -1,24 +1,20 @@
 import NextAuth from "next-auth";
 import Providers from "next-auth/providers";
-import {
-  NEXT_PUBLIC_API_URL,
-  NEXT_PUBLIC_DATABASE_URL,
-  NEXTAUTH_URL,
-} from "../../../constants/index";
+import { JWT_KEY, API_URL } from "../../../constants/index";
 import * as jwt from "jsonwebtoken";
+import axios from "axios";
 
 const providers = [
   Providers.Credentials({
     name: "Credentials",
     authorize: async (credentials) => {
       try {
-        const res = await fetch(
-          `http://localhost:1337/users/?email=${credentials.email}`
-        );
-
+        //fetch user
+        /*
+        const res = await fetch(`${API_URL}/users/?email=${credentials.email}`);
         const json = await res.json();
         console.log(json);
-
+        //Comparing passwords
         if (json.length >= 1) {
           console.log("Succes");
           const user = {
@@ -27,10 +23,22 @@ const providers = [
             username: json[0].username,
             role: json[0].role,
           };
-
-          const token = jwt.sign(user, "qsudhsuoshqou");
+          const token = jwt.sign(user, JWT_KEY);
           return { status: "success", ...user, token };
         }
+        */
+        axios
+          .post(`${API_URL}/auth/local`, {
+            identifier: credentials.email,
+            password: credentials.password,
+          })
+          .then((response) => {
+            console.log("User profile", response.data.user);
+            console.log("User token", response.data.jwt);
+          })
+          .catch((error) => {
+            console.log("An error occurred:", error.response);
+          });
       } catch (e) {
         const errorMessage = e.response.data.message;
         // Redirecting to the login page with error messsage in the URL
