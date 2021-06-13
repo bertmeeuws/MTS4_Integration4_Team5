@@ -4,6 +4,7 @@ import { v4 as uuid } from "uuid";
 import axios from "axios";
 import Head from "next/head";
 import CustomCursor from "../../components/CustomCursor/CustomCursor";
+import { getSession, useSession } from "next-auth/client";
 
 export default function index() {
   const [link, setLink] = useState("");
@@ -51,4 +52,14 @@ export default function index() {
       </section>
     </LayoutTeacher>
   );
+}
+
+export async function getServerSideProps(ctx) {
+  console.log(await getSession(ctx));
+
+  return {
+    props: {
+      session: await getSession(ctx),
+    },
+  };
 }

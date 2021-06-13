@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
-import { signIn, useSession } from "next-auth/client";
+import { signIn, signOut, useSession } from "next-auth/client";
 import { WEBSITE_URL } from "../../constants";
 
 export default function index() {
@@ -84,7 +84,7 @@ export default function index() {
 
             <input
               onChange={(e) => setPassword(e.currentTarget.value)}
-              type="text"
+              type="password"
               value={password}
               id="wachtwoord"
               name="wachtwoord"
@@ -109,6 +109,7 @@ export default function index() {
           </Link>
         </div>
       </div>
+      <button onClick={(e) => signOut()}>Sign out</button>
     </section>
   );
 }

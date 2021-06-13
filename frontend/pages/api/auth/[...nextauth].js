@@ -8,6 +8,7 @@ const providers = [
   Providers.Credentials({
     name: "Credentials",
     authorize: async (credentials) => {
+      //console.log(credentials);
       try {
         //fetch user
         /*
@@ -27,14 +28,23 @@ const providers = [
           return { status: "success", ...user, token };
         }
         */
-        axios
+        return axios
           .post(`${API_URL}/auth/local`, {
             identifier: credentials.email,
             password: credentials.password,
           })
           .then((response) => {
-            console.log("User profile", response.data.user);
-            console.log("User token", response.data.jwt);
+            //console.log("User profile", response.data.user);
+            //console.log(response.data.user);
+            //console.log("User token", response.data.jwt);
+            console.log(response);
+            return {
+              user: {
+                ...response.data.user,
+                ...response.data,
+              },
+              token: response.data.jwt,
+            };
           })
           .catch((error) => {
             console.log("An error occurred:", error.response);
@@ -50,15 +60,18 @@ const providers = [
 
 const callbacks = {
   async jwt(token, user) {
+    //console.log(token);
+    //console.log(user);
     if (user) {
-      token.accessToken = user.token;
+      token.accessToken = user.accessToken;
     }
 
     return token;
   },
 
   async session(session, user) {
-    session.accessToken = user.token;
+    //console.log(session, user);
+    session.accessToken = user.accessToken;
     session.user = user;
 
     return session;
@@ -66,12 +79,14 @@ const callbacks = {
 };
 
 const options = {
-  site: "http://localhost:3003",
+  site: "http://localhost:3000",
   providers,
   callbacks,
   pages: {
-    error: "/login",
-    signIn: "/login", // Changing the error redirect page to our custom login page
+    error: "/",
+    signIn: "/login",
+    signOut: "/",
+    newUser: "/dashboard", // Changing the error redirect page to our custom login page
   },
 };
 
