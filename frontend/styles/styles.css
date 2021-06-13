@@ -182,12 +182,23 @@
   margin: 0 auto;
 }
 .nav {
-  margin-top: 2rem;
+  width: 100%;
+}
+.nav-container .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-container {
+  position: absolute;
+  left: 0;
+  top: 0;
   width: 100%;
 }
 .nav__list {
   width: 100%;
 }
+
 .nav__list .nav__list__item:last-child {
   float: right;
   text-align: right;

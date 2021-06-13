@@ -6,8 +6,44 @@ import Head from "next/head";
 import CustomCursor from "../../components/CustomCursor/CustomCursor";
 import { getSession, useSession } from "next-auth/client";
 
+import ChangeStudents from "../../components/Dashboard/ChangeStudents";
+import Game from "../../components/Dashboard/ChangeStudents";
+import Games from "../../components/Dashboard/ChangeStudents";
+import NewGame from "../../components/Dashboard/ChangeStudents";
+import Students from "../../components/Dashboard/ChangeStudents";
+
 export default function index() {
   const [link, setLink] = useState("");
+
+  const [id, setId] = useState(0);
+
+  const routes = [
+    {
+      id: 0,
+      name: "Nieuwe game",
+      component: <NewGame />,
+    },
+    {
+      id: 1,
+      name: "Gemaakte spellen",
+      component: <Games />,
+    },
+    {
+      id: 2,
+      name: "Game pagina",
+      component: <Game />,
+    },
+    {
+      id: 3,
+      name: "Nieuwe game",
+      component: <NewGame />,
+    },
+    {
+      id: 4,
+      name: "Nieuwe game",
+      component: <NewGame />,
+    },
+  ];
 
   const handleGenerateLink = (e) => {
     e.preventDefault();
