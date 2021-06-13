@@ -23,17 +23,25 @@
   line-height: 3.6rem;
   font-weight: 600;
 }
+
 .p {
   font-size: 2.4rem;
   letter-spacing: 0.2rem;
   line-height: 3.6rem;
   font-weight: 400;
 }
+.bold {
+  font-weight: 700;
+}
 .p-small {
   font-size: 1.4rem;
   letter-spacing: 0.2rem;
   line-height: 2.1rem;
   font-weight: 400;
+}
+.pixelated-font {
+  font-weight: 700;
+  font-family: lores-12;
 }
 
 .h1 marker {
@@ -57,6 +65,18 @@
   margin-top: 12.6rem;
 }
 
+.align-left {
+  text-align: left;
+}
+
+.auth-input {
+  padding: 1rem;
+  border: none;
+  border-bottom: 1rem solid var(--black);
+  max-width: 40rem;
+  outline: none;
+}
+
 .button-primary-blue {
   font-size: 2.4rem;
   line-height: 3.6rem;
@@ -69,6 +89,28 @@
   box-shadow: -10px 9px 0px #000000;
   box-sizing: border-box;
   text-decoration: none;
+  cursor: pointer;
+}
+
+.blue {
+  color: var(--blue);
+}
+.auth-grid {
+  display: grid;
+  grid-template-columns: 0.6fr 1fr;
+}
+
+.yellow-grid {
+  background-color: var(--yellow);
+  height: 100vh;
+  width: 100%;
+  background: var(--yellow);
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.1) 0.1em,
+      transparent 0.1em
+    ),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0.1em, transparent 0.1em);
+  background-size: 1em 1em;
 }
 
 .button-secondary-white {
@@ -83,6 +125,7 @@
   padding: 1.5rem 2.5rem;
   box-shadow: -10px 9px 0px #000000;
   box-sizing: border-box;
+  cursor: pointer;
 }
 /*
 /////////////////
@@ -104,8 +147,6 @@
 */
 
 .label-text {
-  font-size: 1.8rem;
-  font-weight: 500;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 }
@@ -154,8 +195,9 @@
   display: flex;
   justify-content: center;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   height: 100%;
+  margin-left: 9rem;
 }
 .form__register,
 .form__login {
@@ -164,7 +206,30 @@
   flex-direction: column;
   align-items: flex-start;
 }
-
+.form__login-container .h1 {
+  margin-bottom: 2rem;
+}
+.form__login-container .p {
+  margin-bottom: 2rem;
+}
+.form__login {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 4rem;
+}
+.form__login div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
 .form__generateLink {
   margin-top: 3rem;
+}
+.flex-horizontal {
+  display: flex;
+}
+.form__login-alreadyRegistered {
+  margin-top: 2rem;
+  letter-spacing: 0;
 }
