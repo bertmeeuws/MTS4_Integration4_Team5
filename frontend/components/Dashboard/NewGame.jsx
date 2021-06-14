@@ -2,8 +2,12 @@ import React, { useState } from "react";
 import Window from "./Containers/Window";
 import Image from "next/image";
 import { v4 as uuid } from "uuid";
+import axios from "axios";
+import { API_URL } from "../../constants/index";
 
 export default function NewGame({ teacher }) {
+  const { id } = teacher;
+
   const [name, setName] = useState("");
   const [students, setStudents] = useState([]);
 
@@ -11,8 +15,34 @@ export default function NewGame({ teacher }) {
 
   const [link, setAddLink] = useState("");
 
-  const handleSubmitNewGame = (e) => {
+  const handleSubmitNewGame = async (e) => {
     e.preventDefault();
+    if (name === "" || students === []) {
+      alert("Laat de velden niet leeg");
+    } else {
+      try {
+        const created_game = await axios.post(`${API_URL}/games`, {
+          link: uuid(),
+          name: name,
+          teacher: id,
+        });
+        console.log(created_game.data);
+        try {
+          students.forEach(async (student) => {
+            const created_student = await axios.post(`${API_URL}/students`, {
+              name: student.name,
+              private_chat: false,
+              game: created_game.data.id,
+            });
+          });
+        } catch (e) {
+          console.log("Error creating student");
+        }
+      } catch (e) {
+        console.log("Error creating game");
+        console.log(e);
+      }
+    }
   };
 
   const addStudentToList = (e) => {
@@ -70,7 +100,6 @@ export default function NewGame({ teacher }) {
                 name="students"
                 value={addStudent}
                 onChange={(e) => setAddStudent(e.currentTarget.value)}
-                required
               />
               <p
                 onClick={addStudentToList}
