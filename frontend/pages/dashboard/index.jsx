@@ -18,7 +18,7 @@ export default function index({ session }) {
   const teacher = session?.user?.user?.user.teacher;
   //console.log(session?.user?.user?.user.teacher);
 
-  const [link, setLink] = useState("");
+  const [game, setGame] = useState(null);
 
   const [id, setId] = useState(0);
 
@@ -31,12 +31,12 @@ export default function index({ session }) {
     {
       id: 1,
       name: "Gemaakte spellen",
-      component: <Games teacher={teacher} />,
+      component: <Games setId={setId} setGame={setGame} teacher={teacher} />,
     },
     {
       id: 2,
       name: "Game pagina",
-      component: <Game />,
+      component: <Game setId={setId} game={game} teacher={teacher} />,
     },
     {
       id: 3,
@@ -49,24 +49,6 @@ export default function index({ session }) {
       component: <NewGame />,
     },
   ];
-
-  const handleGenerateLink = (e) => {
-    e.preventDefault();
-
-    try {
-      axios
-        .post("http://localhost:1337/links", {
-          link_id: uuid(),
-          user_permissions_user: 0,
-        })
-        .then((response) => {
-          console.log(response.data);
-          setLink(`http://localhost:3000/game/${response?.data?.link_id}`);
-        });
-    } catch (e) {
-      console.log("Error: " + e);
-    }
-  };
 
   return (
     <LayoutTeacher id={id} setId={setId}>
@@ -81,11 +63,6 @@ export default function index({ session }) {
 }
 
 export async function getServerSideProps(ctx) {
-
-  
-
-
-
   return {
     props: {
       session: await getSession(ctx),

@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import Window from "./Containers/Window";
 import { API_URL } from "../../constants";
 
-export default function Games({ teacher }) {
+export default function Games({ teacher, setId, setGame }) {
   const { id } = teacher;
 
   const [games, setGames] = useState([]);
@@ -29,12 +29,20 @@ export default function Games({ teacher }) {
             <Window key={game.link} text={`${API_URL}/game/${game.link}`}>
               <div className="games-flex">
                 <div>
-                  <p className="bold">{game.name} - 24/05/21</p>
+                  <p className="bold">{game.name} - DATE HERE</p>
                   <p>{game.students.length} Leerlingen</p>
                   <p>NUMBER gem. volgers</p>
                 </div>
                 <div>
-                  <p className="button-primary-blue p-small">statistieken</p>
+                  <p
+                    className="button-primary-blue p-small"
+                    onClick={(e) => {
+                      setGame(game.id);
+                      setId(2);
+                    }}
+                  >
+                    statistieken
+                  </p>
                   <p
                     style={{ marginTop: "2.5rem" }}
                     className="button-primary-blue p-small"

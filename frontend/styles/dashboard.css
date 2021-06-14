@@ -169,3 +169,39 @@
   overflow-y: scroll;
   height: 89vh;
 }
+.dashboard-game-subtitle {
+  margin-top: 5.5rem;
+  margin-bottom: 1rem;
+}
+.dashboard-game-circle-containers {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  margin-bottom: 7rem;
+}
+.dashboard-game-circle {
+  width: 16.2rem;
+  height: 16.2rem;
+  border: 1rem solid var(--black);
+  border-radius: 100%;
+  margin-right: 1.5rem;
+  box-shadow: -10px 9px 0px var(--black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+.dashboard-game-scores {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 4rem;
+}
+.dashboard-game-scores .student-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+.dashboard-game-scores .student-row p:last-child {
+  color: var(--yellow);
+}
