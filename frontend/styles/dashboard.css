@@ -36,6 +36,10 @@
   /* HardBlackShadow */
   box-shadow: -10px 9px 0px var(--black);
 }
+.nav__dashboard__list-item:last-child {
+  background-color: var(--red);
+  color: var(--white);
+}
 .nav__dashboard__list-signOff {
   grid-row-start: 14;
 }
@@ -44,7 +48,9 @@
   background: var(--blue);
   color: var(--white);
   /* Primary / Dark */
+  transition: all 0.3s ease;
 }
+
 .dashboard-grid {
   display: grid;
   grid-template-columns: 37.2rem 1fr;

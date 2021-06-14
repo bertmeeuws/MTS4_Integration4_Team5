@@ -1,7 +1,8 @@
 .container {
   padding-left: 7.5rem;
   padding-right: 7.5rem;
-  height: 80vh;
+  height: auto;
+  padding-bottom: 7.5rem;
 
   box-shadow: -10px 9px 0px var(--black);
   border: 1rem solid var(--black);
