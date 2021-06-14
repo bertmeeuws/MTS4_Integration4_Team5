@@ -25,11 +25,12 @@ export const model = {
   }),
 };
 
-
+/*
 export const store = createStore(
   persist(model, {
     storage: "localStorage",
   })
 );
+*/
 
-//export const store = createStore(model);
+export const store = createStore(model);

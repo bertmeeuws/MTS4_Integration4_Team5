@@ -11,6 +11,7 @@ import Game from "../../components/Dashboard/ChangeStudents";
 import Games from "../../components/Dashboard/ChangeStudents";
 import NewGame from "../../components/Dashboard/ChangeStudents";
 import Students from "../../components/Dashboard/ChangeStudents";
+import NavDashboard from "../../components/Dashboard/NavDashboard";
 
 export default function index() {
   const [link, setLink] = useState("");

@@ -1,9 +1,9 @@
-import React from 'react'
+import React from "react";
 
 export default function NewGame() {
-    return (
-        <div>
-            
-        </div>
-    )
+  return (
+    <section className="dashboard-newgame">
+      <h1 className="h2">Maak een nieuw spel aan</h1>
+    </section>
+  );
 }
