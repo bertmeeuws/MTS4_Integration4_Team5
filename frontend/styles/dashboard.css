@@ -63,6 +63,7 @@
 .newGame-input-container {
   display: flex;
   flex-direction: column;
+  margin-bottom: 2rem;
 }
 .newGame-input-container input {
   max-width: 40rem;
@@ -88,10 +89,61 @@
   margin-top: 2rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-row-gap: 1rem;
   grid-column-gap: 4rem;
+
+  overflow-y: scroll;
 }
 .newGame-student-item {
   display: flex;
+  height: 3rem;
   align-items: center;
   justify-content: space-between;
+}
+.newGame-students-form {
+  display: flex;
+  justify-content: space-between;
+  max-width: 40rem;
+}
+.newGame-students-form-input {
+  width: 100% !important;
+}
+.newGame-link-container {
+  margin-top: 9rem;
+  display: flex;
+}
+.newGame-link-container .link-box {
+  border: 0.3rem solid var(--black);
+}
+.newGame-link-container .link-box:first-child {
+  max-width: 40.7rem;
+  margin-right: 2rem;
+}
+.newGame-link-container .link-box:nth-child(2) {
+  max-width: 50%;
+  margin-right: 2rem;
+  color: var(--white);
+  background-color: var(--blue);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.newGame-link-container .link-box:nth-child(3) {
+  max-width: 50%;
+  color: var(--black);
+  background-color: var(--white);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.newGame-link-container .link-box:nth-child(3):hover,
+.newGame-link-container .link-box:nth-child(2):hover {
+  box-sizing: border-box;
+  /* HardBlackShadow */
+  box-shadow: -10px 9px 0px var(--black);
+}
+.newGame-link-container .link-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.75rem 1.95rem;
 }

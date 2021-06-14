@@ -9,17 +9,33 @@ export default function NewGame() {
 
   const [addStudent, setAddStudent] = useState("");
 
+  const [link, setAddLink] = useState("");
+
   const handleSubmitNewGame = (e) => {
     e.preventDefault();
   };
 
   const addStudentToList = (e) => {
     e.preventDefault();
-    setStudents(...students, {
-      id: uuid(),
-      name: addStudent,
-    });
+    if (students === "") {
+      alert("Het veld leerling niet leeglaten");
+    } else {
+      let array = students;
+
+      console.log(array);
+      array.push({
+        id: uuid(),
+        name: addStudent,
+      });
+
+      setStudents(array);
+    }
     setAddStudent("");
+  };
+
+  const deleteStudent = (id) => {
+    let filteredArray = students.filter((item) => item.id !== id);
+    setStudents(filteredArray);
   };
 
   return (
@@ -48,14 +64,14 @@ export default function NewGame() {
             <div className="newGame-students-form">
               <input
                 type="text"
-                className="p-small"
+                className="p-small newGame-students-form-input"
                 name="students"
                 value={addStudent}
                 onChange={(e) => setAddStudent(e.currentTarget.value)}
                 required
               />
               <p
-                onClick={(e) => addStudentToList}
+                onClick={addStudentToList}
                 className="newGame-students-button p-big"
               >
                 toevoegen
@@ -63,24 +79,36 @@ export default function NewGame() {
             </div>
           </div>
           <ul className="newGame-students">
-            <div className="newGame-student-item">
-              <p className="pixelated-font p-big">Hi</p>
-              <Image src="/assets/img/delete.svg" width={15} height={15} />
-            </div>
-            <div className="newGame-student-item">
-              <p className="pixelated-font p-big">Hi</p>
-              <Image src="/assets/img/delete.svg" width={15} height={15} />
-            </div>
-
             {students.map((item) => {
               return (
                 <div className="newGame-student-item">
                   <p className="pixelated-font p-big">{item.name}</p>
-                  <Image src="/assets/img/delete.svg" width={15} height={15} />
+                  <Image
+                    src="/assets/img/delete.svg"
+                    onClick={(e) => deleteStudent(item.id)}
+                    width={15}
+                    height={15}
+                  />
                 </div>
               );
             })}
           </ul>
+          <div className="newGame-link-container">
+            <input
+              type="text"
+              value={link}
+              readOnly
+              className="h2 pixelated-font link-box"
+            />
+            <input
+              type="submit"
+              className="link-box pixelated-font link-button p-big"
+              value="Genereer link"
+            />
+            <p className="link-box link-button pixelated-font p-big">
+              Kopieer link
+            </p>
+          </div>
         </form>
       </Window>
     </section>
