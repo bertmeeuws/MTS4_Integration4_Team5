@@ -9,7 +9,7 @@ export default function Window({ children, text }) {
         <div className={`${styles.circle} ${styles.blue}`}></div>
         <div className={`${styles.circle} ${styles.yellow}`}></div>
         <div className={`${styles.circle} ${styles.red}`}></div>
-        {text ? text : ""}
+        {text ? <p className="p-small">{text}</p> : ""}
       </div>
       <div className={styles.safezone}>{children}</div>
     </div>

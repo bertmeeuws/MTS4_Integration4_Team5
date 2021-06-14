@@ -153,3 +153,19 @@
   align-items: center;
   padding: 1.75rem 1.95rem;
 }
+
+.dashboard-newgame .games-flex {
+  display: flex;
+  justify-content: space-between;
+}
+.dashboard-newgame .games-flex .button-primary-blue {
+  box-shadow: none;
+  transition: all 0.3s ease;
+}
+.dashboard-newgame .games-flex .button-primary-blue:hover {
+  box-shadow: -10px 9px 0px var(--black);
+}
+.overflow-y {
+  overflow-y: scroll;
+  height: 89vh;
+}

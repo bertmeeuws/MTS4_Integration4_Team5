@@ -27,6 +27,7 @@ export default function NewGame({ teacher }) {
           teacher: id,
         });
         console.log(created_game.data);
+        setAddLink(created_game.data.link);
         try {
           students.forEach(async (student) => {
             const created_student = await axios.post(`${API_URL}/students`, {

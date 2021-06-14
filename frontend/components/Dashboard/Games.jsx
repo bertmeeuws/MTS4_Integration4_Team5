@@ -1,25 +1,52 @@
-import React from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 import Window from "./Containers/Window";
+import { API_URL } from "../../constants";
 
-export default function Games() {
+export default function Games({ teacher }) {
+  const { id } = teacher;
+
+  const [games, setGames] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(async () => {
+    const response = await axios.get(
+      `${API_URL}/games?_where[teacher]=${id}&_sort=created_at:DESC`
+    );
+    setLoading(false);
+    setGames(response.data);
+    console.log(response.data);
+  }, []);
+
   return (
     <section className="dashboard-newgame">
       <p className="dashboard-newgame-welcome p blue bold">Alle</p>
       <h1 className="h2">Aangemaakte spellen</h1>
-      <Window text="http://localhost:3000/game/1">
-        <p>2HAc - 24/05/21</p>
-        <p>25 Leerlingen</p>
-        <p>354 gem. volgers</p>
-        <p className="button-primary-blue p-small">statistieken</p>
-        <p className="button-primary-blue p-small">wijzig leerlingen</p>
-      </Window>
-      <Window text="http://localhost:3000/game/1">
-        <p>2HAc - 24/05/21</p>
-        <p>25 Leerlingen</p>
-        <p>354 gem. volgers</p>
-        <p className="button-primary-blue p-small">statistieken</p>
-        <p className="button-primary-blue p-small">wijzig leerlingen</p>
-      </Window>
+      {loading ? <p>Loading</p> : ""}
+      <div className="overflow-y">
+        {games.map((game) => {
+          return (
+            <Window key={game.link} text={`${API_URL}/game/${game.link}`}>
+              <div className="games-flex">
+                <div>
+                  <p className="bold">{game.name} - 24/05/21</p>
+                  <p>{game.students.length} Leerlingen</p>
+                  <p>NUMBER gem. volgers</p>
+                </div>
+                <div>
+                  <p className="button-primary-blue p-small">statistieken</p>
+                  <p
+                    style={{ marginTop: "2.5rem" }}
+                    className="button-primary-blue p-small"
+                  >
+                    wijzig leerlingen
+                  </p>
+                </div>
+              </div>
+            </Window>
+          );
+        })}
+      </div>
     </section>
   );
 }
