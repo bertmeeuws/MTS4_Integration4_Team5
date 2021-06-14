@@ -37,7 +37,6 @@ const providers = [
             //console.log("User profile", response.data.user);
             //console.log(response.data.user);
             //console.log("User token", response.data.jwt);
-            console.log(response);
             return {
               user: {
                 ...response.data.user,
@@ -62,9 +61,13 @@ const callbacks = {
   async jwt(token, user) {
     //console.log(token);
     //console.log(user);
+    console.log(user);
     if (user) {
       token.accessToken = user.accessToken;
+      token.user = user;
     }
+    console.log("________________");
+    console.log(token);
 
     return token;
   },

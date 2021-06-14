@@ -3,7 +3,7 @@ import Window from "./Containers/Window";
 import Image from "next/image";
 import { v4 as uuid } from "uuid";
 
-export default function NewGame() {
+export default function NewGame({ teacher }) {
   const [name, setName] = useState("");
   const [students, setStudents] = useState([]);
 
@@ -40,7 +40,9 @@ export default function NewGame() {
 
   return (
     <section className="dashboard-newgame">
-      <p className="dashboard-newgame-welcome p blue bold">Welkom NAME HERE</p>
+      <p className="dashboard-newgame-welcome p blue bold">
+        Welkom {teacher.surname}
+      </p>
       <h1 className="h2">Maak een nieuw spel aan</h1>
       <Window>
         <form onSubmit={handleSubmitNewGame} className="form__newGame">
@@ -87,6 +89,7 @@ export default function NewGame() {
                     src="/assets/img/delete.svg"
                     onClick={(e) => deleteStudent(item.id)}
                     width={15}
+                    style={{ cursor: "pointer" }}
                     height={15}
                   />
                 </div>

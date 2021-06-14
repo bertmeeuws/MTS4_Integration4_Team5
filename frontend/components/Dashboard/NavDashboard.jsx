@@ -1,4 +1,5 @@
 import React from "react";
+import { signOut } from "next-auth/client";
 
 export default function NavDashboard() {
   return (
@@ -9,7 +10,10 @@ export default function NavDashboard() {
             nieuwe game
           </li>
           <li className="nav__dashboard__list-item p-small">gemaakte games</li>
-          <li className="nav__dashboard__list-item nav__dashboard__list-signOff p-small">
+          <li
+            onClick={(e) => signOut()}
+            className="nav__dashboard__list-item nav__dashboard__list-signOff p-small"
+          >
             afmelden
           </li>
         </ul>
