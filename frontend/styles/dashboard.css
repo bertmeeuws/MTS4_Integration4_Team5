@@ -48,4 +48,50 @@
 .dashboard-grid {
   display: grid;
   grid-template-columns: 37.2rem 1fr;
+  padding-right: 18rem;
+}
+
+.dashboard-newgame {
+  padding-top: 6.7rem;
+}
+.dashboard-newgame .h2 {
+  letter-spacing: 0;
+}
+.dashboard-newgame-welcome {
+  letter-spacing: 0;
+}
+.newGame-input-container {
+  display: flex;
+  flex-direction: column;
+}
+.newGame-input-container input {
+  max-width: 40rem;
+  outline: none;
+  border: none;
+  padding: 0.5rem;
+  border-bottom: 0.2rem solid var(--black);
+  font-family: Poppins;
+}
+
+.newGame-students-button {
+  background-color: var(--blue);
+  height: 4rem;
+  min-width: 16rem;
+  outline: none;
+  border: 0.2rem solid var(--black);
+  cursor: pointer;
+  font-family: Lores-12;
+  color: var(--yellow);
+}
+.newGame-students {
+  margin-left: 2rem;
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 4rem;
+}
+.newGame-student-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
