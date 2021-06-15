@@ -19,8 +19,15 @@ export default function Students({ teacher, game, setId }) {
     }
   }, []);
 
-  const deleteStudent = (id) => {
+  const deleteStudent = async (id) => {
     console.log("Delete student: " + id);
+    try {
+      const response = await axios.delete(`${API_URL}/students/${id}`);
+      let filteredArray = students.filter((item) => item.id !== id);
+      setStudents(filteredArray);
+    } catch (e) {
+      console.log(e);
+    }
   };
 
   return (
