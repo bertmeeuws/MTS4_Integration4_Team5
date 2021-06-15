@@ -32,18 +32,22 @@ export default function Students({ teacher, game, setId }) {
   const handleSubmitForm = async (e) => {
     e.preventDefault();
 
-    try {
-      const response = await axios.post(`${API_URL}/students`, {
-        name: input,
-        private_chat: false,
-        game: game,
-      });
-      let array = students;
-      array.push(response.data);
-      setStudents(array);
-      setInput("");
-    } catch (e) {
-      console.log(e);
+    if (!input) {
+      alert("Laat de velden niet leeg");
+    } else {
+      try {
+        const response = await axios.post(`${API_URL}/students`, {
+          name: input,
+          private_chat: false,
+          game: game,
+        });
+        let array = students;
+        array.push(response.data);
+        setStudents(array);
+        setInput("");
+      } catch (e) {
+        console.log(e);
+      }
     }
   };
 
