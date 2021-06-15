@@ -20,7 +20,7 @@ export default function index({ session }) {
 
   const [game, setGame] = useState(null);
 
-  const [id, setId] = useState(0);
+  const [id, setId] = useState(1);
 
   const routes = [
     {
@@ -40,8 +40,8 @@ export default function index({ session }) {
     },
     {
       id: 3,
-      name: "Nieuwe game",
-      component: <NewGame />,
+      name: "Students",
+      component: <Students setId={setId} game={game} teacher={teacher} />,
     },
     {
       id: 4,
