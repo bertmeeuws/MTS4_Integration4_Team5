@@ -60,7 +60,7 @@ export default function index({ session }) {
 export async function getServerSideProps(ctx) {
   const session = await getSession(ctx);
   console.log(session?.user?.user?.id);
-  if (!session?.user?.user?.id) {
+  if (!session?.user) {
     return {
       redirect: {
         destination: "/",

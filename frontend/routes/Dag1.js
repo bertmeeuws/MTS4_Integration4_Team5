@@ -8,6 +8,19 @@ import Dag1_6 from "../components/Dag1/Dag1_6";
 import Dag1_7 from "../components/Dag1/Dag1_7";
 import Dag1_8 from "../components/Dag1/Dag1_8";
 import Dag1_9 from "../components/Dag1/Dag1_9";
+import Dag1_10 from "../components/Dag1/Dag1_10";
+import Dag1_11 from "../components/Dag1/Dag1_11";
+import Dag1_12 from "../components/Dag1/Dag1_12";
+import Dag1_13 from "../components/Dag1/Dag1_13";
+
+import Dag2 from "../components/Dag2/Dag2";
+import Dag2_1 from "../components/Dag2/Dag2_1";
+import Dag2_2 from "../components/Dag2/Dag2_2";
+import Dag2_3 from "../components/Dag2/Dag2_3";
+import Dag2_4 from "../components/Dag2/Dag2_4";
+import Dag2_5 from "../components/Dag2/Dag2_5";
+import Dag2_6 from "../components/Dag2/Dag2_6";
+import Dag2_7 from "../components/Dag2/Dag2_7";
 
 /*
 const renderRoutes = () => {
@@ -74,4 +87,68 @@ export const Dag1Routes = [
     name: "Dag 1",
     component: <Dag1_9 route={14} title={"Dag 1"} />,
   },
+  {
+    id: 15,
+    name: "Dag 1",
+    component: <Dag1_10 route={15} title={"Dag 1"} />,
+  },
+  {
+    id: 16,
+    name: "Dag 1",
+    component: <Dag1_11 route={16} title={"Dag 1"} />,
+  },
+  {
+    id: 17,
+    name: "Dag 1",
+    component: <Dag1_12 route={17} title={"Dag 1"} />,
+  },
+  {
+    id: 18,
+    name: "Dag 1",
+    component: <Dag1_13 route={18} title={"Dag 1"} />,
+  },
 ];
+
+export const Dag2Routes = [
+  {
+    id: 19,
+    name: "Dag 1",
+    component: <Dag2 route={15} title={"Dag 2"} />,
+  },
+  {
+    id: 19,
+    name: "Dag 1",
+    component: <Dag2_1 route={15} title={"Dag 2"} />,
+  },
+  {
+    id: 19,
+    name: "Dag 1",
+    component: <Dag2_2 route={15} title={"Dag 2"} />,
+  },
+  {
+    id: 19,
+    name: "Dag 1",
+    component: <Dag2_3 route={15} title={"Dag 2"} />,
+  },
+  {
+    id: 19,
+    name: "Dag 1",
+    component: <Dag2_4 route={15} title={"Dag 2"} />,
+  },
+  {
+    id: 19,
+    name: "Dag 1",
+    component: <Dag2_5 route={15} title={"Dag 2"} />,
+  },
+  {
+    id: 19,
+    name: "Dag 1",
+    component: <Dag2_6 route={15} title={"Dag 2"} />,
+  },
+  {
+    id: 19,
+    name: "Dag 1",
+    component: <Dag2_7 route={15} title={"Dag 2"} />,
+  },
+];
+

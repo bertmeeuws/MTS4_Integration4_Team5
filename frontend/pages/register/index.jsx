@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Head from "next/head";
 import axios from "axios";
 import { API_URL } from "../../constants/index";
-import { signIn, useSession } from "next-auth/client";
+import { signIn, useSession, getSession } from "next-auth/client";
 
 import Link from "next/link";
 
@@ -209,4 +209,20 @@ export default function index() {
       </div>
     </section>
   );
+}
+
+export async function getServerSideProps(ctx) {
+  const session = await getSession(ctx);
+  console.log(session?.user?.user?.id);
+  if (session?.user) {
+    return {
+      redirect: {
+        destination: "/dashboard",
+        permanent: false,
+      },
+    };
+  }
+  return {
+    props: {},
+  };
 }

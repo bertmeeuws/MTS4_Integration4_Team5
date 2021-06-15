@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
-import { signIn, signOut, useSession } from "next-auth/client";
+import { signIn, signOut, useSession, getSession } from "next-auth/client";
 import { WEBSITE_URL } from "../../constants";
 
 export default function index() {
@@ -112,4 +112,20 @@ export default function index() {
       <button onClick={(e) => signOut()}>Sign out</button>
     </section>
   );
+}
+
+export async function getServerSideProps(ctx) {
+  const session = await getSession(ctx);
+  console.log(session?.user?.user?.id);
+  if (session?.user) {
+    return {
+      redirect: {
+        destination: "/dashboard",
+        permanent: false,
+      },
+    };
+  }
+  return {
+    props: {},
+  };
 }

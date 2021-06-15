@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import Window from "./Containers/Window";
-import { API_URL } from "../../constants";
+import { API_URL, WEBSITE_URL } from "../../constants";
 
 export default function Games({ teacher, setId, setGame }) {
   const { id } = teacher;
@@ -26,7 +26,7 @@ export default function Games({ teacher, setId, setGame }) {
       <div className="overflow-y">
         {games.map((game) => {
           return (
-            <Window key={game.link} text={`${API_URL}/game/${game.link}`}>
+            <Window key={game.link} text={`${WEBSITE_URL}/game/${game.link}`}>
               <div className="games-flex">
                 <div>
                   <p className="bold">{game.name} - DATE HERE</p>
