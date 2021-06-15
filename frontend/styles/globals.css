@@ -1,6 +1,5 @@
 @import "./reset.css";
 @import "./vars.css";
-@import "./teacher.css";
 @import "./styles.css";
 @import "./loadingbar.css";
 @import "./cursor.css";
@@ -8,6 +7,7 @@
 @import "./dashboard.css";
 @import "./game.css";
 @import "./home.css";
+@import "./auth.css";
 
 @import url("https://use.typekit.net/eqy4ipd.css");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
@@ -69,7 +69,4 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-.dashboard-nav {
-  background-color: lightblue;
 }

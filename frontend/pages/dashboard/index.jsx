@@ -43,11 +43,6 @@ export default function index({ session }) {
       name: "Students",
       component: <Students setId={setId} game={game} teacher={teacher} />,
     },
-    {
-      id: 4,
-      name: "Nieuwe game",
-      component: <NewGame />,
-    },
   ];
 
   return (
@@ -63,6 +58,16 @@ export default function index({ session }) {
 }
 
 export async function getServerSideProps(ctx) {
+  const session = await getSession(ctx);
+  console.log(session?.user?.user?.id);
+  if (!session?.user?.user?.id) {
+    return {
+      redirect: {
+        destination: "/",
+        permanent: false,
+      },
+    };
+  }
   return {
     props: {
       session: await getSession(ctx),

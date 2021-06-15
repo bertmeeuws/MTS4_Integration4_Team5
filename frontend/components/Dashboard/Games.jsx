@@ -44,6 +44,10 @@ export default function Games({ teacher, setId, setGame }) {
                     statistieken
                   </p>
                   <p
+                    onClick={(e) => {
+                      setGame(game.id);
+                      setId(3);
+                    }}
                     style={{ marginTop: "2.5rem" }}
                     className="button-primary-blue p-small"
                   >
