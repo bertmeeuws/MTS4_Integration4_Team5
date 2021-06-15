@@ -6,18 +6,17 @@ import Image from "next/image";
 export default function Students({ teacher, game, setId }) {
   const { id, surname } = teacher;
   const [students, setStudents] = useState([]);
-  console.log(teacher);
-  console.log(game);
+  const [input, setInput] = useState("");
 
   useEffect(async () => {
     try {
       const response = await axios.get(`${API_URL}/games?id=${game}`);
-      console.log(response?.data[0]?.students);
+
       setStudents(response?.data[0]?.students);
     } catch (e) {
       setId(1);
     }
-  }, []);
+  }, [students]);
 
   const deleteStudent = async (id) => {
     console.log("Delete student: " + id);
@@ -30,10 +29,41 @@ export default function Students({ teacher, game, setId }) {
     }
   };
 
+  const handleSubmitForm = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await axios.post(`${API_URL}/students`, {
+        name: input,
+        private_chat: false,
+        game: game,
+      });
+      let array = students;
+      array.push(response.data);
+      setStudents(array);
+      setInput("");
+    } catch (e) {
+      console.log(e);
+    }
+  };
+
   return (
     <section className="dashboard-newgame">
       <p className="dashboard-newgame-welcome p blue bold">Welkom {surname}</p>
       <h1 className="h2">Leerlingen aanpassen</h1>
+      <form onSubmit={handleSubmitForm}>
+        <label htmlFor="student" className="pixelated-font p-small">
+          Leerling toevoegen:
+        </label>
+        <input
+          name="student"
+          id="student"
+          value={input}
+          onChange={(e) => setInput(e.currentTarget.value)}
+        />
+        <input type="submit" value="toevoegen" />
+      </form>
+
       <ul className="newGame-students">
         {students?.map((item) => {
           return (
