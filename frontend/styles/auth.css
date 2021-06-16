@@ -1,42 +1,44 @@
 .form__register-container,
 .form__login-container {
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  align-items: flex-start;
-  height: 100%;
-  margin-left: 9rem;
+  margin-top: 20%;
+  margin-left: 8rem;
 }
-.form__register,
+
 .form__login {
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: flex-start;
 }
-.form__login-container .h1 {
-  margin-bottom: 2rem;
+
+.label__wrapper {
+  display: flex;
+  flex-direction: column;
 }
-.form__login-container .p {
-  margin-bottom: 2rem;
+
+.auth__wrapper-login{
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  display: grid;
+  gap: 2rem;
 }
-.form__login {
+
+.auth__wrapper-register{
+  margin-top: 4rem;
+  margin-bottom: 4rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto;
-  grid-gap: 4rem;
+  gap: 2rem;
 }
-.form__login div {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
+
 .form__generateLink {
   margin-top: 3rem;
 }
+
 .flex-horizontal {
   display: flex;
 }
+
 .form__login-alreadyRegistered {
   margin-top: 2rem;
   letter-spacing: 0;

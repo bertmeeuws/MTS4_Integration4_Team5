@@ -6,17 +6,21 @@ import Image from "next/image";
 export default function Nav({ children }) {
   return (
     <>
-      <nav className="nav-container">
-        <div className="nav wrapper">
-          <Image src="/assets/logo.svg" width={89} height={46.05} />
-          <ul className="nav__list">
-            <li className="nav__list__item nav--item">
-              <button onClick={(e) => signIn()} href="login">
-                Inloggen als leerkracht
-              </button>
-            </li>
-          </ul>
+      <nav className="nav">
+        
+        <div className="nav-container">
+
+          <Image
+            src="/assets/img/logo.svg"
+            width={89} height={46.05}
+          />
+
+          <button onClick={(e) => signIn()} href="login" className="button__header title__s-bold">
+            Inloggen als leerkracht
+          </button>
+
         </div>
+      
       </nav>
       {children}
     </>
