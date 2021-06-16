@@ -2,10 +2,8 @@ import React from "react";
 import { useStoreState, useStoreActions } from "easy-peasy";
 
 export default function Dag1({ route }) {
-  console.log(route);
-  const changeRoute = useStoreActions((actions) => actions.changeRoute);
-
   const user = useStoreState((state) => state.user);
+  const nextRoute = useStoreActions((actions) => actions.nextRoute);
 
   const [name, surname] = user.split(" ");
 
@@ -22,14 +20,7 @@ export default function Dag1({ route }) {
           feed plaatsen.
         </p>
 
-        <button
-          className="button-primary-blue"
-          onClick={(e) => {
-            changeRoute(route++);
-          }}
-        >
-          Start BuddyGram op
-        </button>
+        <button onClick={(e) => nextRoute()}>Start buddygram op</button>
       </div>
     </section>
   );

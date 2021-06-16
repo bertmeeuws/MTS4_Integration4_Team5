@@ -1,9 +1,13 @@
-import React from 'react'
+import React from "react";
+import { useStoreActions } from "easy-peasy";
 
 export default function Dag1_11() {
-    return (
-        <div>
-            
-        </div>
-    )
+  const nextRoute = useStoreActions((actions) => actions.nextRoute);
+
+  return (
+    <div>
+      1.11
+      <button onClick={(e) => nextRoute()}>Volgende</button>
+    </div>
+  );
 }

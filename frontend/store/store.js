@@ -20,6 +20,10 @@ export const model = {
     state.route = payload;
   }),
 
+  nextRoute: action((state, payload) => {
+    state.route += 1;
+  }),
+
   addToDo: action((state, payload) => {
     state.todos.items.push(payload);
   }),

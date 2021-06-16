@@ -1,6 +1,8 @@
 MUTATIONS
 const addTodo = useStoreActions(actions => actions.todos.add);
 
+const changeRoute = useStoreActions(actions => actions.todos.add);
+
 STATE
 const todos = useStoreState(state => state.todos.items);
 
