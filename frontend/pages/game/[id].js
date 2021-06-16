@@ -7,7 +7,13 @@ import DragAndDrop from "../../components/Interactive/DragAndDrop";
 import { useStoreState } from "easy-peasy";
 import CustomCursor from "../../components/CustomCursor/CustomCursor";
 
-import { Dag1Routes, Dag2Routes } from "../../routes/Dag1";
+import {
+  Dag1Routes,
+  Dag2Routes,
+  Dag3Routes,
+  Dag4Routes,
+  Dag5Routes,
+} from "../../routes/Dag1";
 
 import Introduction from "../../components/Introduction/Introduction";
 
@@ -16,7 +22,6 @@ import Onboarding2 from "../../components/Onboarding/Onboarding2";
 import Onboarding3 from "../../components/Onboarding/Onboarding3";
 import Onboarding4 from "../../components/Onboarding/Onboarding4";
 
-import Dag1 from "../../components/Dag1/Dag1";
 import { API_URL } from "../../constants";
 
 export default function Index({ data, ctx, succes, id }) {
@@ -54,6 +59,9 @@ export default function Index({ data, ctx, succes, id }) {
     },
     ...Dag1Routes,
     ...Dag2Routes,
+    ...Dag3Routes,
+    ...Dag4Routes,
+    ...Dag5Routes,
   ];
 
   return (

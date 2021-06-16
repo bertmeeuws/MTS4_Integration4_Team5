@@ -2,6 +2,7 @@ import React from "react";
 import { useStoreState, useStoreActions } from "easy-peasy";
 
 export default function Dag1({ route }) {
+  console.log(route);
   const changeRoute = useStoreActions((actions) => actions.changeRoute);
 
   const user = useStoreState((state) => state.user);

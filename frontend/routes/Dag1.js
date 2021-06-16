@@ -22,19 +22,31 @@ import Dag2_5 from "../components/Dag2/Dag2_5";
 import Dag2_6 from "../components/Dag2/Dag2_6";
 import Dag2_7 from "../components/Dag2/Dag2_7";
 
-/*
-const renderRoutes = () => {
-  let array = [];
-  for (let i = startIndex; i >= 15; i++) {
-    array.push({
-      id: i === startIndex ? 5 : i + 1,
-      name: "Dag 1",
-      component:
-        i === startIndex ? <Dag1 title={"Dag 1"} /> : <Dag1 title={"Dag 1"} />,
-    });
-  }
-};
-*/
+import Dag3 from "../components/Dag3/Dag3";
+import Dag3_1 from "../components/Dag3/Dag3_1";
+import Dag3_2 from "../components/Dag3/Dag3_2";
+import Dag3_3 from "../components/Dag3/Dag3_3";
+import Dag3_4 from "../components/Dag3/Dag3_4";
+import Dag3_5 from "../components/Dag3/Dag3_5";
+import Dag3_6 from "../components/Dag3/Dag3_6";
+
+import Dag4 from "../components/Dag4/Dag4";
+import Dag4_1 from "../components/Dag4/Dag4_1";
+import Dag4_2 from "../components/Dag4/Dag4_2";
+import Dag4_3 from "../components/Dag4/Dag4_3";
+import Dag4_4 from "../components/Dag4/Dag4_4";
+import Dag4_5 from "../components/Dag4/Dag4_5";
+import Dag4_6 from "../components/Dag4/Dag4_6";
+
+import Dag5 from "../components/Dag5/Dag5";
+import Dag5_1 from "../components/Dag5/Dag5_1";
+import Dag5_2 from "../components/Dag5/Dag5_2";
+import Dag5_3 from "../components/Dag5/Dag5_3";
+import Dag5_4 from "../components/Dag5/Dag5_4";
+import Dag5_5 from "../components/Dag5/Dag5_5";
+import Dag5_6 from "../components/Dag5/Dag5_6";
+import Dag5_7 from "../components/Dag5/Dag5_7";
+import Dag5_8 from "../components/Dag5/Dag5_8";
 
 export const Dag1Routes = [
   {
@@ -112,43 +124,166 @@ export const Dag1Routes = [
 export const Dag2Routes = [
   {
     id: 19,
-    name: "Dag 1",
+    name: "Dag 2",
     component: <Dag2 route={15} title={"Dag 2"} />,
   },
   {
     id: 19,
-    name: "Dag 1",
+    name: "Dag 2",
     component: <Dag2_1 route={15} title={"Dag 2"} />,
   },
   {
     id: 19,
-    name: "Dag 1",
+    name: "Dag 2",
     component: <Dag2_2 route={15} title={"Dag 2"} />,
   },
   {
     id: 19,
-    name: "Dag 1",
+    name: "Dag 2",
     component: <Dag2_3 route={15} title={"Dag 2"} />,
   },
   {
     id: 19,
-    name: "Dag 1",
+    name: "Dag 2",
     component: <Dag2_4 route={15} title={"Dag 2"} />,
   },
   {
     id: 19,
-    name: "Dag 1",
+    name: "Dag 2",
     component: <Dag2_5 route={15} title={"Dag 2"} />,
   },
   {
     id: 19,
-    name: "Dag 1",
+    name: "Dag 2",
     component: <Dag2_6 route={15} title={"Dag 2"} />,
   },
   {
     id: 19,
-    name: "Dag 1",
+    name: "Dag 2",
     component: <Dag2_7 route={15} title={"Dag 2"} />,
   },
 ];
 
+export const Dag3Routes = [
+  {
+    id: 19,
+    name: "Dag 3",
+    component: <Dag3 route={15} title={"Dag 2"} />,
+  },
+  {
+    id: 19,
+    name: "Dag 3",
+    component: <Dag3_1 route={15} title={"Dag 2"} />,
+  },
+  {
+    id: 19,
+    name: "Dag 3",
+    component: <Dag3_2 route={15} title={"Dag 2"} />,
+  },
+  {
+    id: 19,
+    name: "Dag 3",
+    component: <Dag3_3 route={15} title={"Dag 2"} />,
+  },
+  {
+    id: 19,
+    name: "Dag 3",
+    component: <Dag3_4 route={15} title={"Dag 2"} />,
+  },
+  {
+    id: 19,
+    name: "Dag 3",
+    component: <Dag3_5 route={15} title={"Dag 2"} />,
+  },
+  {
+    id: 19,
+    name: "Dag 3",
+    component: <Dag3_6 route={15} title={"Dag 2"} />,
+  },
+];
+
+export const Dag4Routes = [
+  {
+    id: 19,
+    name: "Dag 4",
+    component: <Dag4 route={15} title={"Dag 2"} />,
+  },
+  {
+    id: 19,
+    name: "Dag 4",
+    component: <Dag4_1 route={15} title={"Dag 2"} />,
+  },
+  {
+    id: 19,
+    name: "Dag 4",
+    component: <Dag4_2 route={15} title={"Dag 2"} />,
+  },
+  {
+    id: 19,
+    name: "Dag 4",
+    component: <Dag4_3 route={15} title={"Dag 2"} />,
+  },
+  {
+    id: 19,
+    name: "Dag 4",
+    component: <Dag4_4 route={15} title={"Dag 2"} />,
+  },
+  {
+    id: 19,
+    name: "Dag 4",
+    component: <Dag4_5 route={15} title={"Dag 2"} />,
+  },
+  {
+    id: 19,
+    name: "Dag 4",
+    component: <Dag4_6 route={15} title={"Dag 2"} />,
+  },
+];
+
+export const Dag5Routes = [
+  {
+    id: 19,
+    name: "Dag 5",
+    component: <Dag5 route={15} title={"Dag 2"} />,
+  },
+  {
+    id: 19,
+    name: "Dag 5",
+    component: <Dag5_1 route={15} title={"Dag 2"} />,
+  },
+  {
+    id: 19,
+    name: "Dag 5",
+    component: <Dag5_2 route={15} title={"Dag 2"} />,
+  },
+  {
+    id: 19,
+    name: "Dag 5",
+    component: <Dag5_3 route={15} title={"Dag 2"} />,
+  },
+  {
+    id: 19,
+    name: "Dag 5",
+    component: <Dag5_4 route={15} title={"Dag 2"} />,
+  },
+  {
+    id: 19,
+    name: "Dag 5",
+    component: <Dag5_5 route={15} title={"Dag 2"} />,
+  },
+  {
+    id: 19,
+    name: "Dag 5",
+    component: <Dag5_6 route={15} title={"Dag 2"} />,
+  },
+  {
+    id: 19,
+    name: "Dag 5",
+    component: <Dag5_7 route={15} title={"Dag 2"} />,
+  },
+  {
+    id: 19,
+    name: "Dag 5",
+    component: <Dag5_8 route={15} title={"Dag 2"} />,
+  },
+];
