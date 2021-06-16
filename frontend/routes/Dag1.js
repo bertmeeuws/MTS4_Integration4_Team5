@@ -48,77 +48,149 @@ import Dag5_6 from "../components/Dag5/Dag5_6";
 import Dag5_7 from "../components/Dag5/Dag5_7";
 import Dag5_8 from "../components/Dag5/Dag5_8";
 
+import NavbarWithFollowers from "../components/NavBar/NavBarWithFollowers";
+
 export const Dag1Routes = (game) => {
   return [
     {
       id: 5,
       name: "Dag 1",
-      component: <Dag1 data={game[0]} route={5} title={"Dag 1"} />,
+      component: (
+        <>
+          <NavbarWithFollowers text={"maandag - 07:30"} />
+          <Dag1 data={game[0]} route={5} title={"Dag 1"} />
+        </>
+      ),
     },
     {
       id: 6,
       name: "Dag 1",
-      component: <Dag1_1 route={6} title={"Dag 1"} />,
+      component: (
+        <>
+          <NavbarWithFollowers text={"maandag - 07:35"} />
+          <Dag1_1 route={6} title={"Dag 1"} />
+        </>
+      ),
     },
     {
       id: 7,
       name: "Dag 1",
-      component: <Dag1_2 route={7} title={"Dag 1"} />,
+      component: (
+        <>
+          <NavbarWithFollowers text={"maandag - 07:35"} />
+          <Dag1_2 route={7} title={"Dag 1"} />
+        </>
+      ),
     },
     {
       id: 8,
       name: "Dag 1",
-      component: <Dag1_3 route={8} title={"Dag 1"} />,
+      component: (
+        <>
+          <NavbarWithFollowers text={"maandag - 07:35"} />
+          <Dag1_3 route={8} title={"Dag 1"} />
+        </>
+      ),
     },
     {
       id: 9,
       name: "Dag 1",
-      component: <Dag1_4 route={9} title={"Dag 1"} />,
+      component: (
+        <>
+          <NavbarWithFollowers text={"maandag - 07:35"} />
+          <Dag1_4 route={9} title={"Dag 1"} />
+        </>
+      ),
     },
     {
       id: 10,
       name: "Dag 1",
-      component: <Dag1_5 route={10} title={"Dag 1"} />,
+      component: (
+        <>
+          <NavbarWithFollowers followers={100} text={"maandag - 07:35"} />
+          <Dag1_5 route={10} title={"Dag 1"} />
+        </>
+      ),
     },
     {
       id: 11,
       name: "Dag 1",
-      component: <Dag1_6 route={11} title={"Dag 1"} />,
+      component: (
+        <>
+          <NavbarWithFollowers followers={100} text={"maandag - 07:35"} />
+          <Dag1_6 route={11} title={"Dag 1"} />
+        </>
+      ),
     },
     {
       id: 12,
       name: "Dag 1",
-      component: <Dag1_7 route={12} title={"Dag 1"} />,
+      component: (
+        <>
+          <NavbarWithFollowers followers={100} text={"maandag - 07:35"} />
+          <Dag1_7 route={12} title={"Dag 1"} />
+        </>
+      ),
     },
     {
       id: 13,
       name: "Dag 1",
-      component: <Dag1_8 route={13} title={"Dag 1"} />,
+      component: (
+        <>
+          <NavbarWithFollowers followers={100} text={"maandag - 07:35"} />
+          <Dag1_8 route={13} title={"Dag 1"} />
+        </>
+      ),
     },
     {
       id: 14,
       name: "Dag 1",
-      component: <Dag1_9 route={14} title={"Dag 1"} />,
+      component: (
+        <>
+          <NavbarWithFollowers followers={100} text={"maandag - 07:35"} />
+          <Dag1_9 route={14} title={"Dag 1"} />
+        </>
+      ),
     },
     {
       id: 15,
       name: "Dag 1",
-      component: <Dag1_10 route={15} title={"Dag 1"} />,
+      component: (
+        <>
+          <NavbarWithFollowers followers={100} text={"maandag - 07:35"} />
+          <Dag1_10 route={15} title={"Dag 1"} />
+        </>
+      ),
     },
     {
       id: 16,
       name: "Dag 1",
-      component: <Dag1_11 route={16} title={"Dag 1"} />,
+      component: (
+        <>
+          <NavbarWithFollowers followers={100} text={"maandag - 07:35"} />
+          <Dag1_11 route={16} title={"Dag 1"} />
+        </>
+      ),
     },
     {
       id: 17,
       name: "Dag 1",
-      component: <Dag1_12 route={17} title={"Dag 1"} />,
+      component: (
+        <>
+          <NavbarWithFollowers followers={100} text={"maandag - 07:35"} />
+          <Dag1_12 route={17} title={"Dag 1"} />
+        </>
+      ),
     },
     {
       id: 18,
       name: "Dag 1",
-      component: <Dag1_13 route={18} title={"Dag 1"} />,
+      component: (
+        <>
+          <NavbarWithFollowers followers={100} text={"maandag - 07:35"} />
+          <Dag1_13 route={18} title={"Dag 1"} />
+        </>
+      ),
     },
   ];
 };

@@ -22,6 +22,8 @@ import Onboarding2 from "../../components/Onboarding/Onboarding2";
 import Onboarding3 from "../../components/Onboarding/Onboarding3";
 import Onboarding4 from "../../components/Onboarding/Onboarding4";
 
+import NavbarWithFollowers from "../../components/NavBar/NavBarWithFollowers";
+
 import { API_URL } from "../../constants";
 
 export default function Index({ data, ctx, succes, id }) {
