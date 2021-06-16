@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import LoadingBar from "../../components/LoadingBar/LoadingBar";
 import axios from "axios";
 import ProfilePictureForm from "../../components/Forms/ProfilePictureForm";
 import Head from "next/head";
 import DragAndDrop from "../../components/Interactive/DragAndDrop";
-import { useStoreState } from "easy-peasy";
+import { useStoreState, useStoreActions } from "easy-peasy";
 import CustomCursor from "../../components/CustomCursor/CustomCursor";
 
 import {
@@ -27,6 +27,12 @@ import { API_URL } from "../../constants";
 export default function Index({ data, ctx, succes, id }) {
   const routeId = useStoreState((state) => state.route);
 
+  const setGameData = useStoreActions((actions) => actions.setGameData);
+
+  useEffect(() => {
+    setGameData(data);
+  }, []);
+
   console.log(routeId);
 
   //Routes bepaald welke componenten er geladen worden
@@ -35,7 +41,7 @@ export default function Index({ data, ctx, succes, id }) {
     {
       id: 0,
       name: "Introductie",
-      component: <Introduction title={"Introductie"} />,
+      component: <Introduction data={data} title={"Introductie"} />,
     },
     {
       id: 1,
@@ -57,7 +63,7 @@ export default function Index({ data, ctx, succes, id }) {
       name: "Stap 4",
       component: <Onboarding4 title={"Stap 4"} />,
     },
-    ...Dag1Routes,
+    ...Dag1Routes(data),
     ...Dag2Routes,
     ...Dag3Routes,
     ...Dag4Routes,
@@ -84,10 +90,12 @@ export async function getServerSideProps(context) {
   console.log(response.data);
   if (response?.data?.length === 1) {
     console.log("Found a game");
+
     return {
       props: {
         success: true,
         id: id,
+        data: response.data,
       },
     };
   }

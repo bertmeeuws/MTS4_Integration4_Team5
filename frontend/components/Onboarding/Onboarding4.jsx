@@ -4,6 +4,8 @@ import NavBar from "../NavBar/NavBar";
 
 export default function Onboarding4() {
   const changeRoute = useStoreActions((actions) => actions.changeRoute);
+  
+
   return (
     <section className="introduction background-yellow stretch-container">
       <NavBar percent={8} />

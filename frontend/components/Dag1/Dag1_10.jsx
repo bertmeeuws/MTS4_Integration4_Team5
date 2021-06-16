@@ -5,9 +5,10 @@ export default function Dag1_10() {
   const nextRoute = useStoreActions((actions) => actions.nextRoute);
 
   return (
-    <div>
+    <section className="background-yellow stretch-container">
       1.10
-      <button onClick={(e) => nextRoute()}>Volgende</button>
-    </div>
+      <h1 className="title__m-bold">?????</h1>
+      <button onClick={(e) => nextRoute()}>Naar overzicht</button>
+    </section>
   );
 }

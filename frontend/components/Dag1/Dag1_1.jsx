@@ -6,7 +6,8 @@ export default function Dag1_1() {
 
   return (
     <section className="background-yellow stretch-container">
-      1.1
+      <h1 className="title__m-bold">Deel een foto met BuddyGram</h1>
+      <p>Maak, kies of upload een foto en deel deze op je eigen feed.</p>
       <button onClick={(e) => nextRoute()}>Volgende</button>
     </section>
   );

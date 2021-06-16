@@ -5,9 +5,9 @@ export default function Dag2_4() {
   const nextRoute = useStoreActions((actions) => actions.nextRoute);
 
   return (
-    <div>
+    <section className="background-yellow stretch-container">
       2.4
       <button onClick={(e) => nextRoute()}>Volgende</button>
-    </div>
+    </section>
   );
 }

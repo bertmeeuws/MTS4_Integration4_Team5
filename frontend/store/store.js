@@ -5,11 +5,21 @@ export const model = {
   route: 0,
   user: null,
   profile: null,
+  game_data: null,
+  current_gamer: null,
 
   //MUTATIONS
 
+  changeGamer: action((state, payload) => {
+    state.current_gamer = payload;
+  }),
+
   changeUser: action((state, payload) => {
     state.user = payload;
+  }),
+
+  setGameData: action((state, payload) => {
+    state.game_data = payload;
   }),
 
   changeProfilePicture: action((state, payload) => {

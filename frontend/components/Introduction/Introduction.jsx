@@ -1,15 +1,17 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Head from "next/head";
-import { useStoreActions } from "easy-peasy";
+import { useStoreActions, useStoreState } from "easy-peasy";
+import axios from "axios";
+import { API_URL } from "../../constants";
 
-export default function Introduction({ title }) {
-  const chooseUser = useStoreActions((actions) => actions.changeUser);
+export default function Introduction({ data }) {
+  const chooseUser = useStoreActions((actions) => actions.changeGamer);
   const changeRoute = useStoreActions((actions) => actions.changeRoute);
+  const nextRoute = useStoreActions((actions) => actions.nextRoute);
 
-  useEffect(() => {
-    changeRoute(0);
-  }, []);
+  const [game, setGame] = useState(data[0]);
+  console.log(game);
 
   return (
     <>
@@ -21,15 +23,20 @@ export default function Introduction({ title }) {
           </h1>
           <p>Klik op je naam om door te gaan.</p>
           <div className="introduction-list">
-            <button
-              className="button-secondary-white"
-              onClick={(e) => {
-                chooseUser("Ahmed Jipla");
-                changeRoute(1);
-              }}
-            >
-              Dani Armitage
-            </button>
+            {game.students.map((student) => {
+              return (
+                <button
+                  key={student.key}
+                  className="button-secondary-white"
+                  onClick={(e) => {
+                    chooseUser({ name: student.name, id: student.id });
+                    nextRoute();
+                  }}
+                >
+                  {student.name}
+                </button>
+              );
+            })}
           </div>
         </div>
       </section>

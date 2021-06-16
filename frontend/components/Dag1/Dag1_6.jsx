@@ -6,7 +6,7 @@ export default function Dag1_6({ route }) {
   return (
     <section className="background-yellow stretch-container">
       1.6
-      <button onClick={(e) => nextRoute()}>Volgende</button>
+      <button onClick={(e) => nextRoute()}>Feed afsluiten</button>
     </section>
   );
 }

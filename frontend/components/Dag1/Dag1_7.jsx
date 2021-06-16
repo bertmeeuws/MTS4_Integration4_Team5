@@ -6,7 +6,11 @@ export default function Dag1_7({ route }) {
   return (
     <section className="background-yellow stretch-container">
       1.7
-      <button onClick={(e) => nextRoute()}>Volgende</button>
+      <p>-20 volgers</p>
+      <h1 className="title__m-bold">
+        Je hebt volgers verloren omdat je online ruzie maakt
+      </h1>
+      <button onClick={(e) => nextRoute()}>Wat had ik beter gedaan?</button>
     </section>
   );
 }

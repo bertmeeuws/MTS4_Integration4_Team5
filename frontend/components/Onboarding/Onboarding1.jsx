@@ -2,7 +2,9 @@ import React from "react";
 import { useStoreActions } from "easy-peasy";
 import NavBar from "../NavBar/NavBar";
 
-export default function Onboarding1() {
+export default function Onboarding1({ data }) {
+  console.log(data);
+
   const changeRoute = useStoreActions((actions) => actions.changeRoute);
   return (
     <section className="background-yellow stretch-container">
