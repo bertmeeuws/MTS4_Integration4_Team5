@@ -58,6 +58,10 @@
   color: var(--blue);
 }
 
+.text__red {
+  color: var(--red);
+}
+
 .button__header{
   color: var(--white);
   border: none;
@@ -97,11 +101,19 @@
   box-shadow: 0rem 0rem var(--black);
 }
 
-.spacer__s{
+.spacer__s {
   height: 2rem;
 }
 
-.text__with{
+.spacer__m {
+  height: 4rem;
+}
+
+.spacer__l {
+  height: 8rem;
+}
+
+.text__with {
   width: 58rem;
 }
 
@@ -143,6 +155,15 @@
   color: var(--black);
 }
 
+.mark-yellow2 {
+  background-color: var(--yellow);
+  border-radius: 10rem;
+  padding-left: 2rem;
+  margin-left: -2rem;
+  padding-right: 2rem;
+  color: var(--white);
+}
+
 .mark-red {
   background-color: var(--red);
   border-radius: 10rem;
@@ -152,8 +173,24 @@
   color: var(--black);
 }
 
+.mark-red2 {
+  background-color: var(--red);
+  border-radius: 10rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  color: var(--black);
+}
+
 .mark-blue {
   background-color: var(--blue);
+  border-radius: 10rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  color: var(--white);
+}
+
+.mark-turquoise {
+  background-color: var(--turquoise);
   border-radius: 10rem;
   padding-left: 2rem;
   padding-right: 2rem;

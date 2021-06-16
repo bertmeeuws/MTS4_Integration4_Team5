@@ -68,7 +68,6 @@ export default function Home() {
                     alt="pijltje naar onder"
                   />
                 </div>
-
               
             </div>
 
@@ -83,6 +82,7 @@ export default function Home() {
             
             <article className="info__container-left">
               <span className="text__m-bold text__blue">Hoe werkt het?</span>
+              <div className="spacer__s"></div>
               <h2 className="title__m-bold">Leer jongeren omgaan met verschillende online situaties met deze <mark className="mark-blue">interactieve</mark> beleving.</h2>
               <div className="spacer__s"></div>
               <p className="text__m-normal text__with">De 13 tot 15 jarigen gaan met verschillende scenario’s aan de slag om zo de negatieve kant van social media te leren kennen.</p>
@@ -110,15 +110,79 @@ export default function Home() {
           <div className="info__wrapper-blue">
             
             <div className="info__container-2">
+              
+              <article className="info__container-center">
+                <span className="text__m-bold text__white">De gevolgen van cyberpesten</span>
+                <div className="spacer__s"></div>
+                <h2 className="title__m-bold text__white">"Hoe <mark className="mark-turquoise">10</mark> minuten op instagram mijn dag verpestte.”</h2>
+                <div className="spacer__s"></div>
+                <p className="text__m-normal text__white">Katrien, 13 jaar</p>
+              </article>
 
             </div>
 
           </div>
 
           <div className="info__wrapper-yellow">
-            
+
             <div className="info__container-3">
 
+              <div className="car__container box__shadow">
+                
+                <div className="car__top"></div>
+
+                <div className="car__info">
+                  <h2 className="title__m-bold">Als <mark className="mark-blue">leerkracht</mark> heb je zicht op hoe de leerlingen presteren.</h2>
+                  <div className="spacer__s"></div>
+                  <p className="text__m-normal text__with">Via het leerkrachtenpaneel kan je ‘Buddy or Bully’ opstarten en delen met je studenten. Daarnaast heb je ook zicht op de resultaten van de studenten en kan je de focus van de lessen leggen waar nodig.</p>
+                </div>
+
+                <div className="car__nav-container">
+                  <span className="car__nav-item title__s-bold">1</span>
+                  <span className="car__nav-item title__s-bold">2</span>
+                  <span className="car__nav-item title__s-bold">3</span>
+                  <span className="car__nav-item title__s-bold">4</span>
+                </div>
+
+              </div>
+
+              <div className="image__gridYellow">
+                <img
+                  className="gridYellow"
+                  src="/assets/img/gridYellow.svg"
+                  width={528}
+                  height={671}
+                  alt="grid illustratie"
+                />
+              </div>
+              
+              <div className="spacer__l"></div>
+
+              <article className="info__container-left">
+                <span className="text__m-bold text__blue">Volle controle</span>
+                <div className="spacer__s"></div>
+                <h2 className="title__m-bold">Als <mark className="mark-blue">leerkracht</mark> heb je zicht op hoe de leerlingen presteren.</h2>
+                <div className="spacer__s"></div>
+                <p className="text__m-normal text__with">Via het leerkrachtenpaneel kan je ‘Buddy or Bully’ opstarten en delen met je studenten. Daarnaast heb je ook zicht op de resultaten van de studenten en kan je de focus van de lessen leggen waar nodig.</p>
+              </article>
+
+              <div className="spacer__m"></div>
+
+              <div className="buttons__container">
+                <Link href="/register">
+                  <span className="button__primary">login als leerkracht</span>
+                </Link>
+              </div>
+
+            </div>
+
+            <div className="image__blocksYellow">
+              <Image
+                src="/assets/img/blocksYellow.svg"
+                width={500}
+                height={300}
+                alt="gele blokjes illustratie"
+              />
             </div>
 
           </div>
@@ -126,6 +190,12 @@ export default function Home() {
           <div className="info__wrapper-white">
 
             <div className="info__container-4">
+
+              <article className="info__container-center">
+                <span className="text__m-bold text__red">De kracht van reflectie</span>
+                <div className="spacer__s"></div>
+                <h2 className="title__m-bold">Neem vervolgens de kans om er met de leerlingen <mark className="mark-red2">openhartig</mark> over te spreken</h2>
+              </article>
 
             </div>
 
@@ -140,14 +210,38 @@ export default function Home() {
           </div>
 
           <div className="info__wrapper-blue">
+
+            <div className="grid-blue"></div>
             
             <div className="info__container-5">
+
+              <article className="info__container-center">
+                <h2 className="title__l-bold text__white">"Buddy or Bully is <mark className="mark-yellow2">helemaal</mark> gratis</h2>
+                <div className="spacer__s"></div>
+                <p className="text__m-normal text__white">Als school en leerkracht hoef je niets te betalen. Je krijgt meteen toegang tot een dashboard waarop je als leerkracht het spel kan opstarten voor de studenten.</p>
+                <div className="spacer__m"></div>
+              </article>
+
+              <div className="buttons__container-center">
+                <Link href="/register">
+                  <span className="button__primary">login als leerkracht</span>
+                </Link>
+              </div>
 
             </div>
 
           </div>
+
         </main>
-        
+
+        <footer className="footer__container">
+          
+          <div className="footer__wrapper">
+            <p className="title__m-bold text__white">intergration 4</p>
+            <p className="title__m-bold text__white">devine</p>
+          </div>
+
+        </footer>
         
         
         
