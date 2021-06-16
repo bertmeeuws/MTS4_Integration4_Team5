@@ -68,7 +68,7 @@ export const Dag1Routes = (game) => {
       component: (
         <>
           <NavbarWithFollowers text={"maandag - 07:35"} />
-          <Dag1_1 route={6} title={"Dag 1"} />
+          <Dag1_1 data={game[0]} route={6} title={"Dag 1"} />
         </>
       ),
     },
@@ -78,7 +78,7 @@ export const Dag1Routes = (game) => {
       component: (
         <>
           <NavbarWithFollowers text={"maandag - 07:35"} />
-          <Dag1_2 route={7} title={"Dag 1"} />
+          <Dag1_2 data={game[0]} route={7} title={"Dag 1"} />
         </>
       ),
     },
@@ -88,7 +88,7 @@ export const Dag1Routes = (game) => {
       component: (
         <>
           <NavbarWithFollowers text={"maandag - 07:35"} />
-          <Dag1_3 route={8} title={"Dag 1"} />
+          <Dag1_3 data={game[0]} route={8} title={"Dag 1"} />
         </>
       ),
     },
@@ -98,7 +98,7 @@ export const Dag1Routes = (game) => {
       component: (
         <>
           <NavbarWithFollowers text={"maandag - 07:35"} />
-          <Dag1_4 route={9} title={"Dag 1"} />
+          <Dag1_4 data={game[0]} route={9} title={"Dag 1"} />
         </>
       ),
     },
@@ -108,7 +108,7 @@ export const Dag1Routes = (game) => {
       component: (
         <>
           <NavbarWithFollowers followers={100} text={"maandag - 07:35"} />
-          <Dag1_5 route={10} title={"Dag 1"} />
+          <Dag1_5 data={game[0]} route={10} title={"Dag 1"} />
         </>
       ),
     },
@@ -118,7 +118,7 @@ export const Dag1Routes = (game) => {
       component: (
         <>
           <NavbarWithFollowers followers={100} text={"maandag - 07:35"} />
-          <Dag1_6 route={11} title={"Dag 1"} />
+          <Dag1_6 data={game[0]} route={11} title={"Dag 1"} />
         </>
       ),
     },
@@ -128,7 +128,7 @@ export const Dag1Routes = (game) => {
       component: (
         <>
           <NavbarWithFollowers followers={100} text={"maandag - 07:35"} />
-          <Dag1_7 route={12} title={"Dag 1"} />
+          <Dag1_7 data={game[0]} route={12} title={"Dag 1"} />
         </>
       ),
     },
@@ -138,7 +138,7 @@ export const Dag1Routes = (game) => {
       component: (
         <>
           <NavbarWithFollowers followers={100} text={"maandag - 07:35"} />
-          <Dag1_8 route={13} title={"Dag 1"} />
+          <Dag1_8 data={game[0]} route={13} title={"Dag 1"} />
         </>
       ),
     },
@@ -148,7 +148,7 @@ export const Dag1Routes = (game) => {
       component: (
         <>
           <NavbarWithFollowers followers={100} text={"maandag - 07:35"} />
-          <Dag1_9 route={14} title={"Dag 1"} />
+          <Dag1_9 data={game[0]} route={14} title={"Dag 1"} />
         </>
       ),
     },
@@ -158,7 +158,7 @@ export const Dag1Routes = (game) => {
       component: (
         <>
           <NavbarWithFollowers followers={100} text={"maandag - 07:35"} />
-          <Dag1_10 route={15} title={"Dag 1"} />
+          <Dag1_10 data={game[0]} route={15} title={"Dag 1"} />
         </>
       ),
     },
@@ -168,7 +168,7 @@ export const Dag1Routes = (game) => {
       component: (
         <>
           <NavbarWithFollowers followers={100} text={"maandag - 07:35"} />
-          <Dag1_11 route={16} title={"Dag 1"} />
+          <Dag1_11 data={game[0]} route={16} title={"Dag 1"} />
         </>
       ),
     },
@@ -178,7 +178,7 @@ export const Dag1Routes = (game) => {
       component: (
         <>
           <NavbarWithFollowers followers={100} text={"maandag - 07:35"} />
-          <Dag1_12 route={17} title={"Dag 1"} />
+          <Dag1_12 data={game[0]} route={17} title={"Dag 1"} />
         </>
       ),
     },
@@ -188,176 +188,184 @@ export const Dag1Routes = (game) => {
       component: (
         <>
           <NavbarWithFollowers followers={100} text={"maandag - 07:35"} />
-          <Dag1_13 route={18} title={"Dag 1"} />
+          <Dag1_13 data={game[0]} route={18} title={"Dag 1"} />
         </>
       ),
     },
   ];
 };
 
-export const Dag2Routes = [
-  {
-    id: 19,
-    name: "Dag 2",
-    component: <Dag2 route={15} title={"Dag 2"} />,
-  },
-  {
-    id: 19,
-    name: "Dag 2",
-    component: <Dag2_1 route={15} title={"Dag 2"} />,
-  },
-  {
-    id: 19,
-    name: "Dag 2",
-    component: <Dag2_2 route={15} title={"Dag 2"} />,
-  },
-  {
-    id: 19,
-    name: "Dag 2",
-    component: <Dag2_3 route={15} title={"Dag 2"} />,
-  },
-  {
-    id: 19,
-    name: "Dag 2",
-    component: <Dag2_4 route={15} title={"Dag 2"} />,
-  },
-  {
-    id: 19,
-    name: "Dag 2",
-    component: <Dag2_5 route={15} title={"Dag 2"} />,
-  },
-  {
-    id: 19,
-    name: "Dag 2",
-    component: <Dag2_6 route={15} title={"Dag 2"} />,
-  },
-  {
-    id: 19,
-    name: "Dag 2",
-    component: <Dag2_7 route={15} title={"Dag 2"} />,
-  },
-];
+export const Dag2Routes = (game) => {
+  return [
+    {
+      id: 19,
+      name: "Dag 2",
+      component: <Dag2 data={game[0]} route={15} title={"Dag 2"} />,
+    },
+    {
+      id: 19,
+      name: "Dag 2",
+      component: <Dag2_1 data={game[0]} route={15} title={"Dag 2"} />,
+    },
+    {
+      id: 19,
+      name: "Dag 2",
+      component: <Dag2_2 data={game[0]} route={15} title={"Dag 2"} />,
+    },
+    {
+      id: 19,
+      name: "Dag 2",
+      component: <Dag2_3 data={game[0]} route={15} title={"Dag 2"} />,
+    },
+    {
+      id: 19,
+      name: "Dag 2",
+      component: <Dag2_4 data={game[0]} route={15} title={"Dag 2"} />,
+    },
+    {
+      id: 19,
+      name: "Dag 2",
+      component: <Dag2_5 data={game[0]} route={15} title={"Dag 2"} />,
+    },
+    {
+      id: 19,
+      name: "Dag 2",
+      component: <Dag2_6 data={game[0]} route={15} title={"Dag 2"} />,
+    },
+    {
+      id: 19,
+      name: "Dag 2",
+      component: <Dag2_7 data={game[0]} route={15} title={"Dag 2"} />,
+    },
+  ];
+};
 
-export const Dag3Routes = [
-  {
-    id: 19,
-    name: "Dag 3",
-    component: <Dag3 route={15} title={"Dag 2"} />,
-  },
-  {
-    id: 19,
-    name: "Dag 3",
-    component: <Dag3_1 route={15} title={"Dag 2"} />,
-  },
-  {
-    id: 19,
-    name: "Dag 3",
-    component: <Dag3_2 route={15} title={"Dag 2"} />,
-  },
-  {
-    id: 19,
-    name: "Dag 3",
-    component: <Dag3_3 route={15} title={"Dag 2"} />,
-  },
-  {
-    id: 19,
-    name: "Dag 3",
-    component: <Dag3_4 route={15} title={"Dag 2"} />,
-  },
-  {
-    id: 19,
-    name: "Dag 3",
-    component: <Dag3_5 route={15} title={"Dag 2"} />,
-  },
-  {
-    id: 19,
-    name: "Dag 3",
-    component: <Dag3_6 route={15} title={"Dag 2"} />,
-  },
-];
+export const Dag3Routes = (game) => {
+  return [
+    {
+      id: 19,
+      name: "Dag 3",
+      component: <Dag3 data={game[0]} route={15} title={"Dag 2"} />,
+    },
+    {
+      id: 19,
+      name: "Dag 3",
+      component: <Dag3_1 data={game[0]} route={15} title={"Dag 2"} />,
+    },
+    {
+      id: 19,
+      name: "Dag 3",
+      component: <Dag3_2 data={game[0]} route={15} title={"Dag 2"} />,
+    },
+    {
+      id: 19,
+      name: "Dag 3",
+      component: <Dag3_3 data={game[0]} route={15} title={"Dag 2"} />,
+    },
+    {
+      id: 19,
+      name: "Dag 3",
+      component: <Dag3_4 data={game[0]} route={15} title={"Dag 2"} />,
+    },
+    {
+      id: 19,
+      name: "Dag 3",
+      component: <Dag3_5 data={game[0]} route={15} title={"Dag 2"} />,
+    },
+    {
+      id: 19,
+      name: "Dag 3",
+      component: <Dag3_6 data={game[0]} route={15} title={"Dag 2"} />,
+    },
+  ];
+};
 
-export const Dag4Routes = [
-  {
-    id: 19,
-    name: "Dag 4",
-    component: <Dag4 route={15} title={"Dag 2"} />,
-  },
-  {
-    id: 19,
-    name: "Dag 4",
-    component: <Dag4_1 route={15} title={"Dag 2"} />,
-  },
-  {
-    id: 19,
-    name: "Dag 4",
-    component: <Dag4_2 route={15} title={"Dag 2"} />,
-  },
-  {
-    id: 19,
-    name: "Dag 4",
-    component: <Dag4_3 route={15} title={"Dag 2"} />,
-  },
-  {
-    id: 19,
-    name: "Dag 4",
-    component: <Dag4_4 route={15} title={"Dag 2"} />,
-  },
-  {
-    id: 19,
-    name: "Dag 4",
-    component: <Dag4_5 route={15} title={"Dag 2"} />,
-  },
-  {
-    id: 19,
-    name: "Dag 4",
-    component: <Dag4_6 route={15} title={"Dag 2"} />,
-  },
-];
+export const Dag4Routes = (game) => {
+  return [
+    {
+      id: 19,
+      name: "Dag 4",
+      component: <Dag4 data={game[0]} route={15} title={"Dag 2"} />,
+    },
+    {
+      id: 19,
+      name: "Dag 4",
+      component: <Dag4_1 data={game[0]} route={15} title={"Dag 2"} />,
+    },
+    {
+      id: 19,
+      name: "Dag 4",
+      component: <Dag4_2 data={game[0]} route={15} title={"Dag 2"} />,
+    },
+    {
+      id: 19,
+      name: "Dag 4",
+      component: <Dag4_3 data={game[0]} route={15} title={"Dag 2"} />,
+    },
+    {
+      id: 19,
+      name: "Dag 4",
+      component: <Dag4_4 data={game[0]} route={15} title={"Dag 2"} />,
+    },
+    {
+      id: 19,
+      name: "Dag 4",
+      component: <Dag4_5 data={game[0]} route={15} title={"Dag 2"} />,
+    },
+    {
+      id: 19,
+      name: "Dag 4",
+      component: <Dag4_6 data={game[0]} route={15} title={"Dag 2"} />,
+    },
+  ];
+};
 
-export const Dag5Routes = [
-  {
-    id: 19,
-    name: "Dag 5",
-    component: <Dag5 route={15} title={"Dag 2"} />,
-  },
-  {
-    id: 19,
-    name: "Dag 5",
-    component: <Dag5_1 route={15} title={"Dag 2"} />,
-  },
-  {
-    id: 19,
-    name: "Dag 5",
-    component: <Dag5_2 route={15} title={"Dag 2"} />,
-  },
-  {
-    id: 19,
-    name: "Dag 5",
-    component: <Dag5_3 route={15} title={"Dag 2"} />,
-  },
-  {
-    id: 19,
-    name: "Dag 5",
-    component: <Dag5_4 route={15} title={"Dag 2"} />,
-  },
-  {
-    id: 19,
-    name: "Dag 5",
-    component: <Dag5_5 route={15} title={"Dag 2"} />,
-  },
-  {
-    id: 19,
-    name: "Dag 5",
-    component: <Dag5_6 route={15} title={"Dag 2"} />,
-  },
-  {
-    id: 19,
-    name: "Dag 5",
-    component: <Dag5_7 route={15} title={"Dag 2"} />,
-  },
-  {
-    id: 19,
-    name: "Dag 5",
-    component: <Dag5_8 route={15} title={"Dag 2"} />,
-  },
-];
+export const Dag5Routes = (game) => {
+  return [
+    {
+      id: 19,
+      name: "Dag 5",
+      component: <Dag5 data={game[0]} route={15} title={"Dag 2"} />,
+    },
+    {
+      id: 19,
+      name: "Dag 5",
+      component: <Dag5_1 data={game[0]} route={15} title={"Dag 2"} />,
+    },
+    {
+      id: 19,
+      name: "Dag 5",
+      component: <Dag5_2 data={game[0]} route={15} title={"Dag 2"} />,
+    },
+    {
+      id: 19,
+      name: "Dag 5",
+      component: <Dag5_3 data={game[0]} route={15} title={"Dag 2"} />,
+    },
+    {
+      id: 19,
+      name: "Dag 5",
+      component: <Dag5_4 data={game[0]} route={15} title={"Dag 2"} />,
+    },
+    {
+      id: 19,
+      name: "Dag 5",
+      component: <Dag5_5 data={game[0]} route={15} title={"Dag 2"} />,
+    },
+    {
+      id: 19,
+      name: "Dag 5",
+      component: <Dag5_6 data={game[0]} route={15} title={"Dag 2"} />,
+    },
+    {
+      id: 19,
+      name: "Dag 5",
+      component: <Dag5_7 data={game[0]} route={15} title={"Dag 2"} />,
+    },
+    {
+      id: 19,
+      name: "Dag 5",
+      component: <Dag5_8 data={game[0]} route={15} title={"Dag 2"} />,
+    },
+  ];
+};
