@@ -4,9 +4,21 @@ import CustomCursor from "../components/CustomCursor/CustomCursor";
 import { useStoreState } from "easy-peasy";
 import Image from "next/image";
 import Link from "next/link";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
 
 export default function Home() {
   //DIT IS DE HOME PAGINA
+
+
+  var settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1
+  };
 
   return (
     <>
@@ -129,20 +141,56 @@ export default function Home() {
 
               <div className="car__container box__shadow">
                 
-                <div className="car__top"></div>
-
-                <div className="car__info">
-                  <h2 className="title__m-bold">Als <mark className="mark-blue">leerkracht</mark> heb je zicht op hoe de leerlingen presteren.</h2>
-                  <div className="spacer__s"></div>
-                  <p className="text__m-normal text__with">Via het leerkrachtenpaneel kan je ‘Buddy or Bully’ opstarten en delen met je studenten. Daarnaast heb je ook zicht op de resultaten van de studenten en kan je de focus van de lessen leggen waar nodig.</p>
+                <div className="car__top">
+                  
+                  <p className="title__s-bold">stappen tot succes</p>
+                  
+                  <div className="car__cross">
+                    <Image
+                      src="/assets/img/crossBlack.svg"
+                      width={25}
+                      height={25}
+                      alt="kruisje om kader af te sluiten"
+                    />
+                  </div>
                 </div>
 
-                <div className="car__nav-container">
+                <div className="car__info">
+                  <Slider {...settings}>
+                    <div>
+                      <h2 className="title__m-bold">1: <mark className="mark-blue">registreer</mark> je als leerkracht.</h2>
+                      <div className="spacer__s"></div>
+                      <p className="text__m-normal text__with">Maak een account aan als leerkracht en krijg toegang tot het paneel. Star daar een nieuwe ervaring voor jouw leerlingen</p>
+                    </div>
+                    <div>
+                      <h2 className="title__m-bold">2:<mark className="mark-blue">registreer</mark> je als leerkracht.</h2>
+                      <div className="spacer__s"></div>
+                      <p className="text__m-normal text__with">Maak een account aan als leerkracht en krijg toegang tot het paneel. Star daar een nieuwe ervaring voor jouw leerlingen</p>
+                    </div>
+                    <div>
+                      <h2 className="title__m-bold">3:<mark className="mark-blue">registreer</mark> je als leerkracht.</h2>
+                      <div className="spacer__s"></div>
+                      <p className="text__m-normal text__with">Maak een account aan als leerkracht en krijg toegang tot het paneel. Star daar een nieuwe ervaring voor jouw leerlingen</p>
+                    </div>
+                    <div>
+                      <h2 className="title__m-bold">4: <mark className="mark-blue">registreer</mark> je als leerkracht.</h2>
+                      <div className="spacer__s"></div>
+                      <p className="text__m-normal text__with">Maak een account aan als leerkracht en krijg toegang tot het paneel. Star daar een nieuwe ervaring voor jouw leerlingen</p>
+                    </div>
+                    <div>
+                      <h2 className="title__m-bold">5: <mark className="mark-blue">registreer</mark> je als leerkracht.</h2>
+                      <div className="spacer__s"></div>
+                      <p className="text__m-normal text__with">Maak een account aan als leerkracht en krijg toegang tot het paneel. Star daar een nieuwe ervaring voor jouw leerlingen</p>
+                    </div>
+                  </Slider>
+                </div>
+          
+                {/* <div className="car__nav-container">
                   <span className="car__nav-item title__s-bold">1</span>
                   <span className="car__nav-item title__s-bold">2</span>
                   <span className="car__nav-item title__s-bold">3</span>
                   <span className="car__nav-item title__s-bold">4</span>
-                </div>
+                </div> */}
 
               </div>
 
@@ -229,9 +277,7 @@ export default function Home() {
               </div>
 
             </div>
-
           </div>
-
         </main>
 
         <footer className="footer__container">

@@ -182,9 +182,8 @@
   border: 1rem solid var(--black);
   background: var(--white);
   transform: translate(0rem, -10rem);
-  display: grid;
-  grid-template-columns: 10rem 1fr 10rem;
-  grid-template-rows: 6rem 1fr 10rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .car__nav-container {
@@ -193,7 +192,6 @@
   align-items: center;
   width: 27rem;
   grid-row: 3;
-  grid-column: 1/4;
   align-self: center;
   justify-self: center;
 }
@@ -210,20 +208,28 @@
 }
 
 .car__top{
-  background-color: blue;
+  background-color: var(--turquoise);
   border-bottom: 1rem solid var(--black);
   grid-row: 1;
-  grid-column: 1/4;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 4rem;
+  height: 6rem;
 }
 
-.car__info{
+.car__cross {
+  background-color: var(--red);
+  border-left: 1rem solid var(--black);
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  text-align: center;
-  grid-row: 2;
-  grid-column: 2;
+  width: 6rem;
+  height: 100%;
+}
+
+.car__info{
+  
 }
 
 .info__wrapper-blue{
