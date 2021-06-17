@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { API_URL } from "../../constants";
 import { useStoreActions } from "easy-peasy";
 import axios from "axios";
+import Background from "../Background/Background";
+
 
 export default function Dag2_6({ data }) {
   const nextRoute = useStoreActions((actions) => actions.nextRoute);
@@ -26,6 +28,8 @@ export default function Dag2_6({ data }) {
   return (
     <section className="background-yellow stretch-container">
       2.6
+      <Background />
+
       <div className="game-wrapper">
         <h1 className="title__m-bold">OVERZICHT</h1>
         {students.map((student) => {

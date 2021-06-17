@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useStoreActions } from "easy-peasy";
 import { API_URL } from "../../constants";
 import axios from "axios";
+import Background from "../Background/Background";
 
 export default function Dag4_5() {
   const nextRoute = useStoreActions((actions) => actions.nextRoute);
@@ -26,6 +27,8 @@ export default function Dag4_5() {
   return (
     <section className="background-yellow stretch-container">
       4.5
+      <Background />
+
       {students.map((student) => {
         return (
           <p>

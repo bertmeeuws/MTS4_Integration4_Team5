@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { action, useStoreActions, useStoreState } from "easy-peasy";
 import axios from "axios";
 import { API_URL } from "../../constants";
+import Background from "../Background/Background";
 
 export default function Dag1_3({ route, data }) {
   console.log(data);
@@ -29,6 +30,8 @@ export default function Dag1_3({ route, data }) {
 
   return (
     <section className="background-yellow stretch-container">
+      <Background />
+
       <div className="game-wrapper">
         <h1 className="title__m-bold ">Jouw foto staat online!</h1>
         <p className="game__upload-subtext">

@@ -1,11 +1,13 @@
 import React from "react";
 import { useStoreActions } from "easy-peasy";
+import Background from "../Background/Background";
 
 export default function Dag1_2({ route }) {
   const nextRoute = useStoreActions((actions) => actions.nextRoute);
   return (
     <section className="background-yellow stretch-container">
       1.2
+      <Background />
       <div className="game-wrapper">
         <h1 className="title__m-bold">Sleep je foto in de feed!</h1>
         <p className="game__upload-subtext text__m-normal">

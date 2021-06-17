@@ -62,16 +62,16 @@
   color: var(--red);
 }
 
-.button__header{
+.button__header {
   color: var(--white);
   border: none;
   outline: none;
   background: transparent;
 }
 
-.button__primary{
+.button__primary {
   border: 1rem solid var(--black);
-  padding: .5rem 1rem .5rem 1rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
   background-color: var(--blue);
   color: var(--white);
   z-index: 100;
@@ -80,14 +80,14 @@
   transition: 0.1s;
 }
 
-.button__primary:hover{
+.button__primary:hover {
   transform: translate(-1rem, 1rem);
   box-shadow: 0rem 0rem var(--black);
 }
 
-.button__secondary{
+.button__secondary {
   border: 1rem solid var(--black);
-  padding: .5rem 1rem .5rem 1rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
   background-color: var(--white);
   color: var(--black);
   z-index: 100;
@@ -96,7 +96,7 @@
   transition: 0.1s;
 }
 
-.button__secondary:hover{
+.button__secondary:hover {
   transform: translate(-1rem, 1rem);
   box-shadow: 0rem 0rem var(--black);
 }
@@ -116,14 +116,6 @@
 .text__with {
   width: 58rem;
 }
-
-
-
-
-
-
-
-
 
 .p {
   font-size: 2.4rem;
@@ -218,7 +210,7 @@
 .auth-input {
   padding-left: 1rem;
   border: none;
-  border-bottom: .2rem solid var(--black);
+  border-bottom: 0.2rem solid var(--black);
   max-width: 40rem;
   outline: none;
   font-family: Poppins;
@@ -280,6 +272,7 @@
 
 .background-yellow {
   background-color: var(--yellow);
+  overflow-y: hidden;
 }
 
 .stretch-container {
@@ -321,7 +314,7 @@
   height: 100%;
 }
 
-.nav-container{
+.nav-container {
   width: 108rem;
   margin: 0 auto;
   display: flex;

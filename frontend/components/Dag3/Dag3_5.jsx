@@ -1,5 +1,7 @@
 import React from "react";
 import { useStoreActions } from "easy-peasy";
+import Background from "../Background/Background";
+
 
 export default function Dag3_5() {
   const nextRoute = useStoreActions((actions) => actions.nextRoute);
@@ -7,6 +9,8 @@ export default function Dag3_5() {
   return (
     <section className="background-yellow stretch-container">
       3.5
+      <Background />
+
       <div className="game-wrapper">
         <div className="game__textBox">
           <p className="text-center text__m-normal">-20 PENALTY HERE</p>

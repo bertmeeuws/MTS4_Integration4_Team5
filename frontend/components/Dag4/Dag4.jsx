@@ -1,5 +1,6 @@
 import React from "react";
 import { useStoreActions } from "easy-peasy";
+import Background from "../Background/Background";
 
 export default function Dag4() {
   const nextRoute = useStoreActions((actions) => actions.nextRoute);
@@ -7,6 +8,8 @@ export default function Dag4() {
   return (
     <section className="background-yellow stretch-container">
       4.
+      <Background />
+
       <div className="game-wrapper">
         <div className="game__textBox">
           <h1 className="title__m-bold">

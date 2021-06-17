@@ -1,5 +1,6 @@
 import React from "react";
 import { useStoreActions } from "easy-peasy";
+import Background from "../Background/Background";
 
 
 export default function Dag4_6() {
@@ -8,6 +9,8 @@ export default function Dag4_6() {
   return (
     <div>
       4.6
+      <Background />
+
       <button onClick={(e) => nextRoute()}>Volgende</button>
     </div>
   );

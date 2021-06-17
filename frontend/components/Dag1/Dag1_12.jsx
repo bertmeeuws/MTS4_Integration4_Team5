@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { useStoreActions, useStoreState } from "easy-peasy";
 import { API_URL } from "../../constants";
 import axios from "axios";
+import Background from "../Background/Background";
+
 
 export default function Dag1_12({ data }) {
   const nextRoute = useStoreActions((actions) => actions.nextRoute);
@@ -25,6 +27,7 @@ export default function Dag1_12({ data }) {
 
   return (
     <section className="background-yellow stretch-container">
+      <Background />
       1.12
       <div className="game-wrapper">
         <h1 className="title__m-bold">OVERZICHT LIJSTJE</h1>

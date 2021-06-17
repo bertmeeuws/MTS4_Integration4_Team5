@@ -1,4 +1,5 @@
 import React from "react";
+import Background from "../Background/Background";
 import { useStoreActions } from "easy-peasy";
 
 export default function Dag2_2() {
@@ -6,6 +7,7 @@ export default function Dag2_2() {
 
   return (
     <section className="background-yellow stretch-container">
+      <Background />
       2.2
       <div className="game-wrapper">
         <p>

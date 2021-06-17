@@ -1,11 +1,14 @@
 import React from "react";
 import { useStoreActions } from "easy-peasy";
+import Background from "../Background/Background";
+
 
 export default function Dag2_1() {
   const nextRoute = useStoreActions((actions) => actions.nextRoute);
 
   return (
     <section className="background-yellow stretch-container">
+      <Background />
       2.1
       <div className="game-wrapper">
         <h1 className="title__m-bold game__textBox">

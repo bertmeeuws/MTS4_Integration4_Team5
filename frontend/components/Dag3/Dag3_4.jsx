@@ -1,5 +1,7 @@
 import React from "react";
 import { useStoreActions } from "easy-peasy";
+import Background from "../Background/Background";
+
 
 export default function Dag3_4() {
   const nextRoute = useStoreActions((actions) => actions.nextRoute);
@@ -7,6 +9,8 @@ export default function Dag3_4() {
   return (
     <section className="background-yellow stretch-container">
       3.4
+      <Background />
+
       <div className="game-wrapper">
         <h1 className="title__m-bold">
           Er bestaat een functie om likes onzichtbaar te zetten. <br />

@@ -1,5 +1,6 @@
 import React from "react";
 import { useStoreActions } from "easy-peasy";
+import Background from "../Background/Background";
 
 export default function Dag5_1() {
   const nextRoute = useStoreActions((actions) => actions.nextRoute);
@@ -7,6 +8,8 @@ export default function Dag5_1() {
   return (
     <section className="background-yellow stretch-container">
       5.1 Leerkracht foto
+      <Background />
+
       <div className="game-wrapper">
         <p></p>
         <button

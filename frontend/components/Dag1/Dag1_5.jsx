@@ -2,6 +2,7 @@ import React from "react";
 import { useStoreActions, useStoreState } from "easy-peasy";
 import axios from "axios";
 import { API_URL } from "../../constants";
+import Background from "../Background/Background";
 
 export default function Dag1_5({ route }) {
   const nextRoute = useStoreActions((actions) => actions.nextRoute);
@@ -55,6 +56,7 @@ export default function Dag1_5({ route }) {
   return (
     <section className="background-yellow stretch-container">
       1.5
+      <Background />
       <div className="game-wrapper">
         {choices.map((choice) => {
           return (

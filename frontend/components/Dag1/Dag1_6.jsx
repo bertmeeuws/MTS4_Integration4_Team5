@@ -1,5 +1,7 @@
 import React from "react";
 import { useStoreActions, useStoreState } from "easy-peasy";
+import Background from "../Background/Background";
+
 
 export default function Dag1_6({ route }) {
   const nextRoute = useStoreActions((actions) => actions.nextRoute);
@@ -12,6 +14,8 @@ export default function Dag1_6({ route }) {
   return (
     <section className="background-yellow stretch-container">
       1.6
+      <Background />
+
       <div className="game-wrapper">
         <p>{answer.text}</p>
         <button

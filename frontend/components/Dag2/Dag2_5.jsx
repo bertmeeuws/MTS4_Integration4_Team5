@@ -1,5 +1,6 @@
 import React from "react";
 import { useStoreActions } from "easy-peasy";
+import Background from "../Background/Background";
 
 export default function Dag2_5() {
   const nextRoute = useStoreActions((actions) => actions.nextRoute);
@@ -7,6 +8,7 @@ export default function Dag2_5() {
   return (
     <section className="background-yellow stretch-container">
       2.5
+      <Background />
       <div className="game-wrapper">
         <h1 className="title__m-bold game__textBox text-center">
           Vergeet nooit uit te loggen op sociale media als je een openbaar
@@ -20,6 +22,7 @@ export default function Dag2_5() {
           Naar overzicht
         </button>
       </div>
+      <Background />
     </section>
   );
 }

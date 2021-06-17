@@ -1,5 +1,7 @@
 import React from "react";
 import { useStoreActions, useStoreState } from "easy-peasy";
+import Background from "../Background/Background";
+
 
 export default function Dag1_7({ route }) {
   const nextRoute = useStoreActions((actions) => actions.nextRoute);
@@ -12,6 +14,7 @@ export default function Dag1_7({ route }) {
   return (
     <section className="background-yellow stretch-container">
       <div className="game-wrapper">
+      <Background />
         1.7
         <div className="game__textBox">
           <p>-20 volgers</p>
