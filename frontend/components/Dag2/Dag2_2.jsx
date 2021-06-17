@@ -7,11 +7,25 @@ export default function Dag2_2() {
   return (
     <section className="background-yellow stretch-container">
       2.2
-      <h1 className="title__m-bold">
-        Iemand heeft toegang gehad tot jouw accent en heeft een vreemde post op
-        jouw feed gezet.
-      </h1>
-      <button onClick={(e) => nextRoute()}>Swipe om te ontgrendelen</button>
+      <div className="game-wrapper">
+        <p>
+          Ik had gisteren alle antwoorden van het examen in mijn pennenzak
+          gestopt.
+        </p>
+
+        <button
+          className="button__primary text__m-bold button__game-next"
+          onClick={(e) => nextRoute()}
+        >
+          Post behouden
+        </button>
+        <button
+          className="button__primary text__m-bold button__game-next"
+          onClick={(e) => nextRoute()}
+        >
+          Post verwijderen
+        </button>
+      </div>
     </section>
   );
 }

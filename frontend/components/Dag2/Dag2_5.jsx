@@ -7,12 +7,19 @@ export default function Dag2_5() {
   return (
     <section className="background-yellow stretch-container">
       2.5
-      <p>-20 Volgers</p>
-      <h1 className="title__m-bold">
-        Je hebt volgers verloren omdat je de post niet verwijderd.
-      </h1>
-   
-      <button onClick={(e) => nextRoute()}>Wat had ik beter gedaan?</button>
+      <div className="game-wrapper">
+        <h1 className="title__m-bold">
+          Vergeet nooit uit te loggen op sociale media als je een openbaar
+          toestel gebruikt hebt.
+        </h1>
+
+        <button
+          className="button__primary text__m-bold button__game-next"
+          onClick={(e) => nextRoute()}
+        >
+          Naar overzicht
+        </button>
+      </div>
     </section>
   );
 }

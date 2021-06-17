@@ -5,8 +5,21 @@ export default function Dag3() {
   const nextRoute = useStoreActions((actions) => actions.nextRoute);
 
   return (
-    <div>
-      3<button onClick={(e) => nextRoute()}>Volgende</button>
-    </div>
+    <section className="background-yellow stretch-container">
+      3
+      <div className="game-wrapper">
+        <h1 className="title__m-bold">Bekijk hoe goed je foto het doet</h1>
+        <p>
+          Laten we eens kijken naar hoe goed de foto die je maandag hebt
+          upgeload het doet.
+        </p>
+        <button
+          className="button__primary text__m-bold button__game-next"
+          onClick={(e) => nextRoute()}
+        >
+          Bekijk je foto
+        </button>
+      </div>
+    </section>
   );
 }

@@ -30,10 +30,9 @@ export default function Dag1_12({ data }) {
         <h1 className="title__m-bold">OVERZICHT LIJSTJE</h1>
         {students.map((student) => {
           return (
-            <>
-              <p>{student.name}</p>
-              <p>{student.points.pop().followers}</p>
-            </>
+            <p>
+              {student.name} {student.points.pop().followers}
+            </p>
           );
         })}
         <button

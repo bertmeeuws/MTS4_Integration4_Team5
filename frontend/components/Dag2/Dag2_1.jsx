@@ -7,12 +7,19 @@ export default function Dag2_1() {
   return (
     <section className="background-yellow stretch-container">
       2.1
-      <h1 className="title__m-bold">Nieuwe dag, nieuwe kansen</h1>
-      <p>
-        Het is dinsdag 7u30 ‘s ochtends. Klaar voor een nieuwe dag! Laten we
-        snel eens BuddyGram checken!
-      </p>
-      <button onClick={(e) => nextRoute()}>Bekijk feed</button>
+      <div className="game-wrapper">
+        <h1 className="title__m-bold">
+          Iemand heeft toegang gehad tot jouw account en heeft een vreemde post
+          op jouw feed gezet.
+        </h1>
+
+        <button
+          className="button__primary text__m-bold button__game-next"
+          onClick={(e) => nextRoute()}
+        >
+          Swipe om te ontgrendelen
+        </button>
+      </div>
     </section>
   );
 }

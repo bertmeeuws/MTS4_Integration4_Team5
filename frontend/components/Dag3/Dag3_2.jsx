@@ -5,9 +5,32 @@ export default function Dag3_2() {
   const nextRoute = useStoreActions((actions) => actions.nextRoute);
 
   return (
-    <div>
+    <section className="background-yellow stretch-container">
       3.2
-      <button onClick={(e) => nextRoute()}>Volgende</button>
-    </div>
+      <div className="game-wrapper">
+        <h1 className="title__m-bold">
+          Je hebt 3 likes en 0 reacties. Hoe voel je jou daarbij ?
+        </h1>
+
+        <button
+          className="button__primary text__m-bold button__game-next"
+          onClick={(e) => nextRoute()}
+        >
+          Verwiijder de post
+        </button>
+        <button
+          className="button__primary text__m-bold button__game-next"
+          onClick={(e) => nextRoute()}
+        >
+          Ik wil meer likes
+        </button>
+        <button
+          className="button__primary text__m-bold button__game-next"
+          onClick={(e) => nextRoute()}
+        >
+          Maakt helemaal niet uit
+        </button>
+      </div>
+    </section>
   );
 }
