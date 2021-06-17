@@ -4,13 +4,12 @@ import NavBar from "../NavBar/NavBar";
 
 export default function Onboarding4() {
   const changeRoute = useStoreActions((actions) => actions.changeRoute);
-  
 
   return (
     <section className="introduction background-yellow stretch-container">
       <NavBar percent={8} />
       <div className="introduction-container">
-        <h1 className="h2 margin-top align-center">
+        <h1 className="title__m-bold margin-top align-center">
           Personaliseer je eigen account
         </h1>
         <p className="align-center">

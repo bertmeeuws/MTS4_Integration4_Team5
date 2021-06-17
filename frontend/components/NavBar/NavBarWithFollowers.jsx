@@ -1,7 +1,10 @@
 import React from "react";
 import Image from "next/image";
+import { action, useStoreActions, useStoreState } from "easy-peasy";
 
 export default function NavbarWithFollowers({ percent, text, followers }) {
+  const amount = useStoreState((state) => state.followers);
+
   return (
     <nav className="nav__buddygram-introduction">
       <div className="nav__buddygram-wrapper">
@@ -19,7 +22,7 @@ export default function NavbarWithFollowers({ percent, text, followers }) {
       </div>
       {followers ? (
         <div className="nav__buddygram-followers">
-          <p className="title__s-bold">60 followers</p>
+          <p className="title__s-bold">{amount} followers</p>
         </div>
       ) : (
         ""

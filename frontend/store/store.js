@@ -7,8 +7,19 @@ export const model = {
   profile: null,
   game_data: null,
   current_gamer: null,
+  followers: 100,
+
+  answer: null,
 
   //MUTATIONS
+
+  setAnswer: action((state, payload) => {
+    state.answer = payload;
+  }),
+
+  setFollowers: action((state, payload) => {
+    state.followers = payload;
+  }),
 
   changeGamer: action((state, payload) => {
     state.current_gamer = payload;

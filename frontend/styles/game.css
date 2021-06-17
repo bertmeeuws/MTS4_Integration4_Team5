@@ -1,0 +1,33 @@
+.background-yellow .title__m-bold {
+  margin-bottom: 1.4rem;
+}
+.game-wrapper {
+  max-width: 108rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 8rem;
+}
+
+.game__uploadimage {
+  max-width: 108rem;
+}
+.button__game-upload,
+.button__game-next {
+  min-width: 20.7rem;
+  margin: 0 auto;
+  margin-top: 4rem;
+}
+
+.game__upload-subtext {
+  max-width: 40rem;
+}
+.game__followers-container {
+  margin: 0 auto;
+  margin-top: 5.3rem;
+  text-align: center;
+}
+.game__followers-container h1 {
+  font-size: 20rem;
+}

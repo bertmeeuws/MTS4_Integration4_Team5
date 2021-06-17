@@ -9,7 +9,7 @@ export default function Onboarding1({ data }) {
   return (
     <section className="background-yellow stretch-container">
       <NavBar percent={2} />
-      <h1 className="h2 margin-top align-center">
+      <h1 className="title__m-bold margin-top align-center">
         Elke dag kan er wel iets gebeuren
       </h1>
       <p className="p align-center">

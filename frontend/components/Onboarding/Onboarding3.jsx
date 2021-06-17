@@ -9,7 +9,9 @@ export default function Onboarding3() {
     <section className="introduction background-yellow stretch-container">
       <NavBar percent={6} />
       <div className="introduction-container">
-        <h1 className="h2 margin-top align-center">Verlies volgers</h1>
+        <h1 className="title__m-bold margin-top align-center">
+          Verlies volgers
+        </h1>
         <p>Wanneer je een situatie niet correct inschat verlies je volgers.</p>
         <div className="introduction-list">
           <button

@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useEffect } from "react";
+import React, { useState,useEffect } from "react";
 import Webcam from "react-webcam";
 import { API_URL } from "../../constants/index";
 import axios from "axios";
