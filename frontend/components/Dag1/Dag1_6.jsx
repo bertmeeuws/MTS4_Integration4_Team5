@@ -13,7 +13,6 @@ export default function Dag1_6({ route }) {
     <section className="background-yellow stretch-container">
       1.6
       <div className="game-wrapper">
-        <p>Je koos</p>
         <p>{answer.text}</p>
         <button
           className="button__primary text__m-bold button__game-next"

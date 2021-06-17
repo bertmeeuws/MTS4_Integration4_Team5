@@ -12,18 +12,25 @@ export default function Dag1_5({ route }) {
     {
       followers: -20,
       text: "'Je bent afschuwelijk'",
+      penalty: "Je hebt volgers verloren omdat je online ruzie maakt.",
     },
     {
-      followers: -20,
+      followers: 0,
       text: "'Iedereen is uniek en dat maakt juist iedereen mooi op zijn eigen manier'",
+      penalty:
+        "Het is beter om niet te reageren op de haatreactie. Of zelfs nog beter om die gewoon te verwijderen.",
     },
     {
-      followers: -20,
+      followers: 20,
       text: "Verwijder reactie",
+      penalty:
+        "Je hebt de juiste keuze gemaakt, mensen die haatreacties posten willen aandacht. Je moet hun hun niet geven.",
     },
     {
       followers: 10,
       text: "Blokkeer gebruiker",
+      penalty:
+        "Je hebt de juiste keuze gemaakt, mensen die haatreacties posten willen aandacht. Je moet hun hun niet geven.",
     },
   ];
 
