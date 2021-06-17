@@ -8,11 +8,13 @@ export default function Dag3_3() {
     <section className="background-yellow stretch-container">
       3.3
       <div className="game-wrapper">
-        <p>-20 PENALTY HERE</p>
-        <h1 className="title__m-bold">
-          Je hebt volers verloren omdat je je humeur laat beïnvloeden door
-          likes.
-        </h1>
+        <div className="game__textBox">
+          <p className="text-center">-20 PENALTY HERE</p>
+          <h1 className="title__m-bold ">
+            Je hebt volers verloren omdat je je humeur laat beïnvloeden door
+            likes.
+          </h1>
+        </div>
 
         <button
           className="button__primary text__m-bold button__game-next"

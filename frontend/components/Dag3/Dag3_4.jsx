@@ -8,10 +8,10 @@ export default function Dag3_4() {
     <section className="background-yellow stretch-container">
       3.4
       <div className="game-wrapper">
-        <p>-20 PENALTY HERE</p>
         <h1 className="title__m-bold">
-          Je hebt volers verloren omdat je je humeur laat beïnvloeden door
-          likes.
+          Er bestaat een functie om likes onzichtbaar te zetten. <br />
+          <br />
+          Wil je deze functie inschakelen?
         </h1>
         <button
           className="button__primary text__m-bold button__game-next"

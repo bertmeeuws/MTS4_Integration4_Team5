@@ -8,7 +8,7 @@ export default function Dag2_5() {
     <section className="background-yellow stretch-container">
       2.5
       <div className="game-wrapper">
-        <h1 className="title__m-bold">
+        <h1 className="title__m-bold game__textBox text-center">
           Vergeet nooit uit te loggen op sociale media als je een openbaar
           toestel gebruikt hebt.
         </h1>

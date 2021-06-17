@@ -5,9 +5,17 @@ export default function Dag5_1() {
   const nextRoute = useStoreActions((actions) => actions.nextRoute);
 
   return (
-    <div>
-      5.1
-      <button onClick={(e) => nextRoute()}>Volgende</button>
-    </div>
+    <section className="background-yellow stretch-container">
+      5.1 Leerkracht foto
+      <div className="game-wrapper">
+        <p></p>
+        <button
+          className="button__primary text__m-bold button__game-next"
+          onClick={(e) => nextRoute()}
+        >
+          Bekijk de foto
+        </button>
+      </div>
+    </section>
   );
 }

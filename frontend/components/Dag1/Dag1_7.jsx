@@ -13,11 +13,13 @@ export default function Dag1_7({ route }) {
     <section className="background-yellow stretch-container">
       <div className="game-wrapper">
         1.7
-        <p>-20 volgers</p>
-        <p>Je koos</p>
-        <p>{answer.followers}</p>
-        <p>{answer.text}</p>
-        <h1 className="title__m-bold">{answer.penalty}</h1>
+        <div className="game__textBox">
+          <p>-20 volgers</p>
+          <p>Je koos</p>
+          <p>{answer.followers}</p>
+          <p>{answer.text}</p>
+          <h1 className="title__m-bold">{answer.penalty}</h1>
+        </div>
         <button onClick={(e) => nextRoute()}>Wat had ik beter gedaan?</button>
       </div>
     </section>

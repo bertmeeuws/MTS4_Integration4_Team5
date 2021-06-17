@@ -8,7 +8,7 @@ export default function Dag2_1() {
     <section className="background-yellow stretch-container">
       2.1
       <div className="game-wrapper">
-        <h1 className="title__m-bold">
+        <h1 className="title__m-bold game__textBox">
           Iemand heeft toegang gehad tot jouw account en heeft een vreemde post
           op jouw feed gezet.
         </h1>

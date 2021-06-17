@@ -31,3 +31,22 @@
 .game__followers-container h1 {
   font-size: 20rem;
 }
+.game__textBox {
+  padding: 5rem;
+  border: 1rem solid var(--black);
+  background-color: var(--white);
+  max-width: 87rem;
+  margin: 0 auto;
+}
+.game__textBox-small {
+  padding: 1rem 2rem;
+  border: 1rem solid var(--black);
+  background-color: var(--white);
+  margin-bottom: 5rem;
+}
+.game__textBox .title__m-bold {
+  margin-bottom: 2rem;
+}
+.text-center {
+  text-align: center;
+}

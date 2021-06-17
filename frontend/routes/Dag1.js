@@ -363,38 +363,75 @@ export const Dag4Routes = (game) => {
     {
       id: 19,
       name: "Dag 4",
-      component: <Dag4 data={game[0]} route={15} title={"Dag 2"} />,
+      component: (
+        <>
+          <NavbarWithFollowers followers={100} text={"donderdag - 07:40"} />
+          <Dag4 data={game[0]} route={15} title={"Dag 4"} />
+        </>
+      ),
     },
     {
       id: 19,
       name: "Dag 4",
-      component: <Dag4_1 data={game[0]} route={15} title={"Dag 2"} />,
+      component: (
+        <>
+          <NavbarWithFollowers followers={100} text={"donderdag - 07:40"} />
+          <Dag4_1 data={game[0]} route={15} title={"Dag 4"} />
+        </>
+      ),
     },
     {
       id: 19,
       name: "Dag 4",
-      component: <Dag4_2 data={game[0]} route={15} title={"Dag 2"} />,
+      component: (
+        <>
+          <NavbarWithFollowers followers={100} text={"donderdag - 07:40"} />
+          <Dag4_2 data={game[0]} route={15} title={"Dag 4"} />
+        </>
+      ),
     },
     {
       id: 19,
       name: "Dag 4",
-      component: <Dag4_3 data={game[0]} route={15} title={"Dag 2"} />,
+      component: (
+        <>
+          <NavbarWithFollowers followers={100} text={"donderdag - 07:40"} />
+          <Dag4_3 data={game[0]} route={15} title={"Dag 4"} />
+        </>
+      ),
     },
     {
       id: 19,
       name: "Dag 4",
-      component: <Dag4_4 data={game[0]} route={15} title={"Dag 2"} />,
+      component: (
+        <>
+          <NavbarWithFollowers followers={100} text={"donderdag - 07:40"} />
+          <Dag4_4 data={game[0]} route={15} title={"Dag 4"} />
+        </>
+      ),
     },
     {
       id: 19,
       name: "Dag 4",
-      component: <Dag4_5 data={game[0]} route={15} title={"Dag 2"} />,
+      component: (
+        <>
+          <NavbarWithFollowers followers={100} text={"donderdag - 07:40"} />
+          <Dag4_5 data={game[0]} route={15} title={"Dag 4"} />
+        </>
+      ),
     },
+    /*
     {
       id: 19,
       name: "Dag 4",
-      component: <Dag4_6 data={game[0]} route={15} title={"Dag 2"} />,
+      component: (
+        <>
+          <NavbarWithFollowers followers={100} text={"donderdag - 07:40"} />
+          <Dag4_6 data={game[0]} route={15} title={"Dag 4"} />
+        </>
+      ),
     },
+    */
   ];
 };
 
@@ -403,47 +440,92 @@ export const Dag5Routes = (game) => {
     {
       id: 19,
       name: "Dag 5",
-      component: <Dag5 data={game[0]} route={15} title={"Dag 2"} />,
+      component: (
+        <>
+          <NavbarWithFollowers followers={100} text={"vrijdag - 07:40"} />
+          <Dag5 data={game[0]} route={15} title={"Dag 5"} />
+        </>
+      ),
     },
     {
       id: 19,
       name: "Dag 5",
-      component: <Dag5_1 data={game[0]} route={15} title={"Dag 2"} />,
+      component: (
+        <>
+          <NavbarWithFollowers followers={100} text={"vrijdag - 07:40"} />
+          <Dag5_1 data={game[0]} route={15} title={"Dag 5"} />
+        </>
+      ),
     },
     {
       id: 19,
       name: "Dag 5",
-      component: <Dag5_2 data={game[0]} route={15} title={"Dag 2"} />,
+      component: (
+        <>
+          <NavbarWithFollowers followers={100} text={"vrijdag - 07:40"} />
+          <Dag5_2 data={game[0]} route={15} title={"Dag 5"} />
+        </>
+      ),
     },
     {
       id: 19,
       name: "Dag 5",
-      component: <Dag5_3 data={game[0]} route={15} title={"Dag 2"} />,
+      component: (
+        <>
+          <NavbarWithFollowers followers={100} text={"vrijdag - 07:40"} />
+          <Dag5_3 data={game[0]} route={15} title={"Dag 5"} />
+        </>
+      ),
     },
     {
       id: 19,
       name: "Dag 5",
-      component: <Dag5_4 data={game[0]} route={15} title={"Dag 2"} />,
+      component: (
+        <>
+          <NavbarWithFollowers followers={100} text={"vrijdag - 07:40"} />
+          <Dag5_4 data={game[0]} route={15} title={"Dag 5"} />
+        </>
+      ),
     },
     {
       id: 19,
       name: "Dag 5",
-      component: <Dag5_5 data={game[0]} route={15} title={"Dag 2"} />,
+      component: (
+        <>
+          <NavbarWithFollowers followers={100} text={"vrijdag - 07:40"} />
+          <Dag5_5 data={game[0]} route={15} title={"Dag 5"} />
+        </>
+      ),
     },
     {
       id: 19,
       name: "Dag 5",
-      component: <Dag5_6 data={game[0]} route={15} title={"Dag 2"} />,
+      component: (
+        <>
+          <NavbarWithFollowers followers={100} text={"vrijdag - 07:40"} />
+          <Dag5_6 data={game[0]} route={15} title={"Dag 5"} />
+        </>
+      ),
     },
     {
       id: 19,
       name: "Dag 5",
-      component: <Dag5_7 data={game[0]} route={15} title={"Dag 2"} />,
+      component: (
+        <>
+          <NavbarWithFollowers followers={100} text={"vrijdag - 07:40"} />
+          <Dag5_7 data={game[0]} route={15} title={"Dag 5"} />
+        </>
+      ),
     },
     {
       id: 19,
       name: "Dag 5",
-      component: <Dag5_8 data={game[0]} route={15} title={"Dag 2"} />,
+      component: (
+        <>
+          <NavbarWithFollowers followers={100} text={"vrijdag - 07:40"} />
+          <Dag5_8 data={game[0]} route={15} title={"Dag 5"} />
+        </>
+      ),
     },
   ];
 };

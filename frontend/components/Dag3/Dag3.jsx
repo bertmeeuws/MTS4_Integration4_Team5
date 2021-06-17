@@ -8,11 +8,13 @@ export default function Dag3() {
     <section className="background-yellow stretch-container">
       3
       <div className="game-wrapper">
-        <h1 className="title__m-bold">Bekijk hoe goed je foto het doet</h1>
-        <p>
-          Laten we eens kijken naar hoe goed de foto die je maandag hebt
-          upgeload het doet.
-        </p>
+        <div className="game__textBox">
+          <h1 className="title__m-bold">Bekijk hoe goed je foto het doet</h1>
+          <p>
+            Laten we eens kijken naar hoe goed de foto die je maandag hebt
+            upgeload het doet.
+          </p>
+        </div>
         <button
           className="button__primary text__m-bold button__game-next"
           onClick={(e) => nextRoute()}
