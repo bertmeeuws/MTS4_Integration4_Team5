@@ -17,7 +17,7 @@ export default function Onboarding4() {
         </p>
         <div className="introduction-list">
           <button
-            className="button-secondary-white"
+            className="button__secondary text__m-bold button__game-next"
             onClick={(e) => {
               changeRoute(3);
             }}
@@ -25,7 +25,7 @@ export default function Onboarding4() {
             Stap terug
           </button>
           <button
-            className="button-primary-blue"
+            className="button__primary text__m-bold button__game-next"
             onClick={(e) => {
               changeRoute(5);
             }}

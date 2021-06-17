@@ -9,7 +9,12 @@ export default function Dag1_13() {
     <section className="background-yellow stretch-container">
       <Background />
       1.13
-      <button onClick={(e) => nextRoute()}>Volgende</button>
+      <button
+        className="button__primary text__m-bold button__game-next"
+        onClick={(e) => nextRoute()}
+      >
+        Volgende
+      </button>
     </section>
   );
 }

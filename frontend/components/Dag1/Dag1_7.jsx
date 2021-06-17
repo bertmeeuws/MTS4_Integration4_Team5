@@ -2,7 +2,6 @@ import React from "react";
 import { useStoreActions, useStoreState } from "easy-peasy";
 import Background from "../Background/Background";
 
-
 export default function Dag1_7({ route }) {
   const nextRoute = useStoreActions((actions) => actions.nextRoute);
 
@@ -14,7 +13,7 @@ export default function Dag1_7({ route }) {
   return (
     <section className="background-yellow stretch-container">
       <div className="game-wrapper">
-      <Background />
+        <Background />
         1.7
         <div className="game__textBox">
           <p>-20 volgers</p>
@@ -23,7 +22,12 @@ export default function Dag1_7({ route }) {
           <p>{answer.text}</p>
           <h1 className="title__m-bold">{answer.penalty}</h1>
         </div>
-        <button onClick={(e) => nextRoute()}>Wat had ik beter gedaan?</button>
+        <button
+          className="button__primary text__m-bold button__game-next"
+          onClick={(e) => nextRoute()}
+        >
+          Wat had ik beter gedaan?
+        </button>
       </div>
     </section>
   );

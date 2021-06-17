@@ -73,7 +73,12 @@ export default function Dag1_5({ route }) {
             </button>
           );
         })}
-        <button onClick={(e) => nextRoute()}>Volgende</button>
+        <button
+          className="button__primary text__m-bold button__game-next"
+          onClick={(e) => nextRoute()}
+        >
+          Volgende
+        </button>
       </div>
     </section>
   );

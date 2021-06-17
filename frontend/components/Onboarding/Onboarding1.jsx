@@ -16,7 +16,10 @@ export default function Onboarding1({ data }) {
         Elke dag krijg je een situatie voorgeschoteld die je op het internet kan
         ervaren.
       </p>
-      <button className="button-primary-blue " onClick={(e) => changeRoute(2)}>
+      <button
+        className="button__primary text__m-bold button__game-next"
+        onClick={(e) => changeRoute(2)}
+      >
         Ontdek hoe je volgers kan krijgen
       </button>
     </section>

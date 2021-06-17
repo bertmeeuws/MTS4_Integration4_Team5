@@ -12,9 +12,13 @@ export default function Dag1_4({ route }) {
     <section className="background-yellow stretch-container">
       1.4
       <Background />
-
       <Background />
-      <button onClick={(e) => nextRoute()}>Volgende</button>
+      <button
+        className="button__primary text__m-bold button__game-next"
+        onClick={(e) => nextRoute()}
+      >
+        Volgende
+      </button>
     </section>
   );
 }
