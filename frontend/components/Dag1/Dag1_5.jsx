@@ -1,8 +1,11 @@
 import React from "react";
 import { useStoreActions, useStoreState } from "easy-peasy";
+import axios from "axios";
+import { API_URL } from "../../constants";
 
 export default function Dag1_5({ route }) {
   const nextRoute = useStoreActions((actions) => actions.nextRoute);
+  const user = useStoreState((state) => state.current_gamer);
 
   const current_followers = useStoreState((state) => state.followers);
   const setFollowers = useStoreActions((actions) => actions.setFollowers);
@@ -34,6 +37,21 @@ export default function Dag1_5({ route }) {
     },
   ];
 
+  const updateFollowers = async (followers) => {
+    const updated = current_followers + followers;
+
+    try {
+      const response = await axios.post(`${API_URL}/points`, {
+        followers: updated,
+        student: user.id,
+        order: 2,
+      });
+      console.log(response.data);
+    } catch (e) {
+      console.log(e);
+    }
+  };
+
   return (
     <section className="background-yellow stretch-container">
       1.5
@@ -45,6 +63,7 @@ export default function Dag1_5({ route }) {
               onClick={(e) => {
                 setFollowers(current_followers + choice.followers);
                 setAnswer(choice);
+                updateFollowers(choice.followers);
                 nextRoute();
               }}
             >

@@ -21,6 +21,9 @@
     "student": {
       "via": "points",
       "model": "students"
+    },
+    "order": {
+      "type": "integer"
     }
   }
 }
