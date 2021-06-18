@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useStoreActions } from "easy-peasy";
 import { API_URL } from "../../constants/index";
 import Webcam from "react-webcam";
-import Window from "../Dashboard/Containers/Window";
+import ListWindow from "../ListWindow/ListWindow";
 
 export default function Dag1_1() {
   const nextRoute = useStoreActions((actions) => actions.nextRoute);
@@ -92,9 +92,9 @@ export default function Dag1_1() {
               Remove Image
             </button>
           )}
-          <Window>
+          <ListWindow>
             <img id="output" style={{ width: "50%" }} src={state} />
-          </Window>
+          </ListWindow>
         </form>
         <button
           className="button__primary button__game-upload text__m-bold"

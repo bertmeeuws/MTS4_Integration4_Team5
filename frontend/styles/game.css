@@ -52,10 +52,90 @@
   text-align: center;
 }
 .background-image {
-  z-index: 0;
+  z-index: -1;
   position: absolute;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
+}
+.introduction {
+  padding-top: 12.6rem;
+}
+.introduction .title__m-bold {
+  margin-bottom: 2rem;
+}
+.introduction .text__m-normal {
+  margin-bottom: 8.6rem;
+}
+.introduction--list {
+  background-color: var(--yellow);
+  padding-top: 6.5rem;
+  padding-bottom: 6.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+
+  grid-column-gap: 10rem;
+  padding-left: 21.6rem;
+  padding-right: 21.6rem;
+  background: var(--yellow);
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.322) 0.1em,
+      transparent 0.1em
+    ),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0.1em, transparent 0.1em);
+  background-size: 1em 1em;
+}
+
+.onboarding-1 .title__m-bold {
+  max-width: 60rem;
+  margin: 0 auto;
+  margin-top: 19rem;
+  margin-bottom: 2rem;
+}
+.onboarding-1 .text__m-normal {
+  max-width: 60rem;
+  margin: 0 auto;
+}
+.onboarding-1 .button__primary {
+  position: absolute;
+  margin: 0 auto;
+  display: flex;
+}
+.onboarding-progress-container {
+  width: 100%;
+  height: 20rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.onboarding-content-container {
+  height: 33rem;
+}
+
+.progressbar_box {
+  background-color: var(--white);
+  width: 4rem;
+  height: 4rem;
+  border: 1rem solid var(--black);
+  margin: 0 auto;
+  margin-top: 2.5rem;
+  box-shadow: -1rem 1rem var(--black);
+  cursor: pointer;
+  transition: 0.1s;
+}
+.progressbar_box:hover {
+  box-shadow: none;
+  background-color: var(--blue);
+}
+.progressbar_box--active {
+  background-color: var(--blue);
+  width: 4rem;
+  height: 4rem;
+  border: 1rem solid var(--black);
+  margin: 0 auto;
+  margin-top: 2.5rem;
+  box-shadow: none;
 }

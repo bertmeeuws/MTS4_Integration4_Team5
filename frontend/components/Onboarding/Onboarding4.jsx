@@ -1,16 +1,25 @@
 import React from "react";
 import { useStoreActions } from "easy-peasy";
 import NavBar from "../NavBar/NavBar";
+import ProgressBar from "./ProgressBar";
 
 export default function Onboarding4() {
-  const changeRoute = useStoreActions((actions) => actions.changeRoute);
+  const previousRoute = useStoreActions((actions) => actions.previousRoute);
+
+  const nextRoute = useStoreActions((actions) => actions.nextRoute);
 
   return (
-    <section className="introduction background-yellow stretch-container">
+    <section className="background-yellow stretch-container onboarding-1">
       <NavBar percent={8} />
       <div className="introduction-container">
         <h1 className="title__m-bold margin-top align-center">
-          Personaliseer je eigen account
+          <marker
+            style={{ backgroundColor: "var(--white)" }}
+            className="mark-yellow"
+          >
+            Personaliseer
+          </marker>
+          je eigen account
         </h1>
         <p className="align-center">
           Verander de kleuren van je account zoals jij het wil!
@@ -19,7 +28,7 @@ export default function Onboarding4() {
           <button
             className="button__secondary text__m-bold button__game-next"
             onClick={(e) => {
-              changeRoute(3);
+              previousRoute();
             }}
           >
             Stap terug
@@ -27,7 +36,7 @@ export default function Onboarding4() {
           <button
             className="button__primary text__m-bold button__game-next"
             onClick={(e) => {
-              changeRoute(5);
+              nextRoute();
             }}
           >
             Start BuddyGram op
