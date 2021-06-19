@@ -41,6 +41,7 @@ export default function Onboarding4() {
           >
             Start BuddyGram op
           </button>
+          <ProgressBar step={4} />
         </div>
       </div>
     </section>

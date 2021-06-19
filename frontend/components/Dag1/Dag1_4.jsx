@@ -7,18 +7,20 @@ export default function Dag1_4({ route }) {
 
   const current_followers = useStoreState((state) => state.followers);
   const setFollowers = useStoreActions((actions) => actions.setFollowers);
-
+  const picture = useStoreState((state) => state.profile_picture);
   return (
-    <section className="background-yellow stretch-container">
-      1.4
+    <section className="section__post  background-yellow stretch-container">
+      <p className="hidden">1.4</p>
       <Background />
-      <Background />
-      <button
-        className="button__primary text__m-bold button__game-next"
-        onClick={(e) => nextRoute()}
-      >
-        Volgende
-      </button>
+      <div onClick={(e) => nextRoute()} className="post__container">
+        <div className="post__image--overflow">
+          <img style={{ height: "34.5rem" }} src={picture} />
+        </div>
+        <div className="post__comments__container">
+          <p className="post__comment__author title__s-bold">Kareltje</p>
+          <p className="text__m-normal post__comment">Afschuwelijke foto! 🤢</p>
+        </div>
+      </div>
     </section>
   );
 }

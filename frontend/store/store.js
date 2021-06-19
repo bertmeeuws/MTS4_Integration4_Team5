@@ -9,9 +9,15 @@ export const model = {
   current_gamer: null,
   followers: 100,
 
+  profile_picture: null,
+
   answer: null,
 
   //MUTATIONS
+
+  setProfileImage: action((state, payload) => {
+    state.profile_picture = payload;
+  }),
 
   setAnswer: action((state, payload) => {
     state.answer = payload;

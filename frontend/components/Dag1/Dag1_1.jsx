@@ -1,16 +1,23 @@
 import React, { useState, useEffect } from "react";
-import { useStoreActions } from "easy-peasy";
+import { useStoreActions, useStoreState } from "easy-peasy";
 import { API_URL } from "../../constants/index";
 import Webcam from "react-webcam";
 import ListWindow from "../ListWindow/ListWindow";
+import axios from "axios";
 
 export default function Dag1_1() {
   const nextRoute = useStoreActions((actions) => actions.nextRoute);
+
+  const user = useStoreState((state) => state.current_gamer);
+  const setImage = useStoreActions((actions) => actions.setProfileImage);
+
+  console.log(user);
 
   const [state, setState] = useState(null);
   const [deviceId, setDeviceId] = React.useState({});
   const [devices, setDevices] = React.useState([]);
   const [gender, setGender] = useState(null);
+  const [error, setError] = useState(false);
   const [blob, setBlob] = useState(null);
   const videoConstraints = {
     facingMode: "user",
@@ -37,7 +44,9 @@ export default function Dag1_1() {
     e.preventDefault();
     if (!blob) {
       alert("Upload een foto");
+      setError(true);
     } else {
+      setError(false);
       console.log(blob);
       let formData = new FormData(e.target);
       formData.append("ref", "image");
@@ -53,7 +62,18 @@ export default function Dag1_1() {
         axios.post(`${API_URL}/upload`, formData, {
           headers: uploadHeaders,
         });
-        setRoute(2);
+
+        try {
+          console.log("Updating student");
+          const response = await axios.put(`${API_URL}/students/${user.id}`, {
+            image: newImageId,
+          });
+          console.log(response);
+          setImage(state);
+          nextRoute();
+        } catch (e) {
+          console.log(e);
+        }
       } catch (e) {
         console.log(e);
       }
@@ -67,6 +87,7 @@ export default function Dag1_1() {
         <p className="text__m-normal game__upload-subtext">
           Maak, kies of upload een foto en deel deze op je eigen feed.
         </p>
+        {error ? <p>Upload een foto om verder te gaan</p> : ""}
         <form className="game__uploadimage" onSubmit={uploadImage}>
           <input
             type="file"
@@ -79,11 +100,16 @@ export default function Dag1_1() {
             }}
             value=""
           />
-          <input type="submit" value="Upload picture" />
+          <input
+            className="button__primary button__game-upload text__m-bold"
+            type="submit"
+            value="Upload picture"
+          />
         </form>
         <form>
           {state && (
             <button
+              className="button__secondary button__game-upload text__m-bold"
               onClick={(event) => {
                 setState(null);
                 setBlob(null);
@@ -96,12 +122,6 @@ export default function Dag1_1() {
             <img id="output" style={{ width: "50%" }} src={state} />
           </ListWindow>
         </form>
-        <button
-          className="button__primary button__game-upload text__m-bold"
-          onClick={(e) => nextRoute()}
-        >
-          Maak foto
-        </button>
       </div>
     </section>
   );

@@ -8,7 +8,7 @@ export default function ListWindow({ children, text }) {
         <div className={`${styles.circle} ${styles.blue}`}></div>
         <div className={`${styles.circle} ${styles.yellow}`}></div>
         <div className={`${styles.circle} ${styles.red}`}></div>
-        {text ? <p className="p-small">{text}</p> : ""}
+        {text ? <p className="title__s-bold">{text}</p> : ""}
       </div>
       <div className={styles.safezone}>{children}</div>
     </div>

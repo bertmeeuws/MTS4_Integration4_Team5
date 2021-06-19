@@ -2,7 +2,6 @@ import React from "react";
 import { useStoreActions } from "easy-peasy";
 import Background from "../Background/Background";
 
-
 export default function Dag2_1() {
   const nextRoute = useStoreActions((actions) => actions.nextRoute);
 

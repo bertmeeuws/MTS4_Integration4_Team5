@@ -4,6 +4,7 @@
   border: 1rem solid var(--black);
   background-color: white;
   position: relative;
+  z-index: 80;
 }
 .nav__buddygram-wrapper {
   max-width: 106rem;
