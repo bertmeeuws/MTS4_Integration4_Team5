@@ -7,10 +7,10 @@ export default function Dag4() {
 
   return (
     <section className="background-yellow stretch-container">
-      4.
+      <p className="hidden">4.</p>
       <Background />
 
-      <div className="game-wrapper">
+      <div className="game__box__margin game-wrapper">
         <div className="game__textBox">
           <h1 className="title__m-bold">
             Je hebt een bericht verzoek ontvangen van LianaDjok354
