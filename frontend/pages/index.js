@@ -11,13 +11,13 @@ import Slider from "react-slick";
 export default function Home() {
   //DIT IS DE HOME PAGINA
 
-
   var settings = {
     dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
-    slidesToScroll: 1
+    slidesToScroll: 1,
+    centerMode: true
   };
 
   return (
@@ -158,29 +158,34 @@ export default function Home() {
                 <div className="car__info">
                   <Slider {...settings}>
                     <div>
-                      <h2 className="title__m-bold">1: <mark className="mark-blue">registreer</mark> je als leerkracht.</h2>
+                      <span className="text__m-bold text__blue">stap 1:</span>
+                      <h2 className="title__m-bold"><mark className="mark-blue">registreer</mark> je als leerkracht.</h2>
                       <div className="spacer__s"></div>
-                      <p className="text__m-normal text__with">Maak een account aan als leerkracht en krijg toegang tot het paneel. Star daar een nieuwe ervaring voor jouw leerlingen</p>
+                      <p className="text__m-normal car__info-text">Maak een account aan als leerkracht en krijg toegang tot het paneel. Star daar een nieuwe ervaring voor jouw leerlingen</p>
                     </div>
                     <div>
-                      <h2 className="title__m-bold">2:<mark className="mark-blue">registreer</mark> je als leerkracht.</h2>
+                      <span className="text__m-bold text__blue">stap 2:</span>
+                      <h2 className="title__m-bold"><mark className="mark-blue">registreer</mark> je als leerkracht.</h2>
                       <div className="spacer__s"></div>
-                      <p className="text__m-normal text__with">Maak een account aan als leerkracht en krijg toegang tot het paneel. Star daar een nieuwe ervaring voor jouw leerlingen</p>
+                      <p className="text__m-normal car__info-text">Maak een account aan als leerkracht en krijg toegang tot het paneel. Star daar een nieuwe ervaring voor jouw leerlingen</p>
                     </div>
                     <div>
-                      <h2 className="title__m-bold">3:<mark className="mark-blue">registreer</mark> je als leerkracht.</h2>
+                      <span className="text__m-bold text__blue">stap 3:</span>
+                      <h2 className="title__m-bold"><mark className="mark-blue">registreer</mark> je als leerkracht.</h2>
                       <div className="spacer__s"></div>
-                      <p className="text__m-normal text__with">Maak een account aan als leerkracht en krijg toegang tot het paneel. Star daar een nieuwe ervaring voor jouw leerlingen</p>
+                      <p className="text__m-normal car__info-text">Maak een account aan als leerkracht en krijg toegang tot het paneel. Star daar een nieuwe ervaring voor jouw leerlingen</p>
                     </div>
                     <div>
-                      <h2 className="title__m-bold">4: <mark className="mark-blue">registreer</mark> je als leerkracht.</h2>
+                      <span className="text__m-bold text__blue">stap 4:</span>
+                      <h2 className="title__m-bold"><mark className="mark-blue">registreer</mark> je als leerkracht.</h2>
                       <div className="spacer__s"></div>
-                      <p className="text__m-normal text__with">Maak een account aan als leerkracht en krijg toegang tot het paneel. Star daar een nieuwe ervaring voor jouw leerlingen</p>
+                      <p className="text__m-normal car__info-text">Maak een account aan als leerkracht en krijg toegang tot het paneel. Star daar een nieuwe ervaring voor jouw leerlingen</p>
                     </div>
                     <div>
-                      <h2 className="title__m-bold">5: <mark className="mark-blue">registreer</mark> je als leerkracht.</h2>
+                      <span className="text__m-bold text__blue">stap 5:</span>
+                      <h2 className="title__m-bold"><mark className="mark-blue">registreer</mark> je als leerkracht.</h2>
                       <div className="spacer__s"></div>
-                      <p className="text__m-normal text__with">Maak een account aan als leerkracht en krijg toegang tot het paneel. Star daar een nieuwe ervaring voor jouw leerlingen</p>
+                      <p className="text__m-normal car__info-text">Maak een account aan als leerkracht en krijg toegang tot het paneel. Star daar een nieuwe ervaring voor jouw leerlingen</p>
                     </div>
                   </Slider>
                 </div>

@@ -218,6 +218,12 @@
   height: 6rem;
 }
 
+.car__info-text{
+  width: 70%;
+  text-align: center;
+  margin: 0 auto;
+}
+
 .car__cross {
   background-color: var(--red);
   border-left: 1rem solid var(--black);
@@ -229,7 +235,103 @@
 }
 
 .car__info{
-  
+  height: 100%;
+  padding: 4rem;
+}
+
+.slick-dots
+{
+    position: absolute;
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+    bottom: 2rem !important;
+}
+.slick-dots li
+{
+    position: relative;
+    display: inline-block;
+    width: 3rem !important;
+    height: 3rem !important;
+    margin: 2rem !important;
+    padding: 0;
+    cursor: pointer;
+}
+.slick-dots li button
+{
+    font-size: 0;
+    line-height: 0;
+
+    display: block;
+    width: 3rem !important;
+    height: 3rem !important;
+    cursor: pointer;
+    color: transparent;
+    border: 0;
+    outline: none;
+    background: transparent;
+}
+.slick-dots li button:hover,
+.slick-dots li button:focus
+{
+    outline: none;
+}
+.slick-dots li button:hover:before,
+.slick-dots li button:focus:before
+{
+    opacity: 1 !important;
+    border: 1rem solid #2B13E5;
+    transform: translate(-1rem, 1rem);
+    box-shadow: 0rem 0rem #2B13E5;
+}
+.slick-dots li button:before
+{
+    font-family: 'slick';
+    font-size: 6px;
+    line-height: 20px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    border: 1rem solid black;
+    border-radius: 50%;
+    box-shadow: -1rem 1rem black;
+    width: 3rem !important;
+    height: 3rem !important;
+    transition: 0.1s;
+
+    content: ' ' !important;
+    opacity: 1 !important;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.slick-dots li.slick-active button:before
+{
+    opacity: 1 !important;
+    border: 1rem solid #2B13E5;
+    transform: translate(-1rem, 1rem);
+    box-shadow: 0rem 0rem #2B13E5;
+}
+
+.slick-list
+{
+    height: 100% !important;
+    text-align: center !important;
+}
+
+.slick-initialized .slick-slide
+{
+    height: 100% !important;
+}
+
+.slick-slider
+{
+    height: 100% !important;
 }
 
 .info__wrapper-blue{
