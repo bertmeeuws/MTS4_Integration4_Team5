@@ -79,6 +79,10 @@ const callbacks = {
 
     return session;
   },
+
+  async redirect(url, baseUrl) {
+    return baseUrl;
+  },
 };
 
 const options = {
