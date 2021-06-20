@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { useStoreActions } from "easy-peasy";
+import { useStoreActions, useStoreState } from "easy-peasy";
 import Background from "../Background/Background";
 import Image from "next/image";
 
 export default function Dag4_2() {
   const nextRoute = useStoreActions((actions) => actions.nextRoute);
+  const current_followers = useStoreState((state) => state.followers);
+  const setFollowers = useStoreActions((actions) => actions.setFollowers);
 
   const [amount, setAmount] = useState(1);
 
@@ -15,16 +17,22 @@ export default function Dag4_2() {
 
   useEffect(async () => {
     await waitFor(150);
+    setFollowers(current_followers - 5);
     setAmount(2);
     await waitFor(150);
+    setFollowers(current_followers - 10);
     setAmount(3);
     await waitFor(150);
+    setFollowers(current_followers - 15);
     setAmount(4);
     await waitFor(150);
+    setFollowers(current_followers - 20);
     setAmount(5);
     await waitFor(150);
+    setFollowers(current_followers - 25);
     setAmount(6);
     await waitFor(150);
+    setFollowers(current_followers - 30);
     setAmount(7);
     await waitFor(1000);
     nextRoute();

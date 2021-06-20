@@ -18,21 +18,6 @@ export default function Dag2_3() {
 
   const choices = [];
 
-  const updateFollowers = async (followers) => {
-    const updated = current_followers + followers;
-
-    try {
-      const response = await axios.post(`${API_URL}/points`, {
-        followers: updated,
-        student: user.id,
-        order: 2,
-      });
-      console.log(response.data);
-    } catch (e) {
-      console.log(e);
-    }
-  };
-
   return (
     <section className="background-yellow stretch-container">
       <Background />

@@ -12,7 +12,7 @@ export default function Dag3_1() {
       <Background />
       <div className="game-wrapper">
         <div className="game__day3__post">
-          <img src={picture} alt="" />
+          <img style={{ height: "14.8rem" }} src={picture} alt="" />
           <div className="game__day3__likes__container">
             <p className="text__s-normal">
               Kareltje en 2 anderen vinden dit leuk

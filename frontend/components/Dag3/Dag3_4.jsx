@@ -45,7 +45,7 @@ export default function Dag3_4({ data }) {
       const response = await axios.post(`${API_URL}/points`, {
         followers: updated,
         student: user.id,
-        order: 3,
+        order: 5,
       });
       console.log(response.data);
     } catch (e) {

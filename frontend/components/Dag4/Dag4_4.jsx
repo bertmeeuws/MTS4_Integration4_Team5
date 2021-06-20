@@ -7,11 +7,10 @@ export default function Dag4_4() {
 
   return (
     <section className="background-yellow stretch-container">
-      4.4
+      <p className="hidden">4.4</p>
       <Background />
-
       <div className="game-wrapper">
-        <h1 className="title__m-bold game__textBox">
+        <h1 className="title__m-bold game__textBox text-center">
           Berichten die afkomstig zijn van een vreemd e-mailadres of username
           met een mysterieus bericht altijd meteen verwijderen.
         </h1>

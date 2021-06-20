@@ -90,9 +90,9 @@ export default function Dag2_2({ data }) {
         <div className="game__day2__box">
           <div className="game__day2__container game__day2__container--first">
             <div className="game__day2__profile game__day2__profile--first">
-              <p className="game__day2__profile__name">{user?.name}Test</p>
+              <p className="game__day2__profile__name">{user?.name}</p>
               <div className="game__day2__profile__image">
-                <img src={picture} alt="" />
+                <img style={{ height: "14.8rem" }} src={picture} alt="" />
               </div>
             </div>
             <p className="text__m-normal game__day2__comment game__day2__comment__left">
