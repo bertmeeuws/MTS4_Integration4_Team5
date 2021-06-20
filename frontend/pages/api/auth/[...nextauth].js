@@ -1,6 +1,6 @@
 import NextAuth from "next-auth";
 import Providers from "next-auth/providers";
-import { JWT_KEY, API_URL } from "../../../constants/index";
+import { JWT_KEY, API_URL, WEBSITE_URL } from "../../../constants/index";
 import * as jwt from "jsonwebtoken";
 import axios from "axios";
 
@@ -82,7 +82,7 @@ const callbacks = {
 };
 
 const options = {
-  site: "http://localhost:3000",
+  site: WEBSITE_URL,
   providers,
   callbacks,
   pages: {
