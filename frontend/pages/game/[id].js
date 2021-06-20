@@ -89,7 +89,7 @@ export async function getServerSideProps(context) {
   //Code that checks if game actually exists
 
   const response = await axios.get(`${API_URL}/games/?link=${id}`);
-  console.log(response.data);
+
   if (response?.data?.length === 1) {
     console.log("Found a game");
 

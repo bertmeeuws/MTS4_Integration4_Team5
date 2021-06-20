@@ -16,14 +16,14 @@ export default function Dag1_7({ route }) {
         <Background />
         <p className="hidden">1.7</p>
         <div className="game__box__margin text-center game__textBox">
-          <p>-20 volgers</p>
+          <p>{answer?.followers_text} volgers</p>
           <h1 className="title__m-bold">{answer.penalty}</h1>
         </div>
         <button
           className="button__primary text__m-bold button__game-next"
           onClick={(e) => nextRoute()}
         >
-          Wat had ik beter gedaan?
+          {answer?.button}
         </button>
       </div>
     </section>

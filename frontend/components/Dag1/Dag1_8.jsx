@@ -1,9 +1,11 @@
 import React from "react";
-import { useStoreActions } from "easy-peasy";
+import { useStoreActions, useStoreState } from "easy-peasy";
 import Background from "../Background/Background";
 
 export default function Dag1_8({ route }) {
   const nextRoute = useStoreActions((actions) => actions.nextRoute);
+  const answer = useStoreState((state) => state.answer);
+  console.log(answer);
 
   return (
     <section className="background-yellow stretch-container">
@@ -11,11 +13,15 @@ export default function Dag1_8({ route }) {
       <Background />
       <div className="game-wrapper">
         <h1
-          style={{ marginTop: "-1rem", marginBottom: "5rem" }}
-          className="pixelated-font title__m-bold"
+          style={{ marginTop: "4rem", marginBottom: "5rem" }}
+          className="pixelated-font title__s-bold"
         >
           Als iemand zijn negatieve mening geeft dan is het beter om daar
-          positief op te antwoorden
+          positief op te antwoorden. Hun doel is om je{" "}
+          <marker className="mark-red2">slecht te laten voelen</marker> in je
+          vel. <br />
+          <br />
+          Toon dus niet aan dat dit iets doet met je.
         </h1>
         <div className="post__container post__container__lesson">
           <div className="post__comments__container">
@@ -27,7 +33,7 @@ export default function Dag1_8({ route }) {
           <div className="post__comments__container">
             <p className="post__comment__author title__s-bold">Gebruiker</p>
             <p className="text__m-normal post__comment">
-              Iedereen is uniek op zijn eigen manier.
+              Iedereen is uniek op zen eigen manier
             </p>
           </div>
         </div>

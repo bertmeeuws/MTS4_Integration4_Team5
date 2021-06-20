@@ -1,0 +1,55 @@
+.container {
+  text-align: center;
+  margin: 0 auto;
+}
+.message {
+  background: #2c2c2c;
+  color: #ebebeb;
+  text-transform: uppercase;
+  padding: 1rem;
+}
+.outer {
+  background: var(--blue);
+
+  display: inline-block;
+  width: 46.7rem;
+  border: 1rem solid var(--black);
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+.outer .lock {
+  width: 7.6rem;
+  height: 7.6rem;
+  background: var(--white);
+  border-right: 1rem solid var(--black);
+  cursor: pointer;
+  position: relative;
+  left: 0%;
+  -webkit-transition: background 0.2s ease-out, left 0.3s ease-out;
+  -moz-transition: background 0.2s ease-out, left 0.3s ease-out;
+  -ms-transition: background 0.2s ease-out, left 0.3s ease-out;
+  -o-transition: background 0.2s ease-out, left 0.3s ease-out;
+  transition: background 0.2s ease-out, left 0.3s ease-out;
+}
+.outer .lock.dragging {
+  -webkit-transition: none;
+  -moz-transition: none;
+  -ms-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+.outer.unlocked {
+  -webkit-opacity: 0.8;
+  -moz-opacity: 0.8;
+  -ms-opacity: 0.8;
+  -o-opacity: 0.8;
+  opacity: 0.8;
+}
+.outer.unlocked .lock {
+  background: #24cf02;
+  cursor: none;
+}

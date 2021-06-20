@@ -8,10 +8,10 @@ export default function Dag5_3() {
   const [id, setId] = useState(0);
 
   const tips = [
-    "Als je gevoelig bent om emotioneel te regeren op veel of weinig likes, verberg ze dan.",
-    "Wanneer een gebruiker vaak haatcomments schrijft is het best om hem te blokkeren",
-    "Iedereen heeft het recht om een reactie te schrijven. Weet dat je best gewoon positief kan reageren",
-    "Als je vreemde spamberichten ontvangt, klik dan nooit op een link, maar verwijder meteen",
+    "Als je gevoelig bent om emotioneel te reageren op veel of weinig likes, verberg ze dan.",
+    "Wanneer een gebruiker vaak haatcomments schrijft is het best om die persoon te blokkeren.",
+    "Iedereen heeft het recht om een reactie te schrijven. Maar probeer het positief te houden.",
+    "Als je vreemde spamberichten ontvangt, klik dan nooit op een link, maar verwijder die meteen.",
   ];
 
   const next = () => {
@@ -24,12 +24,11 @@ export default function Dag5_3() {
     <section className="background-yellow stretch-container">
       5.3
       <Background />
-
       <div className="game-wrapper">
         <h1 className="title__m-bold hidden">TIPS</h1>
 
         {tips.map((element, key) => {
-          if (key < id) {
+          if (key <= id) {
             return (
               <p className="game__textBox-small title__s-bold">{element}</p>
             );

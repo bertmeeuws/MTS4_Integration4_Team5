@@ -31,7 +31,9 @@ export default function Dag1_6({ route }) {
           </div>
           <div className="post__comments__container">
             <p className="post__comment__author title__s-bold">Gebruiker</p>
-            <p className="text__m-normal post__comment">{answer.text}</p>
+            <p className="text__m-normal post__comment">
+              {answer?.text?.substring(1, answer?.text?.length - 1)}
+            </p>
           </div>
         </div>
         <button

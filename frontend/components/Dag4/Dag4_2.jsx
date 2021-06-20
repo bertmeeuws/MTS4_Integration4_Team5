@@ -6,26 +6,29 @@ import Image from "next/image";
 export default function Dag4_2() {
   const nextRoute = useStoreActions((actions) => actions.nextRoute);
 
-  const [array, setArray] = useState([
-    <div
-      style={{ left: key * 2 + "rem", top: key * 2 + "rem" }}
-      className="game__error__item"
-    >
-      <Image src="/assets/error.svg" height={370} width={599} />
-    </div>,
-  ]);
+  const [amount, setAmount] = useState(1);
 
-  function timeout(ms) {
-    return new Promise((resolve) => setTimeout(resolve, ms));
-  }
+  const array = ["", "", "", "", "", "", ""];
 
-  useEffect(() => {
-    renderErrors();
+  const waitFor = (delay) =>
+    new Promise((resolve) => setTimeout(resolve, delay));
+
+  useEffect(async () => {
+    await waitFor(150);
+    setAmount(2);
+    await waitFor(150);
+    setAmount(3);
+    await waitFor(150);
+    setAmount(4);
+    await waitFor(150);
+    setAmount(5);
+    await waitFor(150);
+    setAmount(6);
+    await waitFor(150);
+    setAmount(7);
+    await waitFor(1000);
+    nextRoute();
   }, []);
-
-  renderErrors = async () => {
-    await timeout(1000);
-  };
 
   return (
     <section className="background-yellow stretch-container">
@@ -33,9 +36,18 @@ export default function Dag4_2() {
       <Background />
       <div className="center-middle game-wrapper">
         <div className="game__error__container">
-          {/*array.map((item, key) => {
-            return item;
-          })*/}
+          {array.map((element, key) => {
+            if (key < amount) {
+              return (
+                <div
+                  style={{ top: 2 * key + "rem", left: 2 * key + "rem" }}
+                  className="game__error__item"
+                >
+                  <Image src="/assets/error.svg" height={370} width={599} />
+                </div>
+              );
+            }
+          })}
         </div>
         <button onClick={(e) => nextRoute()}>Volgende</button>
       </div>

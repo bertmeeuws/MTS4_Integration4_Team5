@@ -2,7 +2,7 @@ import { createStore, action, persist } from "easy-peasy";
 
 export const model = {
   //STATE
-  route: 32,
+  route: 23,
   user: null,
   profile: null,
   game_data: null,
@@ -14,6 +14,12 @@ export const model = {
   answer: null,
 
   //MUTATIONS
+
+  setRouteAmount: action((state, payload) => {
+    let route = state.route;
+    route += payload;
+    state.route = route;
+  }),
 
   setProfileImage: action((state, payload) => {
     state.profile_picture = payload;

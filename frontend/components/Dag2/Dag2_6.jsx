@@ -3,6 +3,7 @@ import { API_URL } from "../../constants";
 import { useStoreActions } from "easy-peasy";
 import axios from "axios";
 import Background from "../Background/Background";
+import ListWindow from "../ListWindow/ListWindow";
 
 export default function Dag2_6({ data }) {
   const nextRoute = useStoreActions((actions) => actions.nextRoute);

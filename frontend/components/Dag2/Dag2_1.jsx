@@ -1,6 +1,7 @@
 import React from "react";
 import { useStoreActions } from "easy-peasy";
 import Background from "../Background/Background";
+import SwipeToUnlock from "../SwipeToUnlock/SwipeToUnlock";
 
 export default function Dag2_1() {
   const nextRoute = useStoreActions((actions) => actions.nextRoute);
@@ -21,6 +22,7 @@ export default function Dag2_1() {
         >
           Swipe om te ontgrendelen
         </button>
+        <SwipeToUnlock />
       </div>
     </section>
   );
