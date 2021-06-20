@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { useStoreActions } from "easy-peasy";
+import { useStoreActions, useStoreState } from "easy-peasy";
 import { API_URL } from "../../constants";
 import axios from "axios";
 import Background from "../Background/Background";
-
+import ListWindow from "../ListWindow/ListWindow";
 
 export default function Dag3_6({ data }) {
   const nextRoute = useStoreActions((actions) => actions.nextRoute);
@@ -27,22 +27,31 @@ export default function Dag3_6({ data }) {
 
   return (
     <section className="background-yellow stretch-container">
-      3.6
+      <p className="hidden">3.6</p>
       <Background />
-
-      {students.map((student) => {
-        return (
-          <p>
-            {student.name} {student.points.pop().followers}
-          </p>
-        );
-      })}
-      <button
-        className="button__primary text__m-bold button__game-next"
-        onClick={(e) => nextRoute()}
-      >
-        Dag afsluiten
-      </button>
+      <div className="game-wrapper">
+        <h1 className="title__m-bold hidden">Overzicht</h1>
+        <ListWindow text={`Leerlingen klas ${data.name}`}>
+          <div className="list__window__container">
+            {students.map((student) => {
+              return (
+                <div className="list__window__item">
+                  <p>{student.name}</p>
+                  <p className="title__s-bold">
+                    {student?.points?.pop()?.followers}
+                  </p>
+                </div>
+              );
+            })}
+          </div>
+        </ListWindow>
+        <button
+          className="button__primary text__m-bold button__game-next"
+          onClick={(e) => nextRoute()}
+        >
+          Dag afsluiten
+        </button>
+      </div>
     </section>
   );
 }

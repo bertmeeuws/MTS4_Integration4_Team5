@@ -126,7 +126,7 @@ export default function Dag2_2({ data }) {
                 onClick={(e) => {
                   setFollowers(current_followers + choice.followers);
                   setAnswer(choice);
-                  //updateFollowers(choice.followers);
+                  updateFollowers(choice.followers);
                   choice?.action();
                 }}
               >

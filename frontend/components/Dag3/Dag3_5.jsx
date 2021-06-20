@@ -1,29 +1,25 @@
 import React from "react";
-import { useStoreActions } from "easy-peasy";
+import { useStoreActions, useStoreState } from "easy-peasy";
 import Background from "../Background/Background";
-
 
 export default function Dag3_5() {
   const nextRoute = useStoreActions((actions) => actions.nextRoute);
+  const answer = useStoreState((state) => state.answer);
 
   return (
     <section className="background-yellow stretch-container">
-      3.5
+      <p className="hidden">3.5</p>
       <Background />
-
       <div className="game-wrapper">
         <div className="game__textBox">
-          <p className="text-center text__m-normal">-20 PENALTY HERE</p>
-          <h1 className="title__m-bold">
-            Laat likes je humeur niet beïnvloeden, een like zegt helemaal niets
-            over hoe je bent.
-          </h1>
+          <p className="text-center text__m-normal">{answer?.followers_text}</p>
+          <h1 className="title__m-bold text-center">{answer?.penalty}</h1>
         </div>
         <button
           className="button__primary text__m-bold button__game-next"
           onClick={(e) => nextRoute()}
         >
-          Naar overzicht
+          {answer?.button}
         </button>
       </div>
     </section>

@@ -387,3 +387,50 @@
   opacity: 0;
   scale: 0;
 }
+.game__day3__post {
+  max-width: 34.5rem;
+  display: grid;
+  margin: 0 auto;
+  grid-template-rows: 1fr 6.3rem;
+  border: 1rem solid var(--black);
+  height: 40.8rem;
+}
+.game__day3__post p {
+  padding: 2rem;
+}
+.game__day3__likes__container {
+  background-color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1rem solid var(--black);
+}
+.game__day3__list {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  width: 66rem;
+  min-height: 50vh;
+  align-items: center;
+}
+.game__day3__list li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.game__day3__list li:hover {
+  transform: scale(1.1);
+}
+.game__day3__list li p {
+  margin-top: 2rem;
+}
+.game__day3__buttons {
+  margin: 0 auto;
+  margin-top: 20rem;
+}
+.game__day3__buttons button {
+  margin-right: 4rem;
+}

@@ -8,11 +8,17 @@ export default function Dag3_1() {
 
   return (
     <section className="background-yellow stretch-container">
-      3.1
+      <p className="hidden">3.1</p>
       <Background />
       <div className="game-wrapper">
-        <img src={picture} alt="" />
-        <p>Kareltje en 2 anderen vinden dit leuk</p>
+        <div className="game__day3__post">
+          <img src={picture} alt="" />
+          <div className="game__day3__likes__container">
+            <p className="text__s-normal">
+              Kareltje en 2 anderen vinden dit leuk
+            </p>
+          </div>
+        </div>
         <button
           className="button__primary text__m-bold button__game-next"
           onClick={(e) => nextRoute()}

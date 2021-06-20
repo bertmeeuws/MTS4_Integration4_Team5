@@ -1,30 +1,30 @@
 import React from "react";
-import { useStoreActions } from "easy-peasy";
+import { useStoreActions, useStoreState } from "easy-peasy";
+import axios from "axios";
+import { API_URL } from "../../constants";
 import Background from "../Background/Background";
-
+import Image from "next/image";
 
 export default function Dag3_3() {
   const nextRoute = useStoreActions((actions) => actions.nextRoute);
+
+  const answer = useStoreState((state) => state.answer);
 
   return (
     <section className="background-yellow stretch-container">
       3.3
       <Background />
-
       <div className="game-wrapper">
-        <div className="game__textBox">
-          <p className="text-center">-20 PENALTY HERE</p>
-          <h1 className="title__m-bold ">
-            Je hebt volers verloren omdat je je humeur laat beïnvloeden door
-            likes.
-          </h1>
+        <div className="game__textBox text-center">
+          <p className="text-center">{answer?.followers_text}</p>
+          <h1 className="title__m-bold">{answer?.penalty}</h1>
         </div>
 
         <button
           className="button__primary text__m-bold button__game-next"
           onClick={(e) => nextRoute()}
         >
-          Wat kan ik hier aan doen?
+          {answer?.button}
         </button>
       </div>
     </section>
