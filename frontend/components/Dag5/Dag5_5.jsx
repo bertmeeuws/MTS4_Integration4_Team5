@@ -1,5 +1,5 @@
 import React from "react";
-import { useStoreActionsn, useStoreState } from "easy-peasy";
+import { useStoreActions, useStoreState } from "easy-peasy";
 import Background from "../Background/Background";
 import axios from "axios";
 import { API_URL } from "../../constants";

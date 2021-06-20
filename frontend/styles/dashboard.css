@@ -19,7 +19,7 @@
   margin-top: 17rem;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(12, 1fr);
+  grid-template-rows: repeat(7, 1fr);
   grid-row-gap: 1rem;
 }
 .nav__dashboard__list-item {
@@ -58,7 +58,7 @@
 }
 
 .dashboard-newgame {
-  padding-top: 6.7rem;
+  margin-top: 6.7rem;
 }
 .dashboard-newgame .h2 {
   letter-spacing: 0;
@@ -204,4 +204,7 @@
 }
 .dashboard-game-scores .student-row p:last-child {
   color: var(--yellow);
+}
+.nav__grid {
+  overflow-y: hidden;
 }

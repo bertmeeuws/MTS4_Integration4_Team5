@@ -7,6 +7,8 @@ export default function Game({ teacher, game }) {
   console.log(game);
   const { id } = teacher;
 
+  //const date = new Date(game[0]?.published_at);
+
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
 
@@ -26,7 +28,9 @@ export default function Game({ teacher, game }) {
   return (
     <section className="dashboard-newgame">
       <p className="dashboard-newgame-welcome p blue bold">Aangemaakt spel</p>
-      <h1 className="h2">{data.name} - DATE</h1>
+      <h1 className="h2">
+        {data.name} - {new Date(data.published_at).toLocaleDateString("be-nl")}
+      </h1>
       <p className="dashboard-game-subtitle pixelated-font">statistieken</p>
       <div className="dashboard-game-circle-containers">
         <div className="dashboard-game-circle">
@@ -36,10 +40,6 @@ export default function Game({ teacher, game }) {
         <div className="dashboard-game-circle">
           <p className="pixelated-font h2">{data.students.length}</p>
           <p className="p-small">Studenten</p>
-        </div>
-        <div className="dashboard-game-circle">
-          <p className="pixelated-font h2">Din</p>
-          <p className="p-small">In-game dag</p>
         </div>
       </div>
       <p className="dashboard-game-subtitle pixelated-font">topscores</p>

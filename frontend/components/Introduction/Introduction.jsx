@@ -10,6 +10,7 @@ export default function Introduction({ data }) {
   const chooseUser = useStoreActions((actions) => actions.changeGamer);
   const changeRoute = useStoreActions((actions) => actions.changeRoute);
   const nextRoute = useStoreActions((actions) => actions.nextRoute);
+  const gamer = useStoreState((state) => state.current_gamer);
 
   console.log(data[0]);
 
@@ -31,14 +32,14 @@ export default function Introduction({ data }) {
                 {game.students.map((student) => {
                   return (
                     <button
-                      key={student.key}
+                      key={student?.key}
                       className="button__secondary text__m-normal"
                       onClick={(e) => {
                         chooseUser({ name: student.name, id: student.id });
                         nextRoute();
                       }}
                     >
-                      {student.name}
+                      {student?.name}
                     </button>
                   );
                 })}

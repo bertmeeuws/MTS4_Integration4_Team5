@@ -18,7 +18,7 @@ export default function Dag1({ route, data }) {
             style={{ backgroundColor: "var(--white)" }}
             className="mark-yellow"
           >
-            {gamer.name}
+            {gamer?.name}
           </marker>{" "}
           op deze maandag. Deel een foto met de wereld.
         </h1>

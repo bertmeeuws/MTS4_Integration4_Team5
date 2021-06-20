@@ -16,6 +16,7 @@ export default function Games({ teacher, setId, setGame }) {
     setLoading(false);
     setGames(response.data);
     console.log(response.data);
+    console.log(response.data[0].id);
   }, []);
 
   return (
@@ -25,13 +26,16 @@ export default function Games({ teacher, setId, setGame }) {
       {loading ? <p>Loading</p> : ""}
       <div className="overflow-y">
         {games.map((game) => {
+          const date = new Date(game.published_at);
+
           return (
             <Window key={game.link} text={`${WEBSITE_URL}/game/${game.link}`}>
               <div className="games-flex">
                 <div>
-                  <p className="bold">{game.name} - DATE HERE</p>
+                  <p className="bold">
+                    {game.name} - {date.toLocaleDateString("be-nl")}
+                  </p>
                   <p>{game.students.length} Leerlingen</p>
-                  <p>NUMBER gem. volgers</p>
                 </div>
                 <div>
                   <p

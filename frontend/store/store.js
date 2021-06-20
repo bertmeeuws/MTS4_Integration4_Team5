@@ -74,5 +74,4 @@ export const store = createStore(
   })
 );
 */
-
 export const store = createStore(model);
