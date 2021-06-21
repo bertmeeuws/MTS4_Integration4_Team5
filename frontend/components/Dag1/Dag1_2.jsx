@@ -40,6 +40,7 @@ export default function Dag1_2({ route }) {
           <Image src="/globe.svg" height={178} width={178} />
         </div>
       </div>
+      <Image src="/assets/raster.svg" width={1040} height={528} />
     </section>
   );
 }

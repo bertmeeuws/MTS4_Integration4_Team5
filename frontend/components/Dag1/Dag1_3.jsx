@@ -3,6 +3,7 @@ import { action, useStoreActions, useStoreState } from "easy-peasy";
 import axios from "axios";
 import { API_URL } from "../../constants";
 import Background from "../Background/Background";
+import Image from "next/image";
 
 export default function Dag1_3({ route, data }) {
   console.log(data);
@@ -29,7 +30,7 @@ export default function Dag1_3({ route, data }) {
   const nextRoute = useStoreActions((actions) => actions.nextRoute);
 
   return (
-    <section className="background-yellow stretch-container">
+    <section className="day1__container background-yellow stretch-container">
       <Background />
 
       <div className="game-wrapper">
@@ -48,6 +49,12 @@ export default function Dag1_3({ route, data }) {
           Bekijk je foto op de feed
         </button>
       </div>
+      <img
+        className="day3__raster__img"
+        src="/assets/raster.svg"
+        width="1040"
+        height="528"
+      />
     </section>
   );
 }

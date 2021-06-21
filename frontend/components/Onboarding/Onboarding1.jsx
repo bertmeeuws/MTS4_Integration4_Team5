@@ -29,14 +29,16 @@ export default function Onboarding1({ data }) {
         </p>
       </div>
       <div className="onboarding-progress-container">
-        <button
-          className="button__primary text__m-bold button__game-next"
-          onClick={(e) => nextRoute()}
-        >
-          Ontdek hoe je volgers kan krijgen
-        </button>
-        <ProgressBar step={1} />
+        <div>
+          <button
+            className="button__primary text__m-bold button__game-next"
+            onClick={(e) => nextRoute()}
+          >
+            Ontdek hoe je volgers kan krijgen
+          </button>
+        </div>
       </div>
+      <ProgressBar step={1} />
     </section>
   );
 }

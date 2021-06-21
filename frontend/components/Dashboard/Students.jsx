@@ -89,7 +89,6 @@ export default function Students({ teacher, game, setId }) {
           value="toevoegen"
         />
       </form>
-
       <ul className="newGame-students">
         {students?.map((item) => {
           return (

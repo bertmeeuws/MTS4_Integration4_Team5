@@ -15,7 +15,7 @@ export default function Onboarding2() {
         <h1 className="title__m-bold margin-top align-center">
           Verdien volgers
         </h1>
-        <p className="align-center">
+        <p className="onboarding2__text align-center">
           Schat de situatie zo goed mogelijk in en verdien zo veel mogelijk
           volgers.
         </p>
@@ -36,9 +36,8 @@ export default function Onboarding2() {
           >
             Ontdek hoe je volgers verliest
           </button>
-
-          <ProgressBar step={2} />
         </div>
+        <ProgressBar step={2} />
       </div>
     </section>
   );

@@ -21,10 +21,10 @@ export default function Onboarding4() {
           </marker>
           je eigen account
         </h1>
-        <p className="align-center">
+        <p className="onboarding2__text align-center">
           Verander de kleuren van je account zoals jij het wil!
         </p>
-        <div className="introduction-list">
+        <div className="onboarding-progress-container">
           <button
             className="button__secondary text__m-bold button__game-next"
             onClick={(e) => {
@@ -41,8 +41,8 @@ export default function Onboarding4() {
           >
             Start BuddyGram op
           </button>
-          <ProgressBar step={4} />
         </div>
+        <ProgressBar step={4} />
       </div>
     </section>
   );

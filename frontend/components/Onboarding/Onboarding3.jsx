@@ -15,8 +15,10 @@ export default function Onboarding3() {
         <h1 className="title__m-bold margin-top align-center">
           Verlies volgers
         </h1>
-        <p>Wanneer je een situatie niet correct inschat verlies je volgers.</p>
-        <div className="introduction-list">
+        <p className="onboarding2__text text-center">
+          Wanneer je een situatie niet correct inschat verlies je volgers.
+        </p>
+        <div className="onboarding-progress-container">
           <button
             className="button__secondary text__m-bold button__game-next"
             onClick={(e) => {
