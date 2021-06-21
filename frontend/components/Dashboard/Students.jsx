@@ -16,7 +16,17 @@ export default function Students({ teacher, game, setId }) {
     } catch (e) {
       setId(1);
     }
-  }, [students]);
+  }, []);
+
+  const refetchUsers = async () => {
+    try {
+      const response = await axios.get(`${API_URL}/games?id=${game}`);
+
+      setStudents(response?.data[0]?.students);
+    } catch (e) {
+      setId(1);
+    }
+  };
 
   const deleteStudent = async (id) => {
     console.log("Delete student: " + id);
@@ -45,6 +55,7 @@ export default function Students({ teacher, game, setId }) {
         array.push(response.data);
         setStudents(array);
         setInput("");
+        refetchUsers();
       } catch (e) {
         console.log(e);
       }
@@ -55,17 +66,28 @@ export default function Students({ teacher, game, setId }) {
     <section className="dashboard-newgame">
       <p className="dashboard-newgame-welcome p blue bold">Welkom {surname}</p>
       <h1 className="h2">Leerlingen aanpassen</h1>
-      <form onSubmit={handleSubmitForm}>
-        <label htmlFor="student" className="pixelated-font p-small">
-          Leerling toevoegen:
-        </label>
+      <form
+        className="dashboard__changestudents__form"
+        onSubmit={handleSubmitForm}
+      >
+        <div className="dashboard__changestudents__div">
+          <label htmlFor="student" className="title__xs-bold">
+            Leerling toevoegen:
+          </label>
+          <input
+            name="student"
+            id="student"
+            className="dashboard__changestudents__input text__s-normal"
+            placeholder="Naam van de student"
+            value={input}
+            onChange={(e) => setInput(e.currentTarget.value)}
+          />
+        </div>
         <input
-          name="student"
-          id="student"
-          value={input}
-          onChange={(e) => setInput(e.currentTarget.value)}
+          className="button__secondary text__s-normal"
+          type="submit"
+          value="toevoegen"
         />
-        <input type="submit" value="toevoegen" />
       </form>
 
       <ul className="newGame-students">
