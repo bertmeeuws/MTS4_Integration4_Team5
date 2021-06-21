@@ -31,6 +31,7 @@ export default function Game({ teacher, game }) {
       <h1 className="h2">
         {data.name} - {new Date(data.published_at).toLocaleDateString("be-nl")}
       </h1>
+      <p>Klik hier om de leerlingen te zien die in privé willen praten</p>
       <p className="dashboard-game-subtitle pixelated-font">statistieken</p>
       <div className="dashboard-game-circle-containers">
         <div className="dashboard-game-circle">

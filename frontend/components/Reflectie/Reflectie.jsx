@@ -1,20 +1,19 @@
 import React from "react";
 import { useStoreActions } from "easy-peasy";
 import Background from "../Background/Background";
-import SwipeToUnlock from "../SwipeToUnlock/SwipeToUnlock";
+import SwipeToUnlock from "../SwipeToUnlock/SwipeToUnlock.jsx";
 
-export default function Dag2_1() {
+export default function Reflectie() {
   const nextRoute = useStoreActions((actions) => actions.nextRoute);
 
   return (
     <section className="background-yellow stretch-container">
       <Background />
-      2.1
       <div className="game-wrapper">
         <h1 className="title__m-bold game__textBox">
-          Iemand heeft toegang gehad tot jouw account en heeft een vreemde post
-          op jouw feed gezet.
+          Tijd voor een reflectiegesprek met de leerkracht.
         </h1>
+
         <SwipeToUnlock action={nextRoute} />
       </div>
     </section>

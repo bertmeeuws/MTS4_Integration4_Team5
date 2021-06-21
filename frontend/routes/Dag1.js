@@ -48,6 +48,8 @@ import Dag5_6 from "../components/Dag5/Dag5_6";
 import Dag5_7 from "../components/Dag5/Dag5_7";
 import Dag5_8 from "../components/Dag5/Dag5_8";
 
+import Reflectie from "../components/Reflectie/Reflectie";
+
 import NavbarWithFollowers from "../components/NavBar/NavBarWithFollowers";
 
 export const Dag1Routes = (game) => {
@@ -182,17 +184,16 @@ export const Dag1Routes = (game) => {
         </>
       ),
     },
-    /*
     {
-      id: 18,
+      id: 5,
       name: "Dag 1",
       component: (
         <>
-          <NavbarWithFollowers followers={100} text={"maandag - 07:35"} />
-          <Dag1_13 data={game[0]} route={18} title={"Dag 1"} />
+          <NavbarWithFollowers text={"maandag - 07:30"} />
+          <Reflectie />
         </>
       ),
-    },*/
+    },
   ];
 };
 
@@ -265,6 +266,16 @@ export const Dag2Routes = (game) => {
         <>
           <NavbarWithFollowers followers={100} text={"dinsdag - 07:30"} />
           <Dag2_6 data={game[0]} route={15} title={"Dag 2"} />
+        </>
+      ),
+    },
+    {
+      id: 5,
+      name: "Dag 2",
+      component: (
+        <>
+          <NavbarWithFollowers followers={100} text={"dinsdag - 07:30"} />
+          <Reflectie />
         </>
       ),
     },
@@ -355,6 +366,16 @@ export const Dag3Routes = (game) => {
         </>
       ),
     },
+    {
+      id: 5,
+      name: "Dag 3",
+      component: (
+        <>
+          <NavbarWithFollowers followers={100} text={"woensdag - 07:40"} />
+          <Reflectie />
+        </>
+      ),
+    },
   ];
 };
 
@@ -417,6 +438,16 @@ export const Dag4Routes = (game) => {
         <>
           <NavbarWithFollowers followers={100} text={"donderdag - 07:40"} />
           <Dag4_5 data={game[0]} route={15} title={"Dag 4"} />
+        </>
+      ),
+    },
+    {
+      id: 5,
+      name: "Dag 4",
+      component: (
+        <>
+          <NavbarWithFollowers followers={100} text={"donderdag - 07:30"} />
+          <Reflectie />
         </>
       ),
     },
@@ -524,6 +555,16 @@ export const Dag5Routes = (game) => {
         <>
           <NavbarWithFollowers followers={100} text={"vrijdag - 07:40"} />
           <Dag5_8 data={game[0]} route={15} title={"Dag 5"} />
+        </>
+      ),
+    },
+    {
+      id: 5,
+      name: "Dag 5",
+      component: (
+        <>
+          <NavbarWithFollowers followers={100} text={"vrijdag - 07:30"} />
+          <Reflectie />
         </>
       ),
     },
