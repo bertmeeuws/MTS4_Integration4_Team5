@@ -1,4 +1,5 @@
 import "../styles/globals.css";
+import "../styles/responsive.css";
 import { Provider } from "next-auth/client";
 import { store } from "../store/store";
 import { StoreProvider } from "easy-peasy";

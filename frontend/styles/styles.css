@@ -39,7 +39,7 @@
 }
 
 .text__s-bold {
-  font-size: 2.4rem;
+  font-size: 1.4rem;
   line-height: 3.6rem;
   font-weight: 700;
 }
@@ -78,6 +78,7 @@
   box-shadow: -1rem 1rem var(--black);
   cursor: pointer;
   transition: 0.1s;
+  text-align: center;
 }
 
 .button__primary:hover {
@@ -94,6 +95,7 @@
   box-shadow: -1rem 1rem var(--black);
   cursor: pointer;
   transition: 0.1s;
+  text-align: center;
 }
 
 .button__secondary:hover {
@@ -114,7 +116,7 @@
 }
 
 .text__with {
-  width: 58rem;
+  max-width: 58rem;
 }
 
 .p {
@@ -242,7 +244,7 @@
 .yellow-grid {
   background-color: var(--yellow);
   height: 100vh;
-  width: 100%;
+  max-width: 100%;
   background: var(--yellow);
   background-image: linear-gradient(
       rgba(255, 255, 255, 0.1) 0.1em,
@@ -276,7 +278,7 @@
 }
 
 .stretch-container {
-  width: 100%;
+  max-width: 100%;
   height: 100%;
 }
 
@@ -315,7 +317,7 @@
 }
 
 .nav-container {
-  width: 108rem;
+  max-width: 108rem;
   margin: 0 auto;
   display: flex;
   align-items: center;

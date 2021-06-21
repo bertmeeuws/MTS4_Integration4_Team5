@@ -1,0 +1,195 @@
+@media only screen and (max-width: 1200px) {
+    
+    .nav-container {
+        width: 90vw;
+    }
+
+    .header__content {
+        width: 90vw;
+        
+    }
+
+    .footer__wrapper {
+        width: 90vw;
+    }
+
+    .car__container {
+        width: 90vw;
+        margin: 0 auto;
+    }
+    
+    .info__container-1 {
+        width: 80vw;
+    }
+
+    .info__container-2 {
+        width: 80vw;
+    }
+
+    .info__container-3 {
+        width: 80vw;
+    }
+
+    .info__container-4 {
+        width: 80vw;
+    }
+
+    .info__container-5 {
+        width: 80vw;
+    }
+
+    .header__img {
+        display: none;
+    }
+
+    .header__box {
+        margin-top: 10rem;
+    }
+
+    .image__lightning{
+        right: 5%;
+        transform: scale(0.9);
+    }
+    
+}
+
+@media only screen and (max-width: 960px) {
+
+    .title__l-bold {
+        font-size: 5rem;
+      }
+
+    .title__m-bold {
+        font-size: 4rem;
+    }
+
+    .box__shadow{
+        box-shadow:
+        -2rem -2rem 0rem -1rem var(--white), 
+        -3rem -3rem 0rem -1rem var(--black),
+        -2rem -2rem 0rem 0rem var(--black);
+      }
+
+    .car__container {
+        width: 90vw;
+        margin: 0 auto;
+    }
+
+    .header__intro {
+        padding: 3rem;
+        margin-bottom: 2rem;
+    }
+
+    .spacer__s {
+        height: .5rem;
+    }
+
+    .header__box {
+        margin-top: 10rem;
+    }
+
+    .image__love {
+        transform: scale(0.8) rotate(15deg);
+        right: 20%;
+    }
+
+    .image__lightning{
+        right: 0;
+        transform: scale(0.7);
+    }
+    
+}
+
+@media only screen and (max-width: 640px) {
+
+    .header__content {
+        width: 90vw;
+    }
+
+    .button__secondary-home {
+        display: none;
+    }
+
+    .text__m-bold {
+        font-size: 1.8rem;
+        line-height: normal;
+      }
+      
+    .text__m-normal {
+        font-size: 1.8rem;
+        line-height: normal;
+    }
+
+    .title__l-bold {
+        font-size: 4rem;
+    }
+
+    .title__s-bold {
+        font-size: 1.4rem;
+    }
+
+    .title__m-bold {
+        font-size: 3.6rem;
+    }
+
+    .image__love {
+        right: 10%;
+    }
+
+    .car__info {
+        padding: 0rem;
+        padding-top: 2rem;
+    }
+    
+    .image__arrowDown {
+        display: none;
+    }
+
+    .image__lightning{
+        right: 0;
+        transform: scale(0.4);
+        margin-top: -30rem;
+        margin-right: -5rem;
+    }
+
+    .image__love {
+        transform: scale(0.7) rotate(15deg);
+    }
+
+    .header__box {
+        margin-top: 8rem;
+    }
+
+    .info__container-5 {
+        padding-bottom: 10rem;
+    }
+
+    .info__container-2 {
+        padding-bottom: 10rem;
+    }
+
+    .slick-dots li {
+        width: 2rem !important;
+        height: 2rem !important;
+    }
+
+    .slick-dots li button{
+        width: 2rem !important;
+        height: 2rem !important;
+    }
+    
+}
+
+@media only screen and (max-width: 400px) {
+    
+    .button__primary-home {
+        align-self: center;
+        justify-self: center;
+        width: 100%;
+    }
+
+    .image__love {
+        transform: scale(0.7) rotate(15deg);
+    }
+    
+}

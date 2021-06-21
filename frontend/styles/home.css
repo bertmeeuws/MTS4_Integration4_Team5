@@ -3,6 +3,7 @@
   background-color: var(--red);
   display: grid;
   grid-template-rows: 1fr 5rem;
+  width: 100vw;
 }
 
 .header__content {
@@ -74,8 +75,8 @@
 
 .image__lightning {
   position: absolute;
-  right: 20%;
   pointer-events: none;
+  right: 25%;
 }
 
 .image__gridYellow {
@@ -90,6 +91,15 @@
   margin-top: 0rem;
   left: -1rem;
   pointer-events: none;
+}
+
+.image__love {
+  position: absolute;
+  margin-top: -5rem;
+  right: 40%;
+  transform: rotate(15deg);
+  pointer-events: none;
+  z-index: 10;
 }
 
 .gridYellow{
@@ -154,6 +164,11 @@
   height: 60rem;
   width: 108rem;
   margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 20rem;
 }
 
 .info__container-3 {
@@ -171,9 +186,14 @@
 }
 
 .info__container-5 {
-  height: 80rem;
+  height: 60rem;
   width: 108rem;
   margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 20rem;
 }
 
 .car__container{
