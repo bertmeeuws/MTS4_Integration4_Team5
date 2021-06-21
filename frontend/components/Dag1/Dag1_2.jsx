@@ -1,12 +1,18 @@
 import React from "react";
 import { useStoreActions, useStoreState } from "easy-peasy";
 import Background from "../Background/Background";
-import { Droppable, DragDropContext, Draggable } from "react-beautiful-dnd";
+import Draggable from "react-draggable";
+import Image from "next/image";
 
 export default function Dag1_2({ route }) {
   const nextRoute = useStoreActions((actions) => actions.nextRoute);
 
   const image = useStoreState((state) => state.profile_picture);
+
+  const handleStop = (e) => {
+    console.log(e);
+    nextRoute();
+  };
 
   return (
     <section className="background-yellow stretch-container">
@@ -17,19 +23,22 @@ export default function Dag1_2({ route }) {
         <p className="game__upload-subtext text__m-normal">
           Grijp de foto met je muis en sleep deze in de feed.
         </p>
-
-        <div style={{ overflow: "none", height: "14.8rem", width: "14.8rem" }}>
-          <img id="output" style={{ height: "14.8rem" }} src={image} />
+        <div className="game__image__drag">
+          <Draggable onStop={handleStop}>
+            <div
+              style={{
+                overflow: "none",
+                height: "14.8rem",
+                width: "14.8rem",
+                zIndex: "8",
+              }}
+            >
+              <img id="output" style={{ height: "14.8rem" }} src={image} />
+            </div>
+          </Draggable>
+          <Image src="/dragarrow.svg" height={178} width={178} />
+          <Image src="/globe.svg" height={178} width={178} />
         </div>
-
-        <div>dqsd</div>
-
-        <button
-          className="button__primary text__m-bold button__game-next"
-          onClick={(e) => nextRoute()}
-        >
-          Volgende
-        </button>
       </div>
     </section>
   );

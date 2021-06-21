@@ -2,10 +2,13 @@ import React, { useEffect, useState } from "react";
 import Window from "./Containers/Window";
 import axios from "axios";
 import { API_URL } from "../../constants";
+import Pop from "./Pop";
 
 export default function Game({ teacher, game }) {
   console.log(game);
   const { id } = teacher;
+
+  const [popup, setPopup] = useState(false);
 
   //const date = new Date(game[0]?.published_at);
 
@@ -27,11 +30,12 @@ export default function Game({ teacher, game }) {
 
   return (
     <section className="dashboard-newgame">
+      {popup ? <Pop setPopup={setPopup} game={game} /> : ""}
       <p className="dashboard-newgame-welcome p blue bold">Aangemaakt spel</p>
       <h1 className="h2">
         {data.name} - {new Date(data.published_at).toLocaleDateString("be-nl")}
       </h1>
-      <p>Klik hier om de leerlingen te zien die in privé willen praten</p>
+
       <p className="dashboard-game-subtitle pixelated-font">statistieken</p>
       <div className="dashboard-game-circle-containers">
         <div className="dashboard-game-circle">
@@ -41,6 +45,10 @@ export default function Game({ teacher, game }) {
         <div className="dashboard-game-circle">
           <p className="pixelated-font h2">{data.students.length}</p>
           <p className="p-small">Studenten</p>
+        </div>
+        <div onClick={(e) => setPopup(true)} className="dashboard-game-circle">
+          <p className="pixelated-font h2">Privé</p>
+          <p className="p-small"></p>
         </div>
       </div>
       <p className="dashboard-game-subtitle pixelated-font">topscores</p>
