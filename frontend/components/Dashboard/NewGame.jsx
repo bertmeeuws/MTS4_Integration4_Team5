@@ -6,11 +6,12 @@ import axios from "axios";
 import { API_URL } from "../../constants/index";
 
 export default function NewGame({ teacher }) {
+  
   const { id } = teacher;
-
+  
   const [name, setName] = useState("");
-  const [students, setStudents] = useState([]);
 
+  const [students, setStudents] = useState([]);
   const [addStudent, setAddStudent] = useState("");
 
   const [link, setAddLink] = useState("");
@@ -71,10 +72,10 @@ export default function NewGame({ teacher }) {
 
   return (
     <section className="dashboard-newgame">
-      <p className="dashboard-newgame-welcome p blue bold">
-        Welkom {teacher.surname}
-      </p>
-      <h1 className="h2">Maak een nieuw spel aan</h1>
+      
+      <span className="text__m-bold text__blue">Welkom, {teacher.surname}</span>
+      <h1 className="title__m-bold">Start een nieuw spel</h1>
+
       <Window>
         <form onSubmit={handleSubmitNewGame} className="form__newGame">
           <div className="newGame-input-container">

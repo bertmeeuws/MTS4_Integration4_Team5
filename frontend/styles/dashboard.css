@@ -1,71 +1,109 @@
-.nav__dashboard {
-  background-color: var(--yellow);
+.newgame__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 10rem;
+}
+
+.nav__dashboard-container {
   height: 100vh;
   width: 20rem;
   background: var(--yellow);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-image: linear-gradient(
       rgba(255, 255, 255, 0.1) 0.1em,
       transparent 0.1em
     ),
     linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0.1em, transparent 0.1em);
   background-size: 1em 1em;
-  position: relative;
 }
 
-.nav__dashboard__list {
-  position: absolute;
-  right: -10rem;
-  margin-left: 5rem;
-  margin-top: 17rem;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(7, 1fr);
-  grid-row-gap: 1rem;
-}
-.nav__dashboard__list-item {
-  padding: 15px 25px;
-  border: 1rem solid var(--black);
-  cursor: pointer;
-  transition: all 0.3s ease;
-  background-color: var(--white);
-}
-.nav__dashboard__list-item:hover {
-  color: var(--white);
-  background-color: var(--blue);
-  box-sizing: border-box;
-  /* HardBlackShadow */
-  box-shadow: -10px 9px 0px var(--black);
-}
-.nav__dashboard__list-item:last-child {
-  background-color: var(--red);
-  color: var(--white);
-}
-.nav__dashboard__list-signOff {
-  grid-row-start: 14;
+.nav__dashboard-list {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 80vh;
 }
 
-.nav__dashboard-active {
-  background: var(--blue);
-  color: var(--white);
-  /* Primary / Dark */
-  transition: all 0.3s ease;
+.nav__dashboard-top {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 5rem;
+}
+
+.nav__dashboard-button {
+  margin-right: -15rem;
 }
 
 .dashboard-grid {
   display: grid;
-  grid-template-columns: 37.2rem 1fr;
-  padding-right: 18rem;
+  grid-template-columns: 35rem 1fr;
+  height: 100vh;
+  overflow: hidden;
 }
 
-.dashboard-newgame {
-  margin-top: 6.7rem;
+.dashboard__wrapper {
+  margin-top: 10rem;
+  margin-right: 10rem;
+  height: 100vh;
 }
-.dashboard-newgame .h2 {
-  letter-spacing: 0;
+
+.games__wrapper {
+  overflow: scroll;
+  height: 100%;
+  margin-top: 10rem;
 }
-.dashboard-newgame-welcome {
-  letter-spacing: 0;
+
+.games__list{
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  margin-bottom: 35rem;
 }
+
+/* game container */
+
+.game__container {
+  border: 1rem solid var(--black);
+}
+
+.game__top {
+  background-color: var(--white);
+  border-bottom: 1rem solid var(--black);
+  grid-row: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 4rem;
+  height: 6rem;
+}
+
+.game__cross {
+  background-color: var(--red);
+  border-left: 1rem solid var(--black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 6rem;
+  height: 100%;
+}
+
+.game__info {
+  height: 100%;
+  padding: 4rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+
+
+
 .newGame-input-container {
   display: flex;
   flex-direction: column;
@@ -167,7 +205,6 @@
 }
 .overflow-y {
   overflow-y: scroll;
-  height: 89vh;
 }
 .dashboard-game-subtitle {
   margin-top: 5.5rem;

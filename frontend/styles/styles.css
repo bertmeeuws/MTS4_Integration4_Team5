@@ -103,6 +103,23 @@
   box-shadow: 0rem 0rem var(--black);
 }
 
+.button__cancel {
+  border: 1rem solid var(--black);
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  background-color: var(--red);
+  color: var(--white);
+  z-index: 100;
+  box-shadow: -1rem 1rem var(--black);
+  cursor: pointer;
+  transition: 0.1s;
+  text-align: center;
+}
+
+.button__cancel:hover {
+  transform: translate(-1rem, 1rem);
+  box-shadow: 0rem 0rem var(--black);
+}
+
 .spacer__s {
   height: 2rem;
 }
