@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Window from "./Containers/Window";
+import Window2 from "./Containers/Window2";
 import Image from "next/image";
 import { v4 as uuid } from "uuid";
 import axios from "axios";
@@ -8,7 +8,7 @@ import { API_URL } from "../../constants/index";
 export default function NewGame({ teacher }) {
   
   const { id } = teacher;
-  
+
   const [name, setName] = useState("");
 
   const [students, setStudents] = useState([]);
@@ -71,46 +71,53 @@ export default function NewGame({ teacher }) {
   };
 
   return (
-    <section className="dashboard-newgame">
+    <section className="dashboard__wrapper">
       
       <span className="text__m-bold text__blue">Welkom, {teacher.surname}</span>
       <h1 className="title__m-bold">Start een nieuw spel</h1>
+      <div className="spacer__m"></div>
 
-      <Window>
+      <Window2>
+        
+        <p className="title__s-bold">Voeg leerlingen toe aan het spel</p>
+        
         <form onSubmit={handleSubmitNewGame} className="form__newGame">
-          <div className="newGame-input-container">
-            <label htmlFor="gamename" className="p-small pixelated-font">
-              Klasnaam:
-            </label>
-            <input
-              type="text"
-              className="p-small"
-              value={name}
-              name="gamename"
-              onChange={(e) => setName(e.currentTarget.value)}
-              required
-            />
-          </div>
-          <div className="newGame-input-container">
-            <label htmlFor="students" className="p-small pixelated-font">
-              Leerlingen:
-            </label>
-            <div className="newGame-students-form">
-              <input
-                type="text"
-                className="p-small newGame-students-form-input"
-                name="students"
-                value={addStudent}
-                onChange={(e) => setAddStudent(e.currentTarget.value)}
-              />
-              <p
-                onClick={addStudentToList}
-                className="newGame-students-button p-big"
-              >
-                toevoegen
-              </p>
+
+          <div className="new__form-container">
+            <div className="label__wrapper">
+                <label className="title__xs-bold" htmlFor="email">
+                  Klasnaam:
+                </label>
+                <input
+                  onChange={(e) => setName(e.currentTarget.value)}
+                  required
+                  type="text"
+                  name="gamename"
+                  value={name}
+                  placeholder="2HAc"
+                  className="auth-input"
+                />
+              </div>
+
+              <div className="label__wrapper">
+                <label className="title__xs-bold" htmlFor="email">
+                  Leerlingen:
+                </label>
+                <div className="add__with-button">
+                  <input
+                    onChange={(e) => setAddStudent(e.currentTarget.value)}
+                    type="text"
+                    name="students"
+                    value={addStudent}
+                    placeholder="Bert Meeuws"
+                    className="auth-input"
+                  />
+
+                  <a onClick={addStudentToList} className="button__add title__s-bold">toevoegen</a>
+                </div>
+              </div>
             </div>
-          </div>
+
           <ul className="newGame-students">
             {students.map((item) => {
               return (
@@ -136,15 +143,13 @@ export default function NewGame({ teacher }) {
             />
             <input
               type="submit"
-              className="link-box pixelated-font link-button p-big"
+              className="button__primary"
               value="Genereer link"
             />
-            <p className="link-box link-button pixelated-font p-big">
-              Kopieer link
-            </p>
+            <a className="button__secondary"> Kopieer link</a>
           </div>
         </form>
-      </Window>
+      </Window2>
     </section>
   );
 }

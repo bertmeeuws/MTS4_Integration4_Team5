@@ -63,7 +63,7 @@ export default function Students({ teacher, game, setId }) {
   };
 
   return (
-    <section className="dashboard-newgame">
+    <section className="dashboard__wrapper">
       <p className="dashboard-newgame-welcome p blue bold">Welkom {surname}</p>
       <h1 className="h2">Leerlingen aanpassen</h1>
       <form

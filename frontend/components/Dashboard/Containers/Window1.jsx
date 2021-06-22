@@ -3,14 +3,14 @@ import { Children } from "react";
 import styles from "../Containers/Window.module.css";
 import Image from "next/image";
 
-export default function Window({ children, text }) {
+export default function Window1({ children, text }) {
 
   return (
     <div className="game__container">
       <div className="game__top">
-                  
-        {text ? <p className="title__xs-bold">{text}</p> : ""}
-                  
+        <div className="game__top-link">
+          {text ? <p className="title__xs-bold">{text}</p> : ""}
+        </div>          
         <div className="game__cross">
           <Image
             src="/assets/img/crossBlack.svg"

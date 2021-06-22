@@ -110,6 +110,24 @@ export default function Home() {
               <p className="text__m-normal text__with">De 13 tot 15 jarigen gaan met verschillende scenario’s aan de slag om zo de negatieve kant van social media te leren kennen.</p>
             </article>
 
+            <div className="image__pill-red">
+              <Image
+                src="/assets/img/pillRed.svg"
+                width={60}
+                height={180}
+                alt="rood designelement"
+              />
+            </div>
+
+            <div className="image__plus-yellow">
+              <Image
+                src="/assets/img/plusYellow.svg"
+                width={80}
+                height={80}
+                alt="geel designelement"
+              />
+            </div>
+
             <div className="image__lightning">
               <Image
                 src="/assets/img/lightning.svg"
@@ -130,6 +148,15 @@ export default function Home() {
           </div>
             
           <div className="info__wrapper-blue">
+
+            <div className="image__donut-red">
+              <Image
+                src="/assets/img/donutRed.svg"
+                width={110}
+                height={110}
+                alt="geel designelement"
+              />
+            </div>
             
             <div className="info__container-2">
               
@@ -140,6 +167,15 @@ export default function Home() {
                 <div className="spacer__s"></div>
                 <p className="text__m-normal text__white">Katrien, 13 jaar</p>
               </article>
+
+              <div className="image__pill-yellow">
+                <Image
+                  src="/assets/img/pillYellow.svg"
+                  width={60}
+                  height={160}
+                  alt="geel designelement"
+                />
+              </div>
 
             </div>
 

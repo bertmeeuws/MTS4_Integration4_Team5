@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Window from "./Containers/Window";
+import Window2 from "./Containers/Window2";
 import axios from "axios";
 import { API_URL } from "../../constants";
 import Pop from "./Pop";
@@ -29,7 +29,7 @@ export default function Game({ teacher, game }) {
   }
 
   return (
-    <section className="dashboard-newgame">
+    <section className="dashboard__wrapper">
       {popup ? <Pop setPopup={setPopup} game={game} /> : ""}
       <p className="dashboard-newgame-welcome p blue bold">Aangemaakt spel</p>
       <h1 className="h2">
@@ -53,7 +53,7 @@ export default function Game({ teacher, game }) {
       </div>
       <p className="dashboard-game-subtitle pixelated-font">topscores</p>
       <div className="dashboard-game-scores">
-        <Window>
+        <Window2>
           <p className="pixelated-font">Leerlingen met de meeste volgers</p>
           <div className="student-row">
             <p>Dani Amritage</p>
@@ -67,8 +67,8 @@ export default function Game({ teacher, game }) {
             <p>Dani Amritage</p>
             <p className="pixelated-font">0</p>
           </div>
-        </Window>
-        <Window>
+        </Window2>
+        <Window2>
           <p className="pixelated-font">Leerlingen met de minste volgers</p>
           <div className="student-row">
             <p>Dani Amritage</p>
@@ -82,7 +82,7 @@ export default function Game({ teacher, game }) {
             <p>Dani Amritage</p>
             <p className="pixelated-font">0</p>
           </div>
-        </Window>
+        </Window2>
       </div>
     </section>
   );

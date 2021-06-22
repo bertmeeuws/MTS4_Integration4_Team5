@@ -79,6 +79,7 @@
   cursor: pointer;
   transition: 0.1s;
   text-align: center;
+  font-size: 2.4rem;
 }
 
 .button__primary:hover {
@@ -96,6 +97,7 @@
   cursor: pointer;
   transition: 0.1s;
   text-align: center;
+  font-size: 2.4rem;
 }
 
 .button__secondary:hover {
@@ -113,11 +115,17 @@
   cursor: pointer;
   transition: 0.1s;
   text-align: center;
+  font-size: 2.4rem;
 }
 
 .button__cancel:hover {
   transform: translate(-1rem, 1rem);
   box-shadow: 0rem 0rem var(--black);
+}
+
+.button__add{
+  cursor: pointer;
+  color: var(--blue);
 }
 
 .spacer__s {
@@ -234,6 +242,7 @@
   outline: none;
   font-family: Poppins;
   font-size: 2.4rem;
+  height: 100%;
 }
 
 .button-primary-blue {

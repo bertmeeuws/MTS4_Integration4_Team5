@@ -26,6 +26,7 @@
   justify-content: space-between;
   flex-direction: column;
   height: 80vh;
+  width: auto;
 }
 
 .nav__dashboard-top {
@@ -37,6 +38,11 @@
 
 .nav__dashboard-button {
   margin-right: -15rem;
+  width: auto;
+}
+
+.nav__dashboard-cancel {
+  margin-top: 0rem;
 }
 
 .dashboard-grid {
@@ -48,8 +54,9 @@
 
 .dashboard__wrapper {
   margin-top: 10rem;
-  margin-right: 10rem;
+  padding-right: 10rem;
   height: 100vh;
+  width: 100%;
 }
 
 .games__wrapper {
@@ -95,14 +102,65 @@
 .game__info {
   height: 100%;
   padding: 4rem;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: 1fr;
+  align-items: flex-end;
+  gap: 2rem;
 }
 
+.add__with-button {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
 
+.new__form-container { 
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
 
+.game__info-new{
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
 
+.game__top-link {
+  overflow-y: scroll;
+  white-space: nowrap;
+}
 
+.top__round-turquoise {
+  width: 3rem;
+  height: 3rem;
+  border: 1rem solid var(--black);
+  border-radius: 100%;
+  background-color: var(--turquoise);
+}
+
+.top__round-yellow {
+  width: 3rem;
+  height: 3rem;
+  border: 1rem solid var(--black);
+  border-radius: 100%;
+  background-color: var(--yellow);
+}
+
+.top__round-red {
+  width: 3rem;
+  height: 3rem;
+  border: 1rem solid var(--black);
+  border-radius: 100%;
+  background-color: var(--red);
+}
+
+.top__round-container{
+  display: flex;
+  gap: 1rem;
+}
 
 .newGame-input-container {
   display: flex;

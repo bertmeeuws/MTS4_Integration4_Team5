@@ -10,15 +10,15 @@ export default function NavDashboard({ setId, id }) {
             <>
               <a
                 onClick={(e) => setId(1)}
-                className="button__secondary nav__dashboard-button"
+                className="button__secondary nav__dashboard-button nav__dashboard-full"
               >
-                terug naar spellen
+                terug
               </a>
               <a
                 onClick={(e) => setId(3)}
                 className={`${
                   id === 3 ? "button__primary" : "button__secondary"
-                } nav__dashboard-button`}
+                } nav__dashboard-button nav__dashboard-full`}
               >
                 leerlingen
               </a>
@@ -29,7 +29,7 @@ export default function NavDashboard({ setId, id }) {
                 onClick={(e) => setId(1)}
                 className={`${
                   id === 1 ? "button__primary" : "button__secondary"
-                } nav__dashboard-button`}
+                } nav__dashboard-button nav__dashboard-full`}
               >
                 overzicht
               </a>
@@ -37,7 +37,7 @@ export default function NavDashboard({ setId, id }) {
                 onClick={(e) => setId(0)}
                 className={`${
                   id === 0 ? "button__primary" : "button__secondary"
-                } nav__dashboard-button`}
+                } nav__dashboard-button nav__dashboard-full`}
               >
                 nieuw spel
               </a>
@@ -46,7 +46,7 @@ export default function NavDashboard({ setId, id }) {
         </div>
         <a
           onClick={(e) => signOut()}
-          className="button__cancel nav__dashboard-button"
+          className="button__cancel nav__dashboard-button nav__dashboard-cancel"
         >
           afmelden
         </a>

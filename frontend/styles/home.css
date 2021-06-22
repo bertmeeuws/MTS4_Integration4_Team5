@@ -102,6 +102,32 @@
   z-index: 10;
 }
 
+.image__pill-red {
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+}
+
+.image__plus-yellow {
+  pointer-events: none;
+  position: absolute;
+  margin-bottom: -89rem;
+  right: 10%;
+}
+
+.image__donut-red{
+  pointer-events: none;
+  position: absolute;
+  left: 0;
+  margin-top: -20rem;
+}
+
+.image__pill-yellow {
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+}
+
 .gridYellow{
   object-fit: cover;
 }

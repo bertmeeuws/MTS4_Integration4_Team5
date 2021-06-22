@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import Window from "./Containers/Window";
+import Window from "./Containers/Window1";
 import { API_URL, WEBSITE_URL } from "../../constants";
 
 export default function Games({ teacher, setId, setGame }) {
@@ -29,7 +29,7 @@ export default function Games({ teacher, setId, setGame }) {
         <div className="newgame__container">
           <span className="title__s-bold">Maak een nieuw spel aan.</span>
           <div className="spacer__s"></div>
-          <p className="text__m-normal">
+          <p className="text__m-normal align-center">
             Voeg al je leerlingen toe aan een spel en genereer een unieke
             deelbare link.
           </p>

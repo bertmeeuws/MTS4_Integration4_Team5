@@ -97,6 +97,57 @@
         right: 0;
         transform: scale(0.7);
     }
+
+    .nav__dashboard-container{
+        width: 100vw;
+        height: 5rem;
+        position: relative;
+        bottom: 0;
+    }
+
+    .dashboard-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 15rem 1fr;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .nav__dashboard-list {
+        justify-content: space-between;
+        flex-direction: row;
+        height: auto;
+        width: 90vw;
+    }
+
+    .nav__dashboard-top {
+        flex-direction: row;
+    }
+
+    .nav__dashboard-button {
+        margin-right: 0rem;
+    }
+
+    .nav__dashboard-cancel {
+        margin-top: 5rem;
+    }
+
+    .dashboard__wrapper {
+        margin-top: 0rem;
+        margin-right: 0rem;
+        height: 100vh;
+        width: 90vw;
+        margin: 0 auto;
+        padding-right: 0rem;
+    }
+
+    .nav__dashboard-full {
+        width: auto;
+    }
+
+    .games__wrapper {
+        margin-top: 5rem;
+    }
     
 }
 
@@ -176,6 +227,95 @@
     .slick-dots li button{
         width: 2rem !important;
         height: 2rem !important;
+    }
+
+    .button__cancel {
+        font-size: 1.4rem;
+    }
+
+    .button__secondary {
+        font-size: 1.4rem;
+    }
+
+    .button__primary {
+        font-size: 1.4rem;
+    }
+
+    .nav__dashboard-container{
+        width: 100vw;
+        height: 10rem;
+        position: fixed;
+        z-index: 1000;
+    }
+
+    .dashboard-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .nav__dashboard-list {
+        justify-content: space-between;
+        flex-direction: row;
+        height: auto;
+        width: 90vw;
+    }
+
+    .nav__dashboard-top {
+        flex-direction: row;
+        margin-top: 0rem;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .nav__dashboard-button {
+        margin-right: 0rem;
+    }
+
+    .nav__dashboard-full {
+        width: 100%;
+    }
+
+    .nav__dashboard-cancel {
+        margin-top: 0rem;
+        top: 2rem;
+        right: 2rem;
+        position: fixed;
+    }
+
+    .dashboard__wrapper {
+        padding-top: 10rem;
+        margin-top: 0rem;
+        margin-right: 0rem;
+        height: 100vh;
+        width: 90vw;
+        margin: 0 auto;
+        padding-right: 0rem;
+    }
+
+    .game__info {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr auto;
+        align-items: flex-end;
+        gap: 2rem;
+    }
+
+    .newgame__container {
+        margin-bottom: 5rem;
+    }
+
+    .game__top {
+        padding-left: 2rem;
+    }
+
+    .game__info {
+        padding: 2rem;
+    }
+
+    .game__info-new {
+        padding: 2rem;
     }
     
 }
