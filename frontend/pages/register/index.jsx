@@ -11,6 +11,7 @@ export default function index() {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [school, setSchool] = useState("");
+  const [emailErr, setEmailErr] = useState(null);
 
   const [error, setError] = useState(null);
 
@@ -123,6 +124,9 @@ export default function index() {
             </div>
 
             <div className="label__wrapper">
+              <p style={{ color: "var(--red)" }} className="title__xs-bold">
+                {emailErr}
+              </p>
               <label
                 className="label-text p-small pixelated-font bold"
                 htmlFor="email"
@@ -130,7 +134,16 @@ export default function index() {
                 Email:
               </label>
               <input
-                onChange={(e) => setEmail(e.currentTarget.value)}
+                onChange={(e) => {
+                  setEmail(e.currentTarget.value);
+                  if (/.+@.+\.[A-Za-z]+$/.test(email)) {
+                    console.log("true");
+                    setEmailErr(null);
+                  } else {
+                    console.log("false");
+                    setEmailErr("Uw email voldoet niet aan het juiste formaat");
+                  }
+                }}
                 type="email"
                 name="email"
                 id="email"

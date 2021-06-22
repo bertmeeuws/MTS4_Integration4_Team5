@@ -4,6 +4,7 @@ import Background from "../Background/Background";
 import axios from "axios";
 import { API_URL } from "../../constants";
 
+
 export default function Dag5_5() {
   const nextRoute = useStoreActions((actions) => actions.nextRoute);
   const user = useStoreState((state) => state.current_gamer);
@@ -38,7 +39,7 @@ export default function Dag5_5() {
             className="button__primary text__m-bold button__game-next"
             onClick={(e) => nextRoute()}
           >
-            Game afsluiten
+            De laatste reflectie
           </button>
         </div>
       </div>

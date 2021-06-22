@@ -14,9 +14,9 @@ export default function Games({ teacher, setId, setGame }) {
       `${API_URL}/games?_where[teacher]=${id}&_sort=created_at:DESC`
     );
     setLoading(false);
-    setGames(response.data);
-    console.log(response.data);
-    console.log(response.data[0].id);
+    setGames(response?.data);
+    console.log(response?.data);
+    console.log(response?.data[0]?.id);
   }, []);
 
   return (
