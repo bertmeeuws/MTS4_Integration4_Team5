@@ -12,6 +12,9 @@ export default function Onboarding3() {
     <section className="background-yellow stretch-container onboarding-1">
       <NavBar percent={6} />
       <div className="onboarding-content-container">
+        <p style={{ color: "var(--blue)" }} className="text__m-bold">
+          3/3 boooh!
+        </p>
         <h1 className="title__m-bold margin-top align-center">
           Verlies volgers
         </h1>
@@ -33,7 +36,7 @@ export default function Onboarding3() {
             }}
             className="button__primary text__m-bold button__game-next"
           >
-            Kleuren kiezen
+            Start BuddyGram op
           </button>
         </div>
         <ProgressBar step={3} />

@@ -12,6 +12,9 @@ export default function Onboarding2() {
     <section className="background-yellow stretch-container onboarding-1">
       <NavBar percent={4} />
       <div className="onboarding-content-container">
+        <p style={{ color: "var(--blue)" }} className="text__m-bold">
+          2/3 yeey!
+        </p>
         <h1 className="title__m-bold margin-top align-center">
           Verdien volgers
         </h1>

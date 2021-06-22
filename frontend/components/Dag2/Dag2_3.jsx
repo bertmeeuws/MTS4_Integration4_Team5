@@ -3,6 +3,7 @@ import { useStoreActions, useStoreState } from "easy-peasy";
 import Background from "../Background/Background";
 import axios from "axios";
 import { API_URL } from "../../constants";
+import SwipeToUnlock from "../SwipeToUnlock/SwipeToUnlock";
 
 export default function Dag2_3() {
   const nextRoute = useStoreActions((actions) => actions.nextRoute);
@@ -19,9 +20,9 @@ export default function Dag2_3() {
   const choices = [];
 
   return (
-    <section className="background-yellow stretch-container">
+    <section className="center-middle background-yellow stretch-container">
       <Background />
-      2.3
+      <p className="hidden">2.3</p>
       <div className="game-wrapper">
         <div className="game__day2__box">
           <div className="game__day2__profile">

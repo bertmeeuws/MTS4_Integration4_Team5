@@ -60,11 +60,12 @@ export default function Index({ data, ctx, succes, id }) {
       name: "Stap 3",
       component: <Onboarding3 title={"Stap 3"} />,
     },
+    /*
     {
       id: 4,
       name: "Stap 4",
       component: <Onboarding4 title={"Stap 4"} />,
-    },
+    },*/
     ...Dag1Routes(data),
     ...Dag2Routes(data),
     ...Dag3Routes(data),

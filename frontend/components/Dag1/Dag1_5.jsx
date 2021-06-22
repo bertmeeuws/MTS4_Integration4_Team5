@@ -18,7 +18,7 @@ export default function Dag1_5({ route }) {
   const choices = [
     {
       followers: -20,
-      followers_text: "-20 Volgers",
+      followers_text: "-20",
       text: "'Je bent zelf lelijk'",
       penalty: "Je hebt volgers verloren omdat je online ruzie maakt.",
       button: "Wat had ik beter gedaan?",
@@ -28,7 +28,7 @@ export default function Dag1_5({ route }) {
     },
     {
       followers: +20,
-      followers_text: "Proficiat! +20 Volgers erbij",
+      followers_text: "+20",
       text: "'Iedereen is uniek en dat maakt juist iedereen mooi op zijn eigen manier'",
       penalty: "Dit is de juiste manier van aanpak, goed gedaan!",
       button: "Klik hier voor meer uitleg",
@@ -38,7 +38,7 @@ export default function Dag1_5({ route }) {
     },
     {
       followers: 0,
-      followers_text: "Geen volgers erbij maar ook geen verloren",
+      followers_text: "+0",
       text: "Verwijder reactie",
       penalty:
         "Door de reactie te verwijderen toon je aan dat het je iets doet. Deze persoon kan nu weer een reactie posten om olie op het vuur te gooien.",
@@ -50,7 +50,7 @@ export default function Dag1_5({ route }) {
     {
       followers: +10,
       text: "Blokkeer gebruiker",
-      followers_text: "+10 Volgers! Toch een paar extra volgers gekregen",
+      followers_text: "+10",
       penalty:
         "Je hebt een goeie keuze gemaakt, zo voorkom je dat deze persoon nog eens een negatieve reactie kan plaatsen.",
       button: "Wat kan ik ook doen?",

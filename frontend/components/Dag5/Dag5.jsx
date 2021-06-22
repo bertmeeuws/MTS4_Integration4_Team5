@@ -6,10 +6,9 @@ export default function Dag5() {
   const nextRoute = useStoreActions((actions) => actions.nextRoute);
 
   return (
-    <section className="background-yellow stretch-container">
-      5.
+    <section className="center-middle background-yellow stretch-container">
+      <p className="hidden">5.</p>
       <Background />
-
       <div className="game-wrapper">
         <div className="game__textBox">
           <h1 className="title__m-bold">

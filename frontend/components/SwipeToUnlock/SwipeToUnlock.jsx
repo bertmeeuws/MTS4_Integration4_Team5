@@ -21,39 +21,34 @@ export default function SwipeToUnlock({ action }) {
   */
 
   const handleStop = (e) => {
-    if (!cantMove) {
-      const x = e.clientX;
-      console.log(start.x + " " + e.clientX);
+    console.log("Stop");
+    console.log(e);
+    const x = e.clientX;
+    console.log(x);
+    action();
 
-      if (x > 620) {
-        console.log("Ver genoeg");
-        setCantMove(true);
-        TweenLite.to("#outer", 0.3, {
-          opacity: 0,
-          ease: Power3.easeInOut,
-        });
-        TweenLite.to("#lock", 1, {
-          translateX: "381px",
-          ease: Power3.easeInOut,
-          onComplete: action,
-        });
-      } else {
-        TweenLite.to("#lock", 1, {
-          translateX: "10px",
-          ease: Power3.easeInOut,
-        });
-        setAnimated(true);
-      }
+    if (x > 620) {
+      console.log("Ver genoeg");
+
+      TweenLite.to("#outer", 0.3, {
+        opacity: 0,
+        ease: Power3.easeInOut,
+      });
+      TweenLite.to("#lock", 1, {
+        translateX: "381px",
+        ease: Power3.easeInOut,
+        onComplete: action,
+      });
+    } else {
+      TweenLite.to("#lock", 1, {
+        translateX: "10px",
+        ease: Power3.easeInOut,
+      });
+      setAnimated(true);
     }
   };
 
-  const handleStart = (e) => {
-    if (!start) {
-      setStart({ x: e.clientX });
-    }
-    if (animated) {
-    }
-  };
+  const handleStart = (e) => {};
 
   return (
     <div className="container">
@@ -68,7 +63,12 @@ export default function SwipeToUnlock({ action }) {
           onStop={handleStop}
         >
           <div className="lock" id="lock">
-            <Image src="/assets/swipearrow.svg" width={17.91} height={17.91} />
+            <img
+              src="/assets/swipearrow.svg"
+              width="17.91"
+              height="17.91"
+              alt=""
+            />
           </div>
         </Draggable>
       </div>

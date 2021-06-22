@@ -529,36 +529,6 @@ export const Dag5Routes = (game) => {
       ),
     },
     {
-      id: 19,
-      name: "Dag 5",
-      component: (
-        <>
-          <NavbarWithFollowers followers={100} text={"vrijdag - 07:40"} />
-          <Dag5_6 data={game[0]} route={15} title={"Dag 5"} />
-        </>
-      ),
-    },
-    {
-      id: 19,
-      name: "Dag 5",
-      component: (
-        <>
-          <NavbarWithFollowers followers={100} text={"vrijdag - 07:40"} />
-          <Dag5_7 data={game[0]} route={15} title={"Dag 5"} />
-        </>
-      ),
-    },
-    {
-      id: 19,
-      name: "Dag 5",
-      component: (
-        <>
-          <NavbarWithFollowers followers={100} text={"vrijdag - 07:40"} />
-          <Dag5_8 data={game[0]} route={15} title={"Dag 5"} />
-        </>
-      ),
-    },
-    {
       id: 5,
       name: "Dag 5",
       component: (

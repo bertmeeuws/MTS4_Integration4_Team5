@@ -17,7 +17,7 @@ export default function Dag3_4({ data }) {
   const choices = [
     {
       followers: +20,
-      followers_text: "+20 Volgers",
+      followers_text: "+20",
       text: "Nee blijf likes tonen",
       penalty: "Goed dat je likes je humeur niet doet beïnvloeden.",
       button: "Naar overzicht",
@@ -27,7 +27,7 @@ export default function Dag3_4({ data }) {
     },
     {
       followers: -20,
-      followers_text: "-20 Volgers",
+      followers_text: "-20",
       text: "Ja, verberg likes",
       penalty:
         "Laat likes je humeur niet beïnvloeden, een like zegt helemaal niets over hoe je bent.",
@@ -54,7 +54,7 @@ export default function Dag3_4({ data }) {
   };
 
   return (
-    <section className="background-yellow stretch-container">
+    <section className="center-middle background-yellow stretch-container">
       <p className="hidden">3.4</p>
       <Background />
       <div className="game-wrapper">

@@ -8,7 +8,7 @@ export default function Dag5_6() {
   return (
     <div>
       <Background />
-      5.6
+      <p className="hidden">5.6</p>
       <button onClick={(e) => nextRoute()}>Volgende</button>
     </div>
   );

@@ -7,7 +7,7 @@ export default function Reflectie() {
   const nextRoute = useStoreActions((actions) => actions.nextRoute);
 
   return (
-    <section className="background-yellow stretch-container">
+    <section className="center-middle background-yellow stretch-container">
       <Background />
       <div className="game-wrapper">
         <h1 className="title__m-bold game__textBox">

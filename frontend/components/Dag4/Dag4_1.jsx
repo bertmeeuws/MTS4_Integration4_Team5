@@ -17,7 +17,7 @@ export default function Dag4_1() {
   const choices = [
     {
       followers: -30,
-      followers_text: "-30 Volgers",
+      followers_text: "-30",
       text: "Spam bericht klikken",
       penalty: "Je hebt volgers verloren door op een spambericht te klikken.",
       button: "Wat had ik beter gedaan?",
@@ -25,7 +25,7 @@ export default function Dag4_1() {
     },
     {
       followers: +30,
-      followers_text: "+30 Volgers",
+      followers_text: "+30",
       text: "Verwijderen",
       penalty:
         "Goed gedaan, klik nooit zomaar op links van mensen die je niet kent.",
@@ -34,7 +34,7 @@ export default function Dag4_1() {
     },
     {
       followers: 0,
-      followers_text: "Je hebt geen volgers bijgekregen of verloren",
+      followers_text: "+0",
       text: "Reageren",
       penalty:
         "Je hebt gereageerd op een spambericht, vaak is er een betere optie.",
@@ -59,7 +59,7 @@ export default function Dag4_1() {
   };
 
   return (
-    <section className="background-yellow stretch-container">
+    <section className="center-middle background-yellow stretch-container">
       <p className="hidden">4.1</p>
       <Background />
       <div className="center-middle game__box__margin game-wrapper">

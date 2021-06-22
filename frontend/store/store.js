@@ -2,7 +2,7 @@ import { createStore, action, persist } from "easy-peasy";
 
 export const model = {
   //STATE
-  route: 8,
+  route: 21,
   user: null,
   profile: null,
   game_data: null,

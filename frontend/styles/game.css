@@ -7,7 +7,6 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-top: 8rem;
   z-index: 2;
 }
 
@@ -35,6 +34,8 @@
   background-color: var(--white);
   max-width: 87rem;
   margin: 0 auto;
+  position: relative;
+  padding-top: 8rem;
 }
 .game__textBox-small {
   padding: 1rem 2rem;
@@ -44,6 +45,28 @@
 }
 .game__textBox .title__m-bold {
   margin-bottom: 2rem;
+}
+.game__box__followers__circle {
+  background-color: var(--blue);
+  display: flex;
+  flex-direction: column;
+  border: 1rem solid var(--black);
+  justify-content: center;
+  align-items: center;
+  width: 15.9rem;
+  height: 15.9rem;
+  border-radius: 100%;
+  color: var(--white);
+  position: absolute;
+  top: -10rem;
+  left: calc(50% - 6.95rem);
+  right: 50%;
+}
+.game__box__followers__circle .title__m-bold {
+  margin-bottom: 0;
+}
+.game__box__followers__circle .text__m-normal {
+  font-size: 1.4rem;
 }
 .text-center {
   text-align: center;
@@ -262,8 +285,12 @@
 .section__post__final .post__container {
   margin-top: -50rem;
 }
-.game__box__margin {
-  margin-top: 10rem;
+
+.game__privatechat__buttons {
+  margin: 0 auto;
+}
+.game__privatechat__buttons button:first-child {
+  margin-right: 3rem;
 }
 .post__container__lesson {
   padding: 2.5rem;
@@ -337,9 +364,8 @@
   cursor: pointer;
 }
 .game__message__profile {
-  border: 1rem solid var(--black);
   position: absolute;
-  left: -4rem;
+  left: -3.5rem;
   top: -4rem;
   width: 6rem;
   height: 6rem;
@@ -481,6 +507,7 @@
   margin-top: 6rem;
   display: inline-block;
   width: 46.7rem;
+
   border: 1rem solid var(--black);
   position: relative;
   -webkit-user-select: none;
@@ -493,7 +520,6 @@
   align-items: center;
   height: 7.6rem;
   box-shadow: -1rem 1rem var(--black);
-  pointer-events: none;
 }
 .outer .lock {
   width: 7.6rem;
@@ -503,7 +529,7 @@
   border-left: 1rem solid var(--black);
   border-top: 1rem solid var(--black);
   border-bottom: 1rem solid var(--black);
-  z-index: 8;
+  z-index: 12;
   cursor: pointer;
   display: flex;
   position: absolute;

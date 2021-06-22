@@ -16,8 +16,11 @@ export default function Dag1_7({ route }) {
         <Background />
         <p className="hidden">1.7</p>
         <div className="game__box__margin text-center game__textBox">
-          <p>{answer?.followers_text} volgers</p>
-          <h1 className="title__m-bold">{answer.penalty}</h1>
+          <p className="game__box__followers__circle">
+            <span className="title__m-bold">{answer?.followers_text}</span>
+            <span className="text__m-normal">volgers</span>
+          </p>
+          <h1 className="title__m-bold">{answer?.penalty}</h1>
         </div>
         <button
           className="button__primary text__m-bold button__game-next"

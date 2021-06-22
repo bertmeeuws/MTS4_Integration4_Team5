@@ -19,26 +19,28 @@ export default function Dag5_5() {
   };
 
   return (
-    <section className="background-yellow stretch-container">
-      5.5
+    <section className="center-middle background-yellow stretch-container">
+      <p className="hidden">5.5</p>
       <Background />
       <div className="game-wrapper">
         <h1 className="title__m-bold">
           Ben je slachtoffer (geweest) van cyberpesten en wil je erover praten
           met de leerkracht in privé?
         </h1>
-        <button
-          className="button__primary text__m-bold button__game-next"
-          onClick={(e) => handleForm()}
-        >
-          Ik wil praten
-        </button>
-        <button
-          className="button__primary text__m-bold button__game-next"
-          onClick={(e) => nextRoute()}
-        >
-          Afsluiten
-        </button>
+        <div className="game__privatechat__buttons">
+          <button
+            className="button__primary text__m-bold button__game-next"
+            onClick={(e) => handleForm()}
+          >
+            Ik wil praten met de leerkracht
+          </button>
+          <button
+            className="button__primary text__m-bold button__game-next"
+            onClick={(e) => nextRoute()}
+          >
+            Game afsluiten
+          </button>
+        </div>
       </div>
     </section>
   );

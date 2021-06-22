@@ -10,12 +10,15 @@ export default function Dag2_4() {
   const answer = useStoreState((state) => state.answer);
 
   return (
-    <section className="background-yellow stretch-container">
+    <section className="center-middle background-yellow stretch-container">
       <Background />
-      2.4
+      <p className="hidden">2.3</p>
       <div className="game-wrapper">
         <div className="game__textBox">
-          <p className="text-center">{answer?.followers_text}</p>
+          <p className="game__box__followers__circle">
+            <span className="title__m-bold">{answer?.followers_text}</span>
+            <span className="text__m-normal">volgers</span>
+          </p>
           <h1 className="title__m-bold text-center">{answer?.penalty}</h1>
         </div>
         <button

@@ -33,7 +33,7 @@
   border-left: 1rem solid var(--black);
   border-top: 1rem solid var(--black);
   border-bottom: 1rem solid var(--black);
-  z-index: 8;
+  z-index: 30;
   cursor: pointer;
   display: flex;
   position: absolute;

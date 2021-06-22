@@ -21,8 +21,8 @@ export default function Dag5_3() {
   };
 
   return (
-    <section className="background-yellow stretch-container">
-      5.3
+    <section className="center-middle background-yellow stretch-container">
+      <p className="hidden">5.3</p>
       <Background />
       <div className="game-wrapper">
         <h1 className="title__m-bold hidden">TIPS</h1>

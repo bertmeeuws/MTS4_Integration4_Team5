@@ -6,10 +6,9 @@ export default function Dag5_1() {
   const nextRoute = useStoreActions((actions) => actions.nextRoute);
 
   return (
-    <section className="background-yellow stretch-container">
+    <section className="center-middle background-yellow stretch-container">
       5.1 Leerkracht foto
       <Background />
-
       <div className="game-wrapper">
         <p></p>
         <button

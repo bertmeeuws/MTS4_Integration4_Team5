@@ -2,13 +2,12 @@ import React from "react";
 import { useStoreActions } from "easy-peasy";
 import Background from "../Background/Background";
 
-
 export default function Dag3() {
   const nextRoute = useStoreActions((actions) => actions.nextRoute);
 
   return (
-    <section className="background-yellow stretch-container">
-      3
+    <section className="center-middle background-yellow stretch-container">
+      <p className="hidden"> 3</p>
       <Background />
 
       <div className="game-wrapper">

@@ -29,14 +29,6 @@ export default function ProgressBar({ step }) {
             }`}
           ></div>
         </li>
-        <li className={styles.item}>
-          kleuren
-          <div
-            className={`progressbar_box ${
-              step === 4 ? "progressbar_box--active" : ""
-            }`}
-          ></div>
-        </li>
       </ul>
     </div>
   );

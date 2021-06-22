@@ -7,7 +7,7 @@ export default function Dag3_1() {
   const picture = useStoreState((state) => state.profile_picture);
 
   return (
-    <section className="background-yellow stretch-container">
+    <section className="center-middle background-yellow stretch-container">
       <p className="hidden">3.1</p>
       <Background />
       <div className="game-wrapper">

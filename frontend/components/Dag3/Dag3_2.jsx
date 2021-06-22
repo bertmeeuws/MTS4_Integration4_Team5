@@ -17,7 +17,7 @@ export default function Dag3_2({ data }) {
   const choices = [
     {
       followers: -20,
-      followers_text: "-20 Volgers",
+      followers_text: "-20",
       text: "Verwijder post",
       penalty: "Je laat je humeur beïnvloeden door likes.",
       image: "/assets/deletepost.svg",
@@ -28,7 +28,7 @@ export default function Dag3_2({ data }) {
     },
     {
       followers: -20,
-      followers_text: "-20 Volgers",
+      followers_text: "-20",
       text: "Ik wil meer likes",
       penalty: "Je laat je humeur beïnvloeden door likes.",
       image: "/assets/morelikes.svg",
@@ -39,7 +39,7 @@ export default function Dag3_2({ data }) {
     },
     {
       followers: 20,
-      followers_text: "+20 Volgers",
+      followers_text: "+20",
       text: "Maakt helemaal niets uit",
       penalty:
         "Goed gekozen, likes zijn niet de realiteit dus laat jezelf niet beïnvloeden hierdoor.",
@@ -67,9 +67,9 @@ export default function Dag3_2({ data }) {
   };
 
   return (
-    <section className="background-yellow stretch-container">
+    <section className="center-middle background-yellow stretch-container">
       <Background />
-      3.2
+      <p className="hidden">3.2</p>
       <div className="game-wrapper">
         <h1 className="title__m-bold">
           Je hebt 3 likes en 0 reacties.

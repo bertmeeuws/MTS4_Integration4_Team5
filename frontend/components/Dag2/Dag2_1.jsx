@@ -8,8 +8,7 @@ export default function Dag2_1() {
 
   return (
     <section className="background-yellow stretch-container">
-      <Background />
-      2.1
+      <p className="hidden">2.1</p>
       <div className="game-wrapper">
         <h1 className="title__m-bold game__textBox">
           Iemand heeft toegang gehad tot jouw account en heeft een vreemde post

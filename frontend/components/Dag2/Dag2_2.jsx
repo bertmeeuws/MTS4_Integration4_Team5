@@ -33,7 +33,7 @@ export default function Dag2_2({ data }) {
   const choices = [
     {
       followers: -20,
-      followers_text: "-20 Volgers",
+      followers_text: "-20",
       text: "Post behouden",
       penalty:
         "Je hebt volgers verloren omdat je de post niet hebt verwijderd.",
@@ -55,7 +55,7 @@ export default function Dag2_2({ data }) {
     },
     {
       followers: +20,
-      followers_text: "+20 Volgers",
+      followers_text: "+20",
       text: "Post verwijderen",
       penalty:
         "Je hebt de post verwijderd, als je dit niet had gedaan kon je in de problemen gekomen zijn.",

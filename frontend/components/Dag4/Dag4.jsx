@@ -6,7 +6,7 @@ export default function Dag4() {
   const nextRoute = useStoreActions((actions) => actions.nextRoute);
 
   return (
-    <section className="background-yellow stretch-container">
+    <section className="center-middle background-yellow stretch-container">
       <p className="hidden">4.</p>
       <Background />
 

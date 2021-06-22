@@ -11,13 +11,16 @@ export default function Dag3_3() {
   const answer = useStoreState((state) => state.answer);
 
   return (
-    <section className="background-yellow stretch-container">
-      3.3
+    <section className="center-middle background-yellow stretch-container">
+      <p className="hidden">3.3</p>
       <Background />
       <div className="game-wrapper">
         <div className="game__textBox text-center">
-          <p className="text-center">{answer?.followers_text}</p>
-          <h1 className="title__m-bold">{answer?.penalty}</h1>
+          <p className="game__box__followers__circle">
+            <span className="title__m-bold">{answer?.followers_text}</span>
+            <span className="text__m-normal">volgers</span>
+          </p>
+          <h1 className="title__m-bold text-center">{answer?.penalty}</h1>
         </div>
 
         <button
