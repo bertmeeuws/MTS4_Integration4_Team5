@@ -3,14 +3,14 @@ import { useStoreActions, useStoreState } from "easy-peasy";
 import Background from "../Background/Background";
 
 export default function Dag1_4({ route }) {
+  
   const nextRoute = useStoreActions((actions) => actions.nextRoute);
-
   const current_followers = useStoreState((state) => state.followers);
   const setFollowers = useStoreActions((actions) => actions.setFollowers);
   const picture = useStoreState((state) => state.profile_picture);
+
   return (
     <section className="section__post  background-yellow stretch-container">
-      <p className="hidden">1.4</p>
       <Background />
       <div onClick={(e) => nextRoute()} className="post__container">
         <div className="post__image--overflow">

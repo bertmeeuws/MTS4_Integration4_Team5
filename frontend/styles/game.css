@@ -8,6 +8,46 @@
   padding-bottom: 4rem;
 }
 
+.day__content-container {
+  margin-top: 15rem;
+  margin-left: 5%;
+}
+
+.day__middle-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  justify-self: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--yellow);
+}
+
+.game__picture-container {
+  width: 44rem;
+  height: 44rem;
+  border: 1rem solid var(--black);
+  box-shadow: -1rem 1rem var(--black);
+  background: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.game__text-back{
+  position: absolute;
+  text-align: center;
+  margin-left: 5rem;
+  margin-right: 5rem;
+}
+
+.game__picture{
+  object-fit: cover;
+  z-index: 10;
+}
+
 .onboarding__button-container {
   display: flex;
   gap: 2rem;
@@ -26,7 +66,13 @@
 }
 
 .game__uploadimage {
-  max-width: 108rem;
+  display: grid;
+  grid-template-rows: auto auto auto;
+  gap: 2rem;
+}
+
+.uploadimage__top{
+  justify-self: flex-end;
 }
 
 .image__clouds {

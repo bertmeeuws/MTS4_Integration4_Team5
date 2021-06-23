@@ -30,20 +30,23 @@ export default function Dag1_3({ route, data }) {
   const nextRoute = useStoreActions((actions) => actions.nextRoute);
 
   return (
-    <section className="day1__container background-yellow stretch-container">
+    <section className="game__content-container">
       <Background />
 
-      <div className="game-wrapper">
-        <h1 className="title__m-bold ">Jouw foto staat online!</h1>
-        <p className="game__upload-subtext">
-          Je hebt meteen 100 volgers gekregen door je foto!
-        </p>
-        <div className="game__followers-container">
+      <div className="day__content-container">
+        <h1 className="title__m-bold">Jouw foto staat online!</h1>
+        <div className="spacer__s"></div>
+        <p className="text__m-normal">Je hebt meteen 100 volgers gekregen door je foto!</p>
+      </div>
+
+      <div className="day__middle-center">
           <p className="text__m-normal">aantal volgers</p>
           <h1 className="title__l-bold">100</h1>
-        </div>
+      </div>
+
+      <div className="game-wrapper">
         <button
-          className="button__primary text__m-bold button__game-next"
+          className="button__primary"
           onClick={(e) => nextRoute()}
         >
           Bekijk je foto op de feed

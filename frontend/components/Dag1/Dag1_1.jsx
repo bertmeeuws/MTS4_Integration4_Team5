@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useStoreActions, useStoreState } from "easy-peasy";
 import { API_URL } from "../../constants/index";
-import Webcam from "react-webcam";
 import ListWindow from "../ListWindow/ListWindow";
 import axios from "axios";
 
@@ -14,31 +13,9 @@ export default function Dag1_1() {
   console.log(user);
 
   const [state, setState] = useState(null);
-  const [deviceId, setDeviceId] = React.useState({});
   const [devices, setDevices] = React.useState([]);
-  const [gender, setGender] = useState(null);
   const [error, setError] = useState(false);
   const [blob, setBlob] = useState(null);
-  const videoConstraints = {
-    facingMode: "user",
-  };
-
-  useEffect(() => {
-    navigator.mediaDevices.enumerateDevices().then(handleDevices);
-  }, []);
-
-  const handleDevices = (mediaDevices) => {
-    setDevices(mediaDevices.filter(({ kind }) => kind === "videoinput")),
-      [setDevices];
-  };
-
-  const webcamRef = React.useRef(null);
-
-  const capture = () => {
-    const imageSrc = webcamRef.current.getScreenshot();
-    console.log(imageSrc);
-    setState(imageSrc);
-  };
 
   const uploadImage = async (e) => {
     e.preventDefault();
@@ -81,48 +58,55 @@ export default function Dag1_1() {
   };
 
   return (
-    <section className="background-yellow stretch-container">
-      <div className="game-wrapper">
-        <h1 className="title__m-bold">Deel een foto met BuddyGram</h1>
-        <p className="text__m-normal game__upload-subtext">
-          Maak, kies of upload een foto en deel deze op je eigen feed.
-        </p>
-        {error ? <p>Upload een foto om verder te gaan</p> : ""}
+
+    <section className="day__middle-center">
+
         <form className="game__uploadimage" onSubmit={uploadImage}>
-          <input
-            type="file"
-            className="custom-file-input"
-            id="input"
-            accept="image/*"
-            onChange={(event) => {
-              setState(URL.createObjectURL(event.target.files[0]));
-              setBlob(event.target.files[0]);
-            }}
-            value=""
-          />
-          <input
-            className="button__primary button__game-upload text__m-bold"
-            type="submit"
-            value="Upload picture"
-          />
-        </form>
-        <form>
-          {state && (
-            <button
-              className="button__secondary button__game-upload text__m-bold"
-              onClick={(event) => {
-                setState(null);
-                setBlob(null);
+
+            <div className="uploadimage__top">
+              {state && (
+                <button
+                  className="button__cancel"
+                  onClick={(event) => {
+                    setState(null);
+                    setBlob(null);
+                  }}
+                >verwijder</button>
+              )}
+            </div>
+
+            <div className="game__picture-container">
+              <p className="game__text-back title__s-bold">upload een foto met het knopje hier onder</p>
+              <img
+                className="game__picture"
+                id="output"
+                width="100%"
+                height="100%"
+                src={state} />
+            </div>
+
+            <div className="uploadimage__bottom">
+              <input
+              type="file"
+              className="custom-file-input"
+              id="input"
+              accept="image/*"
+              onChange={(event) => {
+                setState(URL.createObjectURL(event.target.files[0]));
+                setBlob(event.target.files[0]);
               }}
-            >
-              Remove Image
-            </button>
-          )}
-          <ListWindow>
-            <img id="output" style={{ width: "50%" }} src={state} />
-          </ListWindow>
+              value=""
+              />
+
+              <input
+                className="button__primary"
+                type="submit"
+                value="foto gebruiken"
+              />
+            </div>
+            
         </form>
-      </div>
     </section>
+    
   );
 }

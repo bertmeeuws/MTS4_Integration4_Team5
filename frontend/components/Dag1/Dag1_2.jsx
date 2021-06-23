@@ -15,14 +15,15 @@ export default function Dag1_2({ route }) {
   };
 
   return (
-    <section className="background-yellow stretch-container">
-      <p className="hidden">1.2</p>
+    <section className="game__content-container">
+
+      <div className="day__content-container">
+        <h1 className="title__m-bold">Sleep je foto in de feed!</h1>
+        <div className="spacer__s"></div>
+        <p className="text__m-normal">Grijp de foto met je muis en sleep deze in de feed.</p>
+      </div>
 
       <div className="game-wrapper">
-        <h1 className="title__m-bold">Sleep je foto in de feed!</h1>
-        <p className="game__upload-subtext text__m-normal">
-          Grijp de foto met je muis en sleep deze in de feed.
-        </p>
         <div className="game__image__drag">
           <Draggable onStop={handleStop}>
             <div
