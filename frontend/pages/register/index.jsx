@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Head from "next/head";
 import axios from "axios";
-import { API_URL } from "../../constants/index";
+import { API_URL, WEBSITE_URL } from "../../constants/index";
 import { signIn, useSession, getSession } from "next-auth/client";
 import { css } from "@emotion/react";
 import { PacmanLoader } from "react-spinners";

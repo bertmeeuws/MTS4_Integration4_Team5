@@ -79,10 +79,6 @@ const callbacks = {
 
     return session;
   },
-
-  async redirect(url, baseUrl) {
-    return baseUrl;
-  },
 };
 
 const options = {
@@ -90,10 +86,10 @@ const options = {
   providers,
   callbacks,
   pages: {
-    error: "/",
+    error: "/login",
     signIn: "/login",
     signOut: "/",
-    newUser: "/dashboard", // Changing the error redirect page to our custom login page
+    newUser: "/register",
   },
 };
 
