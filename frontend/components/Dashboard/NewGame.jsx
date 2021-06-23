@@ -20,8 +20,17 @@ export default function NewGame({ teacher }) {
   const handleSubmitNewGame = async (e) => {
     e.preventDefault();
     setAlert(null);
-    if (name === "" || students.length === 0) {
+    if (name === "" || students?.length === 0) {
       setError("Laat de velden niet leeg");
+      if (name === "") {
+        setError("Laat de klasnaam niet leeg");
+      }
+      if (students?.length === 0) {
+        setError("Je moet tenminste 1 leerling per game toevoegen");
+      }
+      if (name === "" || students.length === 0) {
+        setError("Laat de klasnaam niet leeg en voeg tenminste 1 student toe");
+      }
     } else {
       console.log(students);
       setError(null);
@@ -56,9 +65,10 @@ export default function NewGame({ teacher }) {
 
   const addStudentToList = (e) => {
     e.preventDefault();
-    if (students === "") {
-      alert("Het veld leerling niet leeglaten");
+    if (addStudent === "") {
+      setError("Geef de student een naam");
     } else {
+      setError(null);
       let array = students;
 
       console.log(array);
@@ -66,7 +76,6 @@ export default function NewGame({ teacher }) {
         id: uuid(),
         name: addStudent,
       });
-
       setStudents(array);
     }
     setAddStudent("");
@@ -108,7 +117,6 @@ export default function NewGame({ teacher }) {
               </label>
               <input
                 onChange={(e) => setName(e.currentTarget.value)}
-                required
                 type="text"
                 name="gamename"
                 value={name}
@@ -171,9 +179,11 @@ export default function NewGame({ teacher }) {
               style={{ marginRight: "2rem" }}
             />
             <a
-              onClick={(e) =>
-                navigator.clipboard.writeText(`${WEBSITE_URL}/game/${link}`)
-              }
+              onClick={(e) => {
+                navigator.clipboard.writeText(`${WEBSITE_URL}/game/${link}`);
+                setError(null);
+                setAlert("Uw link is gekopieerd");
+              }}
               className="button__secondary"
             >
               {" "}

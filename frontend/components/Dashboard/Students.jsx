@@ -7,6 +7,7 @@ export default function Students({ teacher, game, setId }) {
   const { id, surname } = teacher;
   const [students, setStudents] = useState([]);
   const [input, setInput] = useState("");
+  const [error, setError] = useState(null);
 
   useEffect(async () => {
     try {
@@ -30,12 +31,16 @@ export default function Students({ teacher, game, setId }) {
 
   const deleteStudent = async (id) => {
     console.log("Delete student: " + id);
-    try {
-      const response = await axios.delete(`${API_URL}/students/${id}`);
-      let filteredArray = students.filter((item) => item.id !== id);
-      setStudents(filteredArray);
-    } catch (e) {
-      console.log(e);
+    if (students.length === 1) {
+      setError("Je moet tenminste 1 student toevoegen aan je game");
+    } else {
+      try {
+        const response = await axios.delete(`${API_URL}/students/${id}`);
+        let filteredArray = students.filter((item) => item.id !== id);
+        setStudents(filteredArray);
+      } catch (e) {
+        console.log(e);
+      }
     }
   };
 
@@ -43,8 +48,10 @@ export default function Students({ teacher, game, setId }) {
     e.preventDefault();
 
     if (!input) {
-      alert("Laat de velden niet leeg");
+      setError("Laat het veld niet leeg.");
     } else {
+      setError(null);
+
       try {
         const response = await axios.post(`${API_URL}/students`, {
           name: input,
@@ -66,6 +73,20 @@ export default function Students({ teacher, game, setId }) {
     <section className="dashboard__wrapper">
       <p className="dashboard-newgame-welcome p blue bold">Welkom {surname}</p>
       <h1 className="h2">Leerlingen aanpassen</h1>
+      {error ? (
+        <p
+          style={{
+            color: "var(--red)",
+            fontSize: "1.8rem",
+            marginTop: "1.5rem",
+          }}
+          className="title__s-bold"
+        >
+          {error}
+        </p>
+      ) : (
+        ""
+      )}
       <form
         className="dashboard__changestudents__form"
         onSubmit={handleSubmitForm}
