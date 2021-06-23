@@ -20,7 +20,6 @@ import Introduction from "../../components/Introduction/Introduction";
 import Onboarding1 from "../../components/Onboarding/Onboarding1";
 import Onboarding2 from "../../components/Onboarding/Onboarding2";
 import Onboarding3 from "../../components/Onboarding/Onboarding3";
-import Onboarding4 from "../../components/Onboarding/Onboarding4";
 
 import NavbarWithFollowers from "../../components/NavBar/NavBarWithFollowers";
 

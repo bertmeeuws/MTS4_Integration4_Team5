@@ -3,37 +3,23 @@
   height: 6rem;
   border: 1rem solid var(--black);
   background-color: white;
-  position: relative;
-  z-index: 80;
-}
-.nav__buddygram-wrapper {
-  max-width: 106rem;
-  margin: 0 auto;
+  position: fixed;
   display: flex;
   align-items: center;
-  height: 100%;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  justify-content: space-between;
+  padding-left: 2rem;
 }
-.nav__buddygram-title {
-  color: var(--black);
-  font-size: 2.4rem;
-  line-height: 100%;
-  font-family: lores-12;
-  font-weight: 700;
-}
+
 .nav__buddygram-close {
-  position: absolute;
-  top: -1rem;
-  right: -1rem;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: var(--red);
-  width: 6rem;
-  height: 6rem;
-  border: 1rem solid var(--black);
+  height: 100%;
+  width: 5rem;
+  border-left: 1rem solid var(--black);
 }
+
 .nav__buddygram-battery {
   position: absolute;
   top: 4rem;
@@ -47,6 +33,7 @@
   grid-column-gap: 0.4rem;
   padding: 0.4rem;
 }
+
 .nav__buddygram-today {
   position: absolute;
   top: 4.1rem;
@@ -62,15 +49,19 @@
   padding: 0.4rem;
   flex-direction: column;
 }
+
 .nav__buddygram-today-active {
   right: 24.4rem;
 }
+
 .nav__buddygram-battery .battery-block {
-  background-color: #e23838;
+  background-color: var(--red);
 }
+
 .dashboard-nav {
   background-color: lightblue;
 }
+
 .nav__buddygram-followers {
   position: absolute;
   top: 4.1rem;

@@ -1,6 +1,6 @@
 .game__content-container {
   display: grid;
-  grid-template-rows: auto 1fr auto auto;
+  grid-template-rows: 1fr auto auto;
   gap: 4rem;
   background-color: var(--yellow);
   height: 100vh;
@@ -27,6 +27,21 @@
 
 .game__uploadimage {
   max-width: 108rem;
+}
+
+.image__clouds {
+  animation: moveclouds 40s linear infinite;
+  position: absolute;
+  margin-top: 10rem;
+}
+
+@keyframes moveclouds {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
 }
 
 /* .button__game-upload,
@@ -158,6 +173,7 @@
   align-self: center;
   justify-self: center;
   max-width: 70rem;
+  z-index: 10;
 }
 
 .day1__text {

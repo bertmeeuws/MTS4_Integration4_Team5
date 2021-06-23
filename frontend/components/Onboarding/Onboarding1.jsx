@@ -3,7 +3,7 @@ import { useStoreActions } from "easy-peasy";
 import NavBar from "../NavBar/NavBar";
 import ProgressBar from "./ProgressBar";
 
-export default function Onboarding1({ data }) {
+export default function Onboarding1() {
 
   const nextRoute = useStoreActions((actions) => actions.nextRoute);
 

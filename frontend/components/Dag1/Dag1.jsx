@@ -2,46 +2,34 @@ import React from "react";
 import { useStoreState, useStoreActions } from "easy-peasy";
 import Image from "next/image";
 
-export default function Dag1({ route, data }) {
-  const user = useStoreState((state) => state.user);
+export default function Dag1() {
+  
   const nextRoute = useStoreActions((actions) => actions.nextRoute);
-
   const gamer = useStoreState((state) => state.current_gamer);
 
-  console.log(data);
-
   return (
-    <section className="background-yellow stretch-container onboarding-1">
-      <div className="introduction-container">
-        <h1 className="title__m-bold">
-          Welkom,
-          <marker
-            style={{ backgroundColor: "var(--white)" }}
-            className="mark-yellow"
-          >
-            {gamer?.name}
-          </marker>{" "}
-          Vandaag is het maandag
-        </h1>
-        <p className="onboarding2__text day1__text ">
-          In de volgende stap kan je een foto maken of uploaden en daarna op je
-          feed plaatsen.
-        </p>
 
-        <button
-          className="button__primary text__m-bold button__game-next"
-          onClick={(e) => nextRoute()}
-        >
-          Naar de fotostudio
-        </button>
+    <section className="game__content-container">
+
+        <div className="onboarding-content-container">
+          <h1 className="title__m-bold">Welkom, {gamer?.name}! <br></br> vandaag is het maandag.</h1>
+          <div className="spacer__s"></div>
+          <p className="text__m-normal">Ga naar de fotostudio en plaats een foto op onze feed om de dag goed te starten.</p>
+        </div>
+        
+        <div className="onboarding__button-container">
+          <button className="button__primary" onClick={(e) => nextRoute()}>naar de fotostudio</button>
+        </div>
+
+        <div className="image__clouds">
+          <Image
+            src="/assets/clouds.svg"
+            width={1468}
+            height={380}
+            alt="zwevende wolkjes"
+          />
       </div>
-      <img
-        className="image__clouds__background"
-        src="/assets/clouds.svg"
-        width="1468"
-        height="380"
-        alt=""
-      />
+
     </section>
   );
 }

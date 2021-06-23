@@ -4,8 +4,8 @@ import NavBar from "../NavBar/NavBar";
 import ProgressBar from "./ProgressBar";
 
 export default function Onboarding3() {
+  
   const previousRoute = useStoreActions((actions) => actions.previousRoute);
-
   const nextRoute = useStoreActions((actions) => actions.nextRoute);
 
   return (

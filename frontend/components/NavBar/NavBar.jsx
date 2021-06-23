@@ -13,14 +13,17 @@ export default function NavBar({ percent }) {
   };
 
   return (
-    <nav className="nav__buddygram-introduction">
-      <div className="nav__buddygram-wrapper">
-        <p className="nav__buddygram-title">BuddyGram</p>
-      </div>
+
+    <div className="nav__buddygram-introduction">
+      
+      <p className="title__s-bold">BuddyGram</p>
+
       <div className="nav__buddygram-close">
         <Image src="/assets/img/kruis.svg" height={25} width={25} />
       </div>
+
       <div className="nav__buddygram-battery">{renderBars()}</div>
-    </nav>
+
+    </div>
   );
 }
