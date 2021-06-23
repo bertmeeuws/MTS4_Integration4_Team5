@@ -4,7 +4,6 @@ import Background from "../Background/Background";
 import axios from "axios";
 import { API_URL } from "../../constants";
 
-
 export default function Dag5_5() {
   const nextRoute = useStoreActions((actions) => actions.nextRoute);
   const user = useStoreState((state) => state.current_gamer);
@@ -16,15 +15,17 @@ export default function Dag5_5() {
       });
       console.log(response);
       nextRoute();
-    } catch (e) {}
+    } catch (e) {
+      nextRoute();
+    }
   };
 
   return (
-    <section className="center-middle background-yellow stretch-container">
+    <section className="section__5_5 center-middle background-yellow stretch-container">
       <p className="hidden">5.5</p>
       <Background />
       <div className="game-wrapper">
-        <h1 className="title__m-bold">
+        <h1 className="title__m-bold game__textBox">
           Ben je slachtoffer (geweest) van cyberpesten en wil je erover praten
           met de leerkracht in privé?
         </h1>
@@ -36,7 +37,7 @@ export default function Dag5_5() {
             Ik wil praten met de leerkracht
           </button>
           <button
-            className="button__primary text__m-bold button__game-next"
+            className="button__secondary text__m-bold button__game-next"
             onClick={(e) => nextRoute()}
           >
             De laatste reflectie

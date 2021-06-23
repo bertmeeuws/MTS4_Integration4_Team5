@@ -67,7 +67,7 @@ export default function Dag3_2({ data }) {
   };
 
   return (
-    <section className="center-middle background-yellow stretch-container">
+    <section className="section__day3_2 center-middle background-yellow stretch-container">
       <Background />
       <p className="hidden">3.2</p>
       <div className="game-wrapper">

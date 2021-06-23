@@ -484,26 +484,6 @@ export const Dag5Routes = (game) => {
       component: (
         <>
           <NavbarWithFollowers followers={100} text={"vrijdag - 07:40"} />
-          <Dag5_1 data={game[0]} route={15} title={"Dag 5"} />
-        </>
-      ),
-    },
-    {
-      id: 19,
-      name: "Dag 5",
-      component: (
-        <>
-          <NavbarWithFollowers followers={100} text={"vrijdag - 07:40"} />
-          <Dag5_2 data={game[0]} route={15} title={"Dag 5"} />
-        </>
-      ),
-    },
-    {
-      id: 19,
-      name: "Dag 5",
-      component: (
-        <>
-          <NavbarWithFollowers followers={100} text={"vrijdag - 07:40"} />
           <Dag5_3 data={game[0]} route={15} title={"Dag 5"} />
         </>
       ),
@@ -534,7 +514,7 @@ export const Dag5Routes = (game) => {
       component: (
         <>
           <NavbarWithFollowers followers={100} text={"vrijdag - 07:30"} />
-          <Reflectie />
+          <Reflectie end={true} />
         </>
       ),
     },

@@ -7,24 +7,17 @@ export default function Dag3_1() {
   const picture = useStoreState((state) => state.profile_picture);
 
   return (
-    <section className="center-middle background-yellow stretch-container">
+    <section className="section__day3.1 center-middle background-yellow stretch-container">
       <p className="hidden">3.1</p>
       <Background />
-      <div className="game-wrapper">
-        <div className="game__day3__post">
-          <img style={{ height: "14.8rem" }} src={picture} alt="" />
-          <div className="game__day3__likes__container">
-            <p className="text__s-normal">
-              Kareltje en 2 anderen vinden dit leuk
-            </p>
-          </div>
+
+      <div onClick={(e) => nextRoute()} className="game__day3__post">
+        <img style={{ height: "14.8rem" }} src={picture} alt="" />
+        <div className="game__day3__likes__container">
+          <p className="text__s-normal">
+            Kareltje en 2 anderen vinden dit leuk
+          </p>
         </div>
-        <button
-          className="button__primary text__m-bold button__game-next"
-          onClick={(e) => nextRoute()}
-        >
-          Volgende
-        </button>
       </div>
     </section>
   );

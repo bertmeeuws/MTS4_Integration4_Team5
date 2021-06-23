@@ -26,7 +26,7 @@ export default function Dag3_6({ data }) {
   }, []);
 
   return (
-    <section className="background-yellow stretch-container">
+    <section className="section__day3_6 background-yellow stretch-container">
       <p className="hidden">3.6</p>
       <Background />
       <div className="game-wrapper">

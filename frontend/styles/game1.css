@@ -1,0 +1,82 @@
+.section__day3 .title__m-bold,
+.section__day4 .title__m-bold,
+.section__day5 .title__m-bold {
+  text-align: center;
+  max-width: 77.8rem;
+  margin: 0 auto;
+  margin-bottom: 4rem;
+}
+.section__day3 {
+  padding-top: 10rem;
+}
+.section__day3 .text__m-normal,
+.section__day4 .text__m-normal,
+.section__day5 .text__m-normal {
+  max-width: 60rem;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 17rem;
+}
+.section__day3 .button__primary,
+.section__day3_5 .button__primary {
+  margin: 0 auto;
+  max-width: 21.5rem;
+}
+.section__day3_2 .game__day3__likes__container {
+  margin-top: 4rem;
+}
+.section__day3_3 .button__primary,
+.section__day4_3 .button__primary {
+  margin: 0 auto;
+  margin-top: 11.2rem;
+  max-width: 55rem;
+}
+.section__day5 .button__primary {
+  margin: 0 auto;
+  max-width: 24.5rem;
+}
+.section__day3_3 .game__textBox,
+.section__day3_5 .game__textBox,
+.section__day4_3 .game__textBox {
+  margin-top: 10rem;
+}
+.section__day3_5 .button__primary {
+  margin-top: 6rem;
+}
+.section__day3_4 .title__m-bold marker {
+  background-color: var(--white) !important;
+  color: var(--black) !important;
+}
+.section__day3_6 .game-wrapper,
+.section__5_4 .game-wrapper {
+  height: 100%;
+}
+.section__day3_6 .button__primary,
+.section__day4_5 .button__primary,
+.section__5_4 .button__primary {
+  margin: 0 auto;
+  max-width: 20.5rem;
+  margin-top: 4rem;
+}
+.section__day4 .button__primary {
+  margin: 0 auto;
+  max-width: 25.5rem;
+}
+.section__day4_1 {
+}
+.section__day4_2 .game-wrapper,
+.section__day4_5 .game-wrapper {
+  height: 100%;
+}
+.section__day4_3 {
+}
+.section__day5_3 .button__primary {
+  max-width: 55rem;
+  margin: 0 auto;
+}
+.section__5_5 .title__m-bold {
+  margin-bottom: 4rem;
+}
+.section__5_5 .game__privatechat__buttons .text__m-bold:first-child {
+  float: left;
+}

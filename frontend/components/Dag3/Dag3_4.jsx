@@ -54,19 +54,13 @@ export default function Dag3_4({ data }) {
   };
 
   return (
-    <section className="center-middle background-yellow stretch-container">
+    <section className="section__day3_4 center-middle background-yellow stretch-container">
       <p className="hidden">3.4</p>
       <Background />
       <div className="game-wrapper">
         <h1 className="title__m-bold">
           Er bestaat een functie om likes{" "}
-          <marker
-            style={{ backgroundColor: "var(--white)", color: "var(--black)" }}
-            className="mark-blue"
-          >
-            onzichtbaar
-          </marker>{" "}
-          te zetten. <br />
+          <marker className="mark-blue">onzichtbaar</marker> te zetten. <br />
           <br />
           Wil je deze functie inschakelen?
         </h1>

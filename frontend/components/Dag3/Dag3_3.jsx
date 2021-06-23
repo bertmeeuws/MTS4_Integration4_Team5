@@ -11,7 +11,7 @@ export default function Dag3_3() {
   const answer = useStoreState((state) => state.answer);
 
   return (
-    <section className="center-middle background-yellow stretch-container">
+    <section className="section__day3_3 center-middle background-yellow stretch-container">
       <p className="hidden">3.3</p>
       <Background />
       <div className="game-wrapper">

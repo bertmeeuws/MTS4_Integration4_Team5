@@ -39,7 +39,7 @@ export default function Dag4_2() {
   }, []);
 
   return (
-    <section className="background-yellow stretch-container">
+    <section className="section__day4_2 background-yellow stretch-container">
       <p className="hidden">4.2</p>
       <Background />
       <div className="center-middle game-wrapper">
@@ -57,7 +57,6 @@ export default function Dag4_2() {
             }
           })}
         </div>
-        <button onClick={(e) => nextRoute()}>Volgende</button>
       </div>
     </section>
   );

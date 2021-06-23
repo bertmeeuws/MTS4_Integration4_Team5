@@ -4,7 +4,7 @@ import Image from "next/image";
 import Draggable from "react-draggable";
 import gsap, { TweenLite, Power3 } from "gsap";
 
-export default function SwipeToUnlock({ action }) {
+export default function SwipeToUnlock({ action, end }) {
   const [start, setStart] = useState(null);
   const [cantMove, setCantMove] = useState(false);
   const [animated, setAnimated] = useState(false);
@@ -54,7 +54,7 @@ export default function SwipeToUnlock({ action }) {
     <div className="container">
       <div className="outer" id="outer">
         <p id="unlock-text" className="title__s-bold">
-          Swipe to unlock
+          {end ? "Game afsluiten" : "Swipe to unlock"}
         </p>
         <Draggable
           bounds="parent"

@@ -59,7 +59,7 @@ export default function Dag4_1() {
   };
 
   return (
-    <section className="center-middle background-yellow stretch-container">
+    <section className="section__day4_1 center-middle background-yellow stretch-container">
       <p className="hidden">4.1</p>
       <Background />
       <div className="center-middle game__box__margin game-wrapper">

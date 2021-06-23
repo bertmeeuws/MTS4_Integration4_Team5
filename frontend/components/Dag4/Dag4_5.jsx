@@ -26,7 +26,7 @@ export default function Dag4_5({ data }) {
   }, []);
 
   return (
-    <section className="background-yellow stretch-container">
+    <section className="section__day4_5 background-yellow stretch-container">
       <p className="hidden">4.5</p>
       <Background />
       <div className="game-wrapper">
