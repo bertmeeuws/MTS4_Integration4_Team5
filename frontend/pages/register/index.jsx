@@ -3,7 +3,8 @@ import Head from "next/head";
 import axios from "axios";
 import { API_URL } from "../../constants/index";
 import { signIn, useSession, getSession } from "next-auth/client";
-
+import { css } from "@emotion/react";
+import { PacmanLoader } from "react-spinners";
 import Link from "next/link";
 
 export default function index() {
@@ -12,60 +13,98 @@ export default function index() {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [school, setSchool] = useState("");
   const [emailErr, setEmailErr] = useState(null);
+  const [loading, setLoading] = useState(false);
 
   const [error, setError] = useState(null);
+
+  const [errSurname, setErrSurname] = useState(null);
+  const [errName, setErrName] = useState(null);
+  const [errEmail, setErrEmail] = useState(null);
+  const [errSchool, setErrSchool] = useState(null);
+  const [errPass, setErrPass] = useState(null);
+  const [errConfPass, setErrConfPass] = useState(null);
 
   const [name, setName] = useState("");
   const [surname, setSurname] = useState("");
 
   const handleRegisterForm = async (e) => {
     e.preventDefault();
+    setError(null);
 
-    if (password !== confirmPassword) {
-      alert("Wachtwoorden zijn niet hetzelfde");
-    } else {
-      axios
-        .post(`${API_URL}/auth/local/register`, {
-          username: email,
-          email: email.toLowerCase(),
-          password: password,
-        })
-        .then((response) => {
-          console.log(response?.data?.user?.id);
+    email === "" ? setErrEmail("Vul een email in") : "";
+    school === "" ? setErrSchool("Vul een school in") : "";
+    surname === "" ? setErrSurname("Vul een voornaam in") : "";
+    name === "" ? setErrName("Vul een naam in") : "";
+    password === "" ? setErrPass("Vul een wachtwoord in") : "";
+    password !== confirmPassword
+      ? setErrConfPass("Wachtwoord komt niet overeen met het andere wachtwoord")
+      : "";
 
-          axios
-            .post(`${API_URL}/teachers`, {
-              name: name,
-              surname: surname,
-              school: school,
-              users_permissions_user: response?.data?.user?.id,
-            })
-            .then((response) => {
-              console.log(response);
-              console.log("Account created, now logging in");
-              signIn("credentials", {
-                email,
-                password,
-                callbackUrl: `${WEBSITE_URL}/dashboard`,
+    if (
+      email !== "" &&
+      school !== "" &&
+      surname !== "" &&
+      name !== "" &&
+      password === confirmPassword
+    ) {
+      if (password !== confirmPassword) {
+      } else {
+        setLoading(true);
+        axios
+          .post(`${API_URL}/auth/local/register`, {
+            username: email,
+            email: email.toLowerCase(),
+            password: password,
+          })
+          .then((response) => {
+            console.log(response?.data?.user?.id);
+
+            axios
+              .post(`${API_URL}/teachers`, {
+                name: name,
+                surname: surname,
+                school: school,
+                users_permissions_user: response?.data?.user?.id,
+              })
+              .then((response) => {
+                console.log(response);
+                console.log("Account created, now logging in");
+                signIn("credentials", {
+                  email,
+                  password,
+                  callbackUrl: `${WEBSITE_URL}/dashboard`,
+                });
+                setLoading(false);
+              })
+              .catch((error) => {
+                setLoading(false);
+                console.log(error);
+                cleanFields();
               });
-            })
-            .catch((error) => {
-              /*
-              console.log(error?.response?.data[0]);
-              console.log(error?.response?.data[0]?.messages[0]?.message);
-              setError(error?.response?.data[0]?.messages[0]?.message);
-              */
-            });
-        })
-        .catch((error) => {
-          /*
-          console.log(error?.response?.data[0]);
-          console.log(error?.response?.data[0]?.messages[0]?.message);
-          setError(error?.response?.data[0]?.messages[0]?.message);
-          */
-        });
+          })
+          .catch((error) => {
+            setLoading(false);
+            setError("Het emailadres bestaat al");
+            cleanFields();
+          });
+      }
     }
+    cleanFields();
   };
+
+  const cleanFields = () => {
+    setName("");
+    setSurname("");
+    setSchool("");
+    setEmail("");
+    setPassword("");
+    setConfirmPassword("");
+  };
+
+  const override = css`
+    display: block;
+    margin-bottom: 1.5rem;
+  `;
 
   return (
     <section className="auth-grid">
@@ -84,10 +123,20 @@ export default function index() {
         </h1>
 
         <form onSubmit={handleRegisterForm} className="form__login">
-          {error !== null ? <p>{Error}</p> : ""}
+          {error ? <p>{Error}</p> : ""}
 
           <div className="auth__wrapper-register">
             <div className="label__wrapper">
+              {errSurname ? (
+                <p
+                  style={{ color: "var(--red)", marginBottom: "1rem" }}
+                  className="title__xs-bold"
+                >
+                  {errSurname}
+                </p>
+              ) : (
+                ""
+              )}
               <label
                 className="label-text p-small pixelated-font bold"
                 htmlFor="voornaam"
@@ -106,6 +155,16 @@ export default function index() {
             </div>
 
             <div className="label__wrapper">
+              {errName ? (
+                <p
+                  style={{ color: "var(--red)", marginBottom: "1rem" }}
+                  className="title__xs-bold"
+                >
+                  {errName}
+                </p>
+              ) : (
+                ""
+              )}
               <label
                 className="label-text p-small pixelated-font bold"
                 htmlFor="achternaam"
@@ -127,6 +186,16 @@ export default function index() {
               <p style={{ color: "var(--red)" }} className="title__xs-bold">
                 {emailErr}
               </p>
+              {errEmail ? (
+                <p
+                  style={{ color: "var(--red)", marginBottom: "1rem" }}
+                  className="title__xs-bold"
+                >
+                  {errEmail}
+                </p>
+              ) : (
+                ""
+              )}
               <label
                 className="label-text p-small pixelated-font bold"
                 htmlFor="email"
@@ -154,6 +223,16 @@ export default function index() {
             </div>
 
             <div className="label__wrapper">
+              {errSchool ? (
+                <p
+                  style={{ color: "var(--red)", marginBottom: "1rem" }}
+                  className="title__xs-bold"
+                >
+                  {errSchool}
+                </p>
+              ) : (
+                ""
+              )}
               <label
                 className="label-text p-small pixelated-font bold"
                 htmlFor="school"
@@ -172,6 +251,16 @@ export default function index() {
             </div>
 
             <div className="label__wrapper">
+              {errPass ? (
+                <p
+                  style={{ color: "var(--red)", marginBottom: "1rem" }}
+                  className="title__xs-bold"
+                >
+                  {errPass}
+                </p>
+              ) : (
+                ""
+              )}
               <label
                 className="label-text p-small pixelated-font bold"
                 htmlFor="wachtwoord"
@@ -191,6 +280,16 @@ export default function index() {
             </div>
 
             <div className="label__wrapper">
+              {errConfPass ? (
+                <p
+                  style={{ color: "var(--red)", marginBottom: "1rem" }}
+                  className="title__xs-bold"
+                >
+                  {errConfPass}
+                </p>
+              ) : (
+                ""
+              )}
               <label
                 className="label-text p-small pixelated-font bold"
                 htmlFor="wachtwoord"
@@ -208,16 +307,28 @@ export default function index() {
               />
             </div>
           </div>
-          <input
-            className="form__auth--button button-primary-blue"
-            value="registreren"
-            type="submit"
-          />
+          {loading ? (
+            <PacmanLoader
+              loading={loading}
+              color={"var(--blue)"}
+              css={override}
+              size={25}
+            />
+          ) : (
+            <input
+              className="form__auth--button button-primary-blue"
+              value="registreren"
+              type="submit"
+            />
+          )}
         </form>
         <div className="form__login-alreadyRegistered flex-horizontal p-small auth-">
           <p>Ik heb al een account.</p>
           <Link href="/login">
-            <span style={{ marginLeft: "0.5rem" }} className="bold blue">
+            <span
+              style={{ marginLeft: "0.5rem", cursor: "pointer" }}
+              className="bold blue"
+            >
               Inloggen als leerkracht
             </span>
           </Link>

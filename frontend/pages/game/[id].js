@@ -13,7 +13,7 @@ import {
   Dag3Routes,
   Dag4Routes,
   Dag5Routes,
-} from "../../routes/Dag1";
+} from "../../routes/Dagen";
 
 import Introduction from "../../components/Introduction/Introduction";
 

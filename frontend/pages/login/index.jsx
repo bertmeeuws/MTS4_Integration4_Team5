@@ -3,40 +3,51 @@ import Head from "next/head";
 import Link from "next/link";
 import { signIn, signOut, useSession, getSession } from "next-auth/client";
 import { WEBSITE_URL } from "../../constants";
+import { css } from "@emotion/react";
+import { PacmanLoader } from "react-spinners";
 
 export default function index() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [failed, setFailed] = useState(false);
-  const [error, setError] = useState({
-    email: "",
-    password: "",
-  });
+
   const [emailErr, setEmailErr] = useState(null);
   const [passErr, setPassErr] = useState(null);
+
+  const [loading, setLoading] = useState(false);
 
   const handleLoginForm = async (e) => {
     e.preventDefault();
     setFailed(false);
+    setEmail(null);
+    setPassErr(null);
 
-    try {
-      if (email !== "" && password !== "") {
-        signIn("credentials", {
-          email,
-          password,
-          callbackUrl: `${WEBSITE_URL}/login`,
-        });
+    email === "" ? setEmailErr("Vul een emailadres in") : "";
+    password === "" ? setPassErr("Vul een wachtwoord in") : "";
+
+    if (email !== "" && password !== "") {
+      try {
+        setLoading(true);
+        if (email !== "" && password !== "") {
+          signIn("credentials", {
+            email,
+            password,
+            callbackUrl: `${WEBSITE_URL}/login`,
+          });
+        }
+      } catch (e) {
+        setLoading(false);
+        console.log(e);
+        setFailed(true);
       }
-      if (password === "" || password === null) {
-        setPassErr("Vul een wachtwoord in");
-      }
-    } catch (e) {
-      console.log(e);
-      setFailed(true);
     }
   };
 
-  console.log(error);
+  const override = css`
+    display: block;
+    margin-bottom: 1.5rem;
+  `;
+
   return (
     <section className="auth-grid">
       <Head>
@@ -53,7 +64,10 @@ export default function index() {
           <marker className="mark-yellow">Login</marker> als leerkracht
         </h1>
         {failed ? (
-          <p style={{ color: "var(--red);" }}>
+          <p
+            style={{ color: "var(--red);", marginBottom: "1rem" }}
+            className="title__xs-bold"
+          >
             Uw wachtwoord of email is fout.
           </p>
         ) : (
@@ -90,7 +104,16 @@ export default function index() {
             </div>
 
             <div className="label__wrapper">
-              <p className="title__xs-bold">{passErr}</p>
+              {passErr ? (
+                <p
+                  style={{ color: "var(--red)", marginBottom: "1rem" }}
+                  className="title__xs-bold"
+                >
+                  {passErr}
+                </p>
+              ) : (
+                ""
+              )}
               <label className="title__xs-bold" htmlFor="wachtwoord">
                 Wachtwoord:
               </label>
@@ -114,11 +137,20 @@ export default function index() {
             </div>
           </div>
 
-          <input
-            className="form__auth--button button-primary-blue"
-            value="inloggen"
-            type="submit"
-          />
+          {loading ? (
+            <PacmanLoader
+              loading={loading}
+              color={"var(--blue)"}
+              css={override}
+              size={25}
+            />
+          ) : (
+            <input
+              className="form__auth--button button-primary-blue"
+              value="inloggen"
+              type="submit"
+            />
+          )}
         </form>
         <div className="form__login-alreadyRegistered flex-horizontal p-small auth-">
           <p>Nog geen account?</p>
