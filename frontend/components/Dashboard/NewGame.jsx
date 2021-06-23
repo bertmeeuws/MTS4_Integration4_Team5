@@ -3,24 +3,28 @@ import Window2 from "./Containers/Window2";
 import Image from "next/image";
 import { v4 as uuid } from "uuid";
 import axios from "axios";
-import { API_URL } from "../../constants/index";
+import { API_URL, WEBSITE_URL } from "../../constants/index";
 
 export default function NewGame({ teacher }) {
-  
   const { id } = teacher;
 
   const [name, setName] = useState("");
 
   const [students, setStudents] = useState([]);
   const [addStudent, setAddStudent] = useState("");
+  const [error, setError] = useState(null);
+  const [alert, setAlert] = useState(null);
 
   const [link, setAddLink] = useState("");
 
   const handleSubmitNewGame = async (e) => {
     e.preventDefault();
-    if (name === "" || students === []) {
-      alert("Laat de velden niet leeg");
+    setAlert(null);
+    if (name === "" || students.length === 0) {
+      setError("Laat de velden niet leeg");
     } else {
+      console.log(students);
+      setError(null);
       try {
         const created_game = await axios.post(`${API_URL}/games`, {
           link: uuid(),
@@ -37,12 +41,15 @@ export default function NewGame({ teacher }) {
               game: created_game.data.id,
             });
           });
+          setAlert("Uw game werd gemaakt");
         } catch (e) {
           console.log("Error creating student");
+          setError("Er is een probleem opgetreden");
         }
       } catch (e) {
         console.log("Error creating game");
         console.log(e);
+        setError("Er is een probleem opgetreden");
       }
     }
   };
@@ -72,51 +79,67 @@ export default function NewGame({ teacher }) {
 
   return (
     <section className="dashboard__wrapper">
-      
       <span className="text__m-bold text__blue">Welkom, {teacher.surname}</span>
       <h1 className="title__m-bold">Start een nieuw spel</h1>
       <div className="spacer__m"></div>
 
       <Window2>
-        
+        {alert ? (
+          <p style={{ color: "var(--blue)" }} className="title__s-bold">
+            {alert}
+          </p>
+        ) : (
+          ""
+        )}
+        {error ? (
+          <p style={{ color: "var(--red)" }} className="title__s-bold">
+            {error}
+          </p>
+        ) : (
+          ""
+        )}
         <p className="title__s-bold">Voeg leerlingen toe aan het spel</p>
-        
-        <form onSubmit={handleSubmitNewGame} className="form__newGame">
 
+        <form onSubmit={handleSubmitNewGame} className="form__newGame">
           <div className="new__form-container">
             <div className="label__wrapper">
-                <label className="title__xs-bold" htmlFor="email">
-                  Klasnaam:
-                </label>
+              <label className="title__xs-bold" htmlFor="email">
+                Klasnaam:
+              </label>
+              <input
+                onChange={(e) => setName(e.currentTarget.value)}
+                required
+                type="text"
+                name="gamename"
+                value={name}
+                placeholder="2HAc"
+                className="auth-input"
+              />
+            </div>
+
+            <div className="label__wrapper">
+              <label className="title__xs-bold" htmlFor="email">
+                Leerlingen:
+              </label>
+              <div className="add__with-button">
                 <input
-                  onChange={(e) => setName(e.currentTarget.value)}
-                  required
+                  onChange={(e) => setAddStudent(e.currentTarget.value)}
                   type="text"
-                  name="gamename"
-                  value={name}
-                  placeholder="2HAc"
+                  name="students"
+                  value={addStudent}
+                  placeholder="Bert Meeuws"
                   className="auth-input"
                 />
-              </div>
 
-              <div className="label__wrapper">
-                <label className="title__xs-bold" htmlFor="email">
-                  Leerlingen:
-                </label>
-                <div className="add__with-button">
-                  <input
-                    onChange={(e) => setAddStudent(e.currentTarget.value)}
-                    type="text"
-                    name="students"
-                    value={addStudent}
-                    placeholder="Bert Meeuws"
-                    className="auth-input"
-                  />
-
-                  <a onClick={addStudentToList} className="button__add title__s-bold">toevoegen</a>
-                </div>
+                <a
+                  onClick={addStudentToList}
+                  className="button__add title__s-bold"
+                >
+                  toevoegen
+                </a>
               </div>
             </div>
+          </div>
 
           <ul className="newGame-students">
             {students.map((item) => {
@@ -137,7 +160,7 @@ export default function NewGame({ teacher }) {
           <div className="newGame-link-container">
             <input
               type="text"
-              value={link}
+              value={link !== "" ? `${WEBSITE_URL}/game/${link}` : ""}
               readOnly
               className="h2 pixelated-font link-box"
             />
@@ -145,8 +168,17 @@ export default function NewGame({ teacher }) {
               type="submit"
               className="button__primary"
               value="Genereer link"
+              style={{ marginRight: "2rem" }}
             />
-            <a className="button__secondary"> Kopieer link</a>
+            <a
+              onClick={(e) =>
+                navigator.clipboard.writeText(`${WEBSITE_URL}/game/${link}`)
+              }
+              className="button__secondary"
+            >
+              {" "}
+              Kopieer link
+            </a>
           </div>
         </form>
       </Window2>

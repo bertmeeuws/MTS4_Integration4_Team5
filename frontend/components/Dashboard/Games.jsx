@@ -2,12 +2,15 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import Window from "./Containers/Window1";
 import { API_URL, WEBSITE_URL } from "../../constants";
+import DeletePopUp from "./DeletePopUp";
 
 export default function Games({ teacher, setId, setGame }) {
   const { id } = teacher;
 
   const [games, setGames] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [deletePopup, setDeletePopup] = useState(false);
+  const [selectedGame, setSelectedGame] = useState(null);
 
   useEffect(async () => {
     const response = await axios.get(
@@ -17,10 +20,18 @@ export default function Games({ teacher, setId, setGame }) {
     setGames(response?.data);
     console.log(response?.data);
     console.log(response?.data[0]?.id);
-  }, []);
+  }, [deletePopup]);
 
   return (
     <section className="dashboard__wrapper">
+      {deletePopup ? (
+        <DeletePopUp
+          setDeletePopup={setDeletePopup}
+          selectedGame={selectedGame}
+        />
+      ) : (
+        ""
+      )}
       <span className="text__m-bold text__blue">Welkom, {teacher.surname}</span>
       <h1 className="title__m-bold">overzicht spellen</h1>
       {loading ? <p>Loading</p> : ""}
@@ -44,11 +55,17 @@ export default function Games({ teacher, setId, setGame }) {
             const date = new Date(game.published_at);
 
             return (
-              <Window key={game.link} text={`${WEBSITE_URL}/game/${game.link}`}>
+              <Window
+                key={game.link}
+                game={game}
+                text={`${WEBSITE_URL}/game/${game.link}`}
+                setSelectedGame={setSelectedGame}
+                setDeletePopup={setDeletePopup}
+              >
                 <div>
                   <p className="bold">
                     {" "}
-                    {game.name} - {date.toLocaleDateString("be-nl")}
+                    {game.name} - {date.toLocaleDateString("be-NL")}
                   </p>
                   <p>{game.students.length} Leerlingen</p>
                 </div>

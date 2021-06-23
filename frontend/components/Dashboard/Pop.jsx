@@ -4,8 +4,6 @@ import axios from "axios";
 import { API_URL } from "../../constants";
 
 export default function Pop({ setPopup, game }) {
-  console.log(game);
-
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [atleastOne, setAtleastOne] = useState(false);

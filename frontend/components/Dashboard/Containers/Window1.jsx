@@ -3,15 +3,29 @@ import { Children } from "react";
 import styles from "../Containers/Window.module.css";
 import Image from "next/image";
 
-export default function Window1({ children, text }) {
+export default function Window1({
+  children,
+  text,
+  game,
+  setDeletePopup,
+  setSelectedGame,
+}) {
+  console.log(game);
 
   return (
     <div className="game__container">
       <div className="game__top">
         <div className="game__top-link">
           {text ? <p className="title__xs-bold">{text}</p> : ""}
-        </div>          
-        <div className="game__cross">
+        </div>
+        <div
+          onClick={(e) => {
+            setSelectedGame(game);
+            setDeletePopup(true);
+          }}
+          style={{ cursor: "pointer" }}
+          className="game__cross"
+        >
           <Image
             src="/assets/img/crossBlack.svg"
             width={25}
@@ -24,16 +38,7 @@ export default function Window1({ children, text }) {
       <div className="game__info">{children}</div>
     </div>
   );
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+
   return (
     <div className={styles.container}>
       <div className={styles.navigation}>

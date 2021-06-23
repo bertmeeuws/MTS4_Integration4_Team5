@@ -12,7 +12,15 @@ export default function NavDashboard({ setId, id }) {
                 onClick={(e) => setId(1)}
                 className="button__secondary nav__dashboard-button nav__dashboard-full"
               >
-                terug
+                overzicht
+              </a>
+              <a
+                onClick={(e) => setId(2)}
+                className={`${
+                  id === 2 ? "button__primary" : "button__secondary"
+                } nav__dashboard-button nav__dashboard-full`}
+              >
+                game
               </a>
               <a
                 onClick={(e) => setId(3)}
