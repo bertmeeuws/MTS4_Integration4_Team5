@@ -14,28 +14,28 @@
     }
 
     .car__container {
-        width: 90vw;
+        width: 100vw;
         margin: 0 auto;
     }
     
     .info__container-1 {
-        width: 80vw;
+        width: 90vw;
     }
 
     .info__container-2 {
-        width: 80vw;
+        width: 90vw;
     }
 
     .info__container-3 {
-        width: 80vw;
+        width: 90vw;
     }
 
     .info__container-4 {
-        width: 80vw;
+        width: 90vw;
     }
 
     .info__container-5 {
-        width: 80vw;
+        width: 90vw;
     }
 
     .header__img {
@@ -148,6 +148,11 @@
     .games__wrapper {
         margin-top: 5rem;
     }
+
+    .image__pixelatedHeads {
+        transform: scale(0.6);
+        right: 0;
+    }
     
 }
 
@@ -188,8 +193,10 @@
     }
 
     .car__info {
-        padding: 0rem;
+        padding-bottom: 2rem;
         padding-top: 2rem;
+        padding-left: 0rem;
+        padding-right: 0rem;
     }
     
     .image__arrowDown {
@@ -316,6 +323,21 @@
 
     .game__info-new {
         padding: 2rem;
+    }
+
+    .car__info-text {
+        width: 100%;
+        padding-right: 5rem;
+        padding-left: 5rem;
+    }
+
+    .image__pixelatedHeads {
+        right: 50;
+        margin-top: -15rem;
+    }
+
+    .image__thumb {
+        display: none;
     }
     
 }

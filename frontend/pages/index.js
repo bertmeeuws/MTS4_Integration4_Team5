@@ -54,12 +54,13 @@ export default function Home() {
                 </div>
                 
                 <div className="buttons__container">
-                  <Link href="/register">
-                    <span className="button__secondary button__secondary-home">hoe werkt het?</span>
+
+                  <a href="#about__working" className="button__secondary button__secondary-home">hoe werkt het?</a>
+
+                  <Link href="/login">
+                    <span className="button__primary button__primary-home">start het spel</span>
                   </Link>
-                  <Link href="/register">
-                  <span className="button__primary button__primary-home">start het spel</span>
-                  </Link>
+
                 </div>
 
               </div>
@@ -102,7 +103,7 @@ export default function Home() {
           
           <div className="info__container-1">
             
-            <article className="info__container-left">
+            <article className="info__container-left" id="about__working">
               <span className="text__m-bold text__blue">Hoe werkt het?</span>
               <div className="spacer__s"></div>
               <h2 className="title__m-bold">Leer jongeren omgaan met verschillende online situaties met deze <mark className="mark-blue">interactieve</mark> beleving.</h2>
@@ -146,17 +147,17 @@ export default function Home() {
               className="lightningDevider"
             />
           </div>
-            
-          <div className="info__wrapper-blue">
 
-            <div className="image__donut-red">
+          <div className="image__donut-red">
               <Image
                 src="/assets/img/donutRed.svg"
                 width={110}
                 height={110}
                 alt="geel designelement"
               />
-            </div>
+          </div>
+            
+          <div className="info__wrapper-blue">
             
             <div className="info__container-2">
               
@@ -203,31 +204,31 @@ export default function Home() {
 
                 <div className="car__info">
                   <Slider {...settings}>
-                    <div>
+                    <div className="car__info-wrapper">
                       <span className="text__m-bold text__blue">stap 1:</span>
                       <h2 className="title__m-bold"><mark className="mark-blue">registreer</mark> je als leerkracht</h2>
                       <div className="spacer__s"></div>
                       <p className="text__m-normal car__info-text">Maak een account aan als leerkracht en krijg toegang tot het paneel.</p>
                     </div>
-                    <div>
+                    <div className="car__info-wrapper">
                       <span className="text__m-bold text__blue">stap 2:</span>
-                      <h2 className="title__m-bold">maak<mark className="mark-blue">een spel</mark>aan</h2>
+                      <h2 className="title__m-bold">maak een <mark className="mark-blue">spel</mark>aan</h2>
                       <div className="spacer__s"></div>
                       <p className="text__m-normal car__info-text">Druk op "nieuw spel" in het dashboard en ga naar de volgende stap.</p>
                     </div>
-                    <div>
+                    <div className="car__info-wrapper">
                       <span className="text__m-bold text__blue">stap 3:</span>
                       <h2 className="title__m-bold"><mark className="mark-blue">leerlingen</mark> toevoegen</h2>
                       <div className="spacer__s"></div>
                       <p className="text__m-normal car__info-text">Voeg al jouw leerlingen toe aan het spel.</p>
                     </div>
-                    <div>
+                    <div className="car__info-wrapper">
                       <span className="text__m-bold text__blue">stap 4:</span>
                       <h2 className="title__m-bold"><mark className="mark-blue">genereer</mark> een link</h2>
                       <div className="spacer__s"></div>
                       <p className="text__m-normal car__info-text">Stuur deze link door naar de toestellen.</p>
                     </div>
-                    <div>
+                    <div className="car__info-wrapper">
                       <span className="text__m-bold text__blue">stap 5:</span>
                       <h2 className="title__m-bold"><mark className="mark-blue">monitor</mark>de resultaten</h2>
                       <div className="spacer__s"></div>
@@ -235,19 +236,10 @@ export default function Home() {
                     </div>
                   </Slider>
                 </div>
-          
-                {/* <div className="car__nav-container">
-                  <span className="car__nav-item title__s-bold">1</span>
-                  <span className="car__nav-item title__s-bold">2</span>
-                  <span className="car__nav-item title__s-bold">3</span>
-                  <span className="car__nav-item title__s-bold">4</span>
-                </div> */}
-
               </div>
 
               <div className="image__gridYellow">
                 <img
-                  className="gridYellow"
                   src="/assets/img/gridYellow.svg"
                   width={528}
                   height={671}
@@ -268,11 +260,20 @@ export default function Home() {
               <div className="spacer__m"></div>
 
               <div className="buttons__container">
-                <Link href="/register">
+                <Link href="/login">
                   <span className="button__primary">login als leerkracht</span>
                 </Link>
               </div>
 
+            </div>
+
+            <div className="image__thumb">
+              <Image
+                src="/assets/img/thumb.svg"
+                width={155}
+                height={155}
+                alt="duimpje naar onder afbeelding"
+              />
             </div>
 
             <div className="image__blocksYellow">
@@ -298,6 +299,15 @@ export default function Home() {
 
             </div>
 
+            <div className="image__pixelatedHeads">
+                <Image
+                  src="/assets/img/pixelatedHeads.png"
+                  width={620}
+                  height={420}
+                  alt="foto waarbij hoofden onkenbaar zijn"
+                />
+              </div>
+
           </div>
 
           <div className="lightningDevider__container">
@@ -308,9 +318,16 @@ export default function Home() {
             />
           </div>
 
-          <div className="info__wrapper-blue">
+          <div className="image__donut-red">
+              <Image
+                src="/assets/img/donutRed.svg"
+                width={110}
+                height={110}
+                alt="geel designelement"
+              />
+          </div>
 
-            <div className="grid-blue"></div>
+          <div className="info__wrapper-blue">
             
             <div className="info__container-5">
 
@@ -323,8 +340,35 @@ export default function Home() {
 
               <div className="buttons__container-center">
                 <Link href="/register">
-                  <span className="button__primary">login als leerkracht</span>
+                  <span className="button__primary">start nu gratis</span>
                 </Link>
+              </div>
+
+              <div className="image__pill-yellow">
+                <Image
+                  src="/assets/img/pillYellow.svg"
+                  width={60}
+                  height={160}
+                  alt="geel designelement"
+                />
+              </div>
+
+              <div className="image__plus-red">
+                <Image
+                  src="/assets/img/plusRed.svg"
+                  width={80}
+                  height={80}
+                  alt="geel designelement"
+                />
+              </div>
+
+              <div className="image__gridBlue">
+                <img
+                  src="/assets/img/gridBlue.svg"
+                  width={528}
+                  height={671}
+                  alt="grid illustratie"
+                />
               </div>
 
             </div>
@@ -334,49 +378,11 @@ export default function Home() {
         <footer className="footer__container">
           
           <div className="footer__wrapper">
-            <p className="title__m-bold text__white">intergration 4</p>
+            <p className="title__m-bold text__white">integration 4</p>
             <p className="title__m-bold text__white">devine</p>
           </div>
 
         </footer>
-        
-        
-        
-        
-        
-        
-        
-        
-        {/* <main className={styles.main}>
-          <section className="header__home">
-            <div style={{ position: "relative" }} className="wrapper">
-              <div className="header__whiteBox-container">
-                <div className="header__whiteBox-outside">
-                  <div className="header__whiteBox-inside">
-                    <h1 className="h1">
-                      Wapen de nieuwe generatie tegen cyberpesten
-                    </h1>
-                    <p>
-                      Leer jongeren omgaan met verschillende online situaties
-                      dankzij deze interactieve beleving!
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="header__image-container">
-                <Image
-                  src="/assets/img/header_illu.svg"
-                  width={456}
-                  height={438}
-                  alt="Illustratie van een container"
-                />
-              </div>
-            </div>
-          </section>
-          <div className="black-bar-infinite">
-            <Marquee />
-          </div>
-        </main> */}
       
     </>
   );
