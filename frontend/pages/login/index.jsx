@@ -98,8 +98,7 @@ export default function index() {
                 id="email"
                 value={email}
                 placeholder="john@teacher.com"
-                className="auth-input"
-                style={{ minWidth: "40rem" }}
+                className="auth__input-login"
               />
             </div>
 
@@ -131,8 +130,7 @@ export default function index() {
                 id="wachtwoord"
                 name="wachtwoord"
                 placeholder="Typ jouw wachtwoord hier..."
-                className="auth-input"
-                style={{ minWidth: "40rem" }}
+                className="auth__input-login"
               />
             </div>
           </div>
@@ -146,21 +144,18 @@ export default function index() {
             />
           ) : (
             <input
-              className="form__auth--button button-primary-blue"
+              className="button__primary"
               value="inloggen"
               type="submit"
             />
           )}
         </form>
-        <div className="form__login-alreadyRegistered flex-horizontal p-small auth-">
-          <p>Nog geen account?</p>
+
+        <div className="auth__switch-container">
+          <p className="text__s-normal">Nog geen account?</p>
+
           <Link href="/register">
-            <span
-              style={{ marginLeft: "0.5rem", cursor: "pointer" }}
-              className="bold blue"
-            >
-              Registreer als leerkracht
-            </span>
+            <span className="text__s-bold text__blue link">Registreer als leerkracht</span>
           </Link>
         </div>
       </div>

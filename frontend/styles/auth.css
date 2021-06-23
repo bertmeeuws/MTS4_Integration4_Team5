@@ -35,11 +35,9 @@
   margin-top: 3rem;
 }
 
-.flex-horizontal {
+.auth__switch-container{
   display: flex;
-}
-
-.form__login-alreadyRegistered {
+  flex-wrap: wrap;
+  gap: 1rem;
   margin-top: 2rem;
-  letter-spacing: 0;
 }

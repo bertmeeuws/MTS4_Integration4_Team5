@@ -150,7 +150,7 @@ export default function index() {
                 id="voornaam"
                 value={surname}
                 placeholder="Typ hier..."
-                className="input-margin auth-input"
+                className="input-margin auth__input-register"
               />
             </div>
 
@@ -178,7 +178,7 @@ export default function index() {
                 id="achternaam"
                 value={name}
                 placeholder="Typ hier..."
-                className="input-margin auth-input"
+                className="input-margin auth__input-register"
               />
             </div>
 
@@ -218,7 +218,7 @@ export default function index() {
                 id="email"
                 value={email}
                 placeholder="email@email.com"
-                className="input-margin auth-input"
+                className="input-margin auth__input-register"
               />
             </div>
 
@@ -246,7 +246,7 @@ export default function index() {
                 id="school"
                 value={school}
                 placeholder="Typ hier..."
-                className="input-margin auth-input"
+                className="input-margin auth__input-register"
               />
             </div>
 
@@ -275,7 +275,7 @@ export default function index() {
                 id="wachtwoord"
                 name="wachtwoord"
                 placeholder="Typ uw wachtwoord hier..."
-                className="input-margin auth-input"
+                className="input-margin auth__input-register"
               />
             </div>
 
@@ -303,7 +303,7 @@ export default function index() {
                 id="wachtwoord"
                 name="wachtwoord"
                 placeholder="Typ wachtwoord hier"
-                className="input-margin auth-input"
+                className="input-margin auth__input-register"
               />
             </div>
           </div>
@@ -316,21 +316,17 @@ export default function index() {
             />
           ) : (
             <input
-              className="form__auth--button button-primary-blue"
+              className="button__primary"
               value="registreren"
               type="submit"
             />
           )}
         </form>
-        <div className="form__login-alreadyRegistered flex-horizontal p-small auth-">
-          <p>Ik heb al een account.</p>
+        <div className="auth__switch-container">
+          <p className="text__s-normal">Ik heb een account.</p>
+
           <Link href="/login">
-            <span
-              style={{ marginLeft: "0.5rem", cursor: "pointer" }}
-              className="bold blue"
-            >
-              Inloggen als leerkracht
-            </span>
+            <span className="text__s-bold text__blue link">Inloggen als leerkracht</span>
           </Link>
         </div>
       </div>
