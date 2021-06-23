@@ -4,6 +4,8 @@ import axios from "axios";
 import { API_URL } from "../../constants";
 import Pop from "./Pop";
 import { formatDate } from "../../utils/formatDate";
+import { css } from "@emotion/react";
+import { PacmanLoader } from "react-spinners";
 
 export default function Game({ teacher, game }) {
   const { id } = teacher;
@@ -12,6 +14,13 @@ export default function Game({ teacher, game }) {
 
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
+
+  const override = css`
+    display: block;
+    margin: 0 auto;
+    border-color: var(--yellow);
+    margin-top: 40vh;
+  `;
 
   useEffect(async () => {
     const response = await axios.get(`${API_URL}/games?id=${game}`);
@@ -80,7 +89,7 @@ export default function Game({ teacher, game }) {
   };
 
   if (loading) {
-    return <p>Loading</p>;
+    return <PacmanLoader color={"var(--blue)"} css={override} size={50} />;
   }
 
   return (

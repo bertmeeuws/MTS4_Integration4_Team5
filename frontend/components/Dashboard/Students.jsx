@@ -2,17 +2,27 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { API_URL } from "../../constants";
 import Image from "next/image";
+import { css } from "@emotion/react";
+import { PacmanLoader } from "react-spinners";
 
 export default function Students({ teacher, game, setId }) {
   const { id, surname } = teacher;
   const [students, setStudents] = useState([]);
   const [input, setInput] = useState("");
   const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  const override = css`
+    display: block;
+    margin: 0 auto;
+    border-color: var(--yellow);
+    margin-top: 40vh;
+  `;
 
   useEffect(async () => {
     try {
       const response = await axios.get(`${API_URL}/games?id=${game}`);
-
+      setLoading(false);
       setStudents(response?.data[0]?.students);
     } catch (e) {
       setId(1);
@@ -111,6 +121,12 @@ export default function Students({ teacher, game, setId }) {
         />
       </form>
       <ul className="newGame-students">
+        <PacmanLoader
+          loading={loading}
+          color={"var(--blue)"}
+          css={override}
+          size={50}
+        />
         {students?.map((item) => {
           return (
             <div className="newGame-student-item">

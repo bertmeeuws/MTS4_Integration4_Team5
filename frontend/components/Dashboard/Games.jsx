@@ -4,6 +4,8 @@ import Window from "./Containers/Window1";
 import { API_URL, WEBSITE_URL } from "../../constants";
 import DeletePopUp from "./DeletePopUp";
 import { formatDate } from "../../utils/formatDate";
+import { css } from "@emotion/react";
+import { PacmanLoader } from "react-spinners";
 
 export default function Games({ teacher, setId, setGame }) {
   const { id } = teacher;
@@ -12,6 +14,12 @@ export default function Games({ teacher, setId, setGame }) {
   const [loading, setLoading] = useState(true);
   const [deletePopup, setDeletePopup] = useState(false);
   const [selectedGame, setSelectedGame] = useState(null);
+
+  const override = css`
+    display: block;
+    margin: 0 auto;
+    border-color: var(--yellow);
+  `;
 
   useEffect(async () => {
     const response = await axios.get(
@@ -35,7 +43,6 @@ export default function Games({ teacher, setId, setGame }) {
       )}
       <span className="text__m-bold text__blue">Welkom, {teacher.surname}</span>
       <h1 className="title__m-bold">overzicht spellen</h1>
-      {loading ? <p>Loading</p> : ""}
 
       <div className="games__wrapper">
         <div className="newgame__container">
@@ -52,6 +59,12 @@ export default function Games({ teacher, setId, setGame }) {
         </div>
 
         <div className="games__list">
+          {loading ? (
+            <PacmanLoader color={"var(--blue)"} css={override} size={50} />
+          ) : (
+            ""
+          )}
+
           {games.map((game) => {
             const date = new Date(game.published_at);
 

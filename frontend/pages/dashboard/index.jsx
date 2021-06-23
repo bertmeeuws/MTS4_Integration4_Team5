@@ -63,7 +63,7 @@ export async function getServerSideProps(ctx) {
   if (!session?.user) {
     return {
       redirect: {
-        destination: "/",
+        destination: "/login",
         permanent: false,
       },
     };
