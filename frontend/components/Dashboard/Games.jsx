@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import Window from "./Containers/Window1";
 import { API_URL, WEBSITE_URL } from "../../constants";
 import DeletePopUp from "./DeletePopUp";
+import { formatDate } from "../../utils/formatDate";
 
 export default function Games({ teacher, setId, setGame }) {
   const { id } = teacher;
@@ -65,7 +66,7 @@ export default function Games({ teacher, setId, setGame }) {
                 <div>
                   <p className="bold">
                     {" "}
-                    {game.name} - {date.toLocaleDateString("be-NL")}
+                    {game.name} - {formatDate(date)}
                   </p>
                   <p>{game.students.length} Leerlingen</p>
                 </div>

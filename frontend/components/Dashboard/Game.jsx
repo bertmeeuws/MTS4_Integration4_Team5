@@ -3,6 +3,7 @@ import Window2 from "./Containers/Window2";
 import axios from "axios";
 import { API_URL } from "../../constants";
 import Pop from "./Pop";
+import { formatDate } from "../../utils/formatDate";
 
 export default function Game({ teacher, game }) {
   const { id } = teacher;
@@ -87,7 +88,7 @@ export default function Game({ teacher, game }) {
       {popup ? <Pop setPopup={setPopup} game={game} /> : ""}
       <p className="dashboard-newgame-welcome p blue bold">Aangemaakt spel</p>
       <h1 className="h2">
-        {data.name} - {new Date(data.published_at).toLocaleDateString("be-nl")}
+        {data.name} - {formatDate(new Date(data.published_at))}
       </h1>
 
       <p className="dashboard-game-subtitle pixelated-font">statistieken</p>
