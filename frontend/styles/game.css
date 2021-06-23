@@ -1,6 +1,21 @@
-.background-yellow .title__m-bold {
-  margin-bottom: 1.4rem;
+.game__content-container {
+  display: grid;
+  grid-template-rows: auto 1fr auto auto;
+  gap: 4rem;
+  background-color: var(--yellow);
+  height: 100vh;
+  width: 100vw;
+  padding-bottom: 4rem;
 }
+
+.onboarding__button-container {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  align-self: center;
+  justify-self: center;
+}
+
 .game-wrapper {
   max-width: 108rem;
   margin: 0 auto;
@@ -13,21 +28,24 @@
 .game__uploadimage {
   max-width: 108rem;
 }
-.button__game-upload,
+
+/* .button__game-upload,
 .button__game-next {
   min-width: 20.7rem;
   margin: 0 auto;
   margin-top: 4rem;
-}
+} */
 
 .game__followers-container {
   margin: 0 auto;
   margin-top: 5.3rem;
   text-align: center;
 }
+
 .game__followers-container h1 {
   font-size: 20rem;
 }
+
 .game__textBox {
   padding: 5rem;
   border: 1rem solid var(--black);
@@ -37,15 +55,18 @@
   position: relative;
   padding-top: 8rem;
 }
+
 .game__textBox-small {
   padding: 1rem 2rem;
   border: 1rem solid var(--black);
   background-color: var(--white);
   margin-bottom: 5rem;
 }
+
 .game__textBox .title__m-bold {
   margin-bottom: 2rem;
 }
+
 .game__box__followers__circle {
   background-color: var(--blue);
   display: flex;
@@ -62,15 +83,19 @@
   left: calc(50% - 6.95rem);
   right: 50%;
 }
+
 .game__box__followers__circle .title__m-bold {
   margin-bottom: 0;
 }
+
 .game__box__followers__circle .text__m-normal {
   font-size: 1.4rem;
 }
+
 .text-center {
   text-align: center;
 }
+
 .background-image {
   z-index: -1;
   position: absolute;
@@ -79,15 +104,19 @@
   width: 100%;
   height: 100%;
 }
+
 .introduction {
   padding-top: 12.6rem;
 }
+
 .introduction .title__m-bold {
   margin-bottom: 2rem;
 }
+
 .introduction .text__m-normal {
   margin-bottom: 8.6rem;
 }
+
 .introduction--list {
   background-color: var(--yellow);
   padding-top: 6.5rem;
@@ -110,63 +139,51 @@
 .introduction-container {
   z-index: 5;
 }
-.onboarding-1 .title__m-bold {
-  max-width: 60rem;
-  margin: 0 auto;
-  margin-top: 19rem;
-  margin-bottom: 2rem;
-}
-.onboarding-1 .text__m-normal {
-  max-width: 60rem;
-  margin: 0 auto;
-}
-.onboarding-1 .button__primary {
-  margin: 0 auto;
-  display: flex;
-}
-.onboarding-progress-container {
-  width: 100%;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 .onboarding-progress-container .button__game-next {
   margin-top: 0;
   margin: 0;
 }
+
 .onboarding-progress-container .button__game-next:first-child {
   margin-right: 3rem;
 }
+
 .onboarding-progress-container .button-primary {
   margin: 0 !important;
 }
+
 .onboarding-content-container {
-  height: 33rem;
+  text-align: center;
+  align-self: center;
+  justify-self: center;
+  max-width: 70rem;
 }
-.onboarding2__text {
-  margin-bottom: 15rem;
-}
+
 .day1__text {
   max-width: 60rem;
   margin: 0 auto;
   margin-bottom: 15rem;
   margin-top: 4rem;
 }
+
 .image__clouds__background {
   position: absolute;
   z-index: 0;
   right: 12rem;
   top: 13.5rem;
 }
+
 .day3__raster__img {
   position: absolute;
   left: -45rem;
   bottom: -20rem;
 }
+
 .day1__container {
   overflow-y: hidden;
 }
+
 .progressbar_box {
   background-color: var(--white);
   width: 4rem;
@@ -178,10 +195,12 @@
   cursor: pointer;
   transition: 0.1s;
 }
+
 .progressbar_box:hover {
   box-shadow: none;
   background-color: var(--blue);
 }
+
 .progressbar_box--active {
   background-color: var(--blue);
   width: 4rem;
@@ -201,18 +220,22 @@
   transition: all 0.3s ease;
   margin-top: -5rem;
 }
+
 .post__container:hover {
   transform: rotate(1deg);
 }
+
 .post__image--overflow {
   overflow: hidden;
   height: 34.5rem;
   width: 34.5rem;
   border: 1rem solid var(--black);
 }
+
 .post__comment__author {
   margin-top: 3rem;
 }
+
 .post__comment {
   border-radius: 0rem 2rem 2rem 2rem;
   border: 1rem solid var(--black);
@@ -220,11 +243,13 @@
   padding: 1rem 2rem;
   background-color: var(--white);
 }
+
 .section__post {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .post__comment__option {
   border-radius: 2rem 2rem 0rem 2rem;
   border: 1rem solid var(--black);
@@ -233,6 +258,7 @@
   background-color: var(--white);
   box-shadow: -1rem 1rem var(--black);
 }
+
 .post__comments__options--title {
   font-size: 3.6rem;
   font-family: lores-12;
@@ -243,6 +269,7 @@
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
+
 .post__comments__grid {
   margin-top: 4rem;
   display: grid;
@@ -251,6 +278,7 @@
   border: 1rem solid var(--black);
   box-shadow: -1rem 1rem var(--black);
 }
+
 .post__container__options {
   display: flex;
   flex-direction: column;
@@ -268,9 +296,11 @@
     linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0.1em, transparent 0.1em);
   background-size: 1em 1em;
 }
+
 .post__comment__option:hover {
   transform: translateY(30);
 }
+
 .post__comments__grid .post__container {
   margin-top: 0;
   border-left: 0;
@@ -278,10 +308,12 @@
   border-bottom: none;
   box-shadow: none;
 }
+
 .post__comments__grid .post__container:hover,
 .post__container__lesson:hover {
   transform: none;
 }
+
 .section__post__final .post__container {
   margin-top: -50rem;
 }
@@ -289,19 +321,23 @@
 .game__privatechat__buttons {
   margin: 0 auto;
 }
+
 .game__privatechat__buttons button:first-child {
   margin-right: 3rem;
 }
+
 .post__container__lesson {
   padding: 2.5rem;
   margin: 0 auto;
 }
+
 .center-middle {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
+
 .list__window__container {
   background: var(--yellow);
   background-image: linear-gradient(
@@ -318,6 +354,7 @@
   grid-template-columns: 1fr;
   grid-row-gap: 3rem;
 }
+
 .list__window__item {
   background-color: var(--white);
   box-shadow: -1rem 1rem var(--black);
@@ -327,6 +364,7 @@
   justify-content: space-between;
   align-items: center;
 }
+
 .game__message__container {
   max-width: 49.3rem;
 
@@ -334,15 +372,18 @@
   border: 1rem solid var(--black);
   position: relative;
 }
+
 .game__message__content {
   padding: 3rem 3rem;
 }
+
 .game__chat__container {
   border-top: 1rem solid var(--black);
   display: grid;
   grid-template-columns: 1fr 7.6rem;
   grid-template-rows: 7.6rem;
 }
+
 .game__chat__arrow {
   display: flex;
   align-items: center;
@@ -351,18 +392,22 @@
   border-left: 1rem solid var(--black);
   box-sizing: content-box;
 }
+
 .game__chat__input {
   display: flex;
   align-items: center;
   padding-left: 4rem;
 }
+
 .game__message--link {
   color: var(--blue);
   cursor: pointer;
 }
+
 .game__chat--answer {
   cursor: pointer;
 }
+
 .game__message__profile {
   position: absolute;
   left: -3.5rem;
@@ -370,6 +415,7 @@
   width: 6rem;
   height: 6rem;
 }
+
 .game__message__quit {
   position: absolute;
   right: -3rem;
@@ -382,22 +428,26 @@
   height: 6rem;
   border: 1rem solid var(--black);
 }
+
 .game__message__author {
   position: absolute;
   top: -4rem;
   left: 5rem;
 }
+
 .game__error__container {
   position: relative;
   width: 59.9rem;
   height: 37rem;
   margin-top: 6rem;
 }
+
 .game__error__item {
   position: absolute;
   width: 59.9rem;
   height: 37rem;
 }
+
 .game__day2__box {
   border: 1rem solid var(--black);
   background: var(--yellow);
@@ -410,17 +460,20 @@
   margin: 0 auto;
   padding: 5rem;
 }
+
 .game__day2__comment {
   padding: 3rem;
   background-color: var(--white);
   border-radius: 3rem 3rem 3rem 0rem;
   border: 1rem solid var(--black);
 }
+
 .game__day2__profile {
   position: relative;
   float: left;
   margin-top: 5rem;
 }
+
 .game__day2__profile__image {
   border: 1rem solid var(--black);
   width: 14.8rem;
@@ -430,21 +483,26 @@
   align-items: center;
   justify-content: center;
 }
+
 .game__day2__comment__left {
   margin-left: 20rem;
 }
+
 .game__day2__profile__name {
   position: absolute;
   left: 0;
   top: -4rem;
 }
+
 .game__day2__container:first-child {
   margin-bottom: 8rem;
 }
+
 .game__day2__container--hate {
   opacity: 0;
   scale: 0;
 }
+
 .game__day3__post {
   max-width: 34.5rem;
   display: grid;
@@ -453,9 +511,11 @@
   border: 1rem solid var(--black);
   height: 40.8rem;
 }
+
 .game__day3__post p {
   padding: 2rem;
 }
+
 .game__day3__likes__container {
   background-color: var(--white);
   display: flex;
@@ -463,6 +523,7 @@
   align-items: center;
   border-top: 1rem solid var(--black);
 }
+
 .game__day3__list {
   margin: 0 auto;
   display: flex;
@@ -471,6 +532,7 @@
   min-height: 50vh;
   align-items: center;
 }
+
 .game__day3__list li {
   display: flex;
   flex-direction: column;
@@ -479,29 +541,36 @@
   cursor: pointer;
   transition: all 0.3s ease;
 }
+
 .game__day3__list li:hover {
   transform: scale(1.1);
 }
+
 .game__day3__list li p {
   margin-top: 2rem;
 }
+
 .game__day3__buttons {
   margin: 0 auto;
   margin-top: 20rem;
 }
+
 .game__day3__buttons button {
   margin-right: 4rem;
 }
+
 .container {
   text-align: center;
   margin: 0 auto;
 }
+
 .message {
   background: #2c2c2c;
   color: #ebebeb;
   text-transform: uppercase;
   padding: 1rem;
 }
+
 .outer {
   background: var(--blue);
   margin-top: 6rem;
@@ -521,6 +590,7 @@
   height: 7.6rem;
   box-shadow: -1rem 1rem var(--black);
 }
+
 .outer .lock {
   width: 7.6rem;
   height: 7.6rem;
@@ -543,9 +613,11 @@
   justify-content: center;
   align-items: center;
 }
+
 .outer p {
   color: var(--white);
 }
+
 .outer .lock.dragging {
   -webkit-transition: none;
   -moz-transition: none;
@@ -553,6 +625,7 @@
   -o-transition: none;
   transition: none;
 }
+
 .outer.unlocked {
   -webkit-opacity: 0.8;
   -moz-opacity: 0.8;
@@ -560,10 +633,12 @@
   -o-opacity: 0.8;
   opacity: 0.8;
 }
+
 .outer.unlocked .lock {
   background: #24cf02;
   cursor: none;
 }
+
 .game__image__drag {
   height: 40vh;
   display: flex;
@@ -571,6 +646,7 @@
   justify-content: space-around;
   width: 100%;
 }
+
 .dashboard__popup__container {
   position: absolute;
   left: 0;
@@ -582,6 +658,7 @@
   align-items: center;
   justify-content: center;
 }
+
 .dashboard__popup {
   width: 80rem;
   height: 50rem;
@@ -592,6 +669,7 @@
   position: relative;
   padding: 3rem;
 }
+
 .dashboard__popup__exit {
   position: absolute;
   right: -1rem;
@@ -604,9 +682,11 @@
   justify-content: center;
   border: 1rem solid var(--black);
 }
+
 .dashboard__popup__students {
   margin-top: 3rem;
 }
+
 .dashboard__changestudents__input {
   border: none;
   border-bottom: 0.3rem solid var(--black);
@@ -614,16 +694,19 @@
   padding: 1rem;
   min-width: 40rem;
 }
+
 .dashboard__changestudents__form {
   margin-top: 3rem;
   margin-bottom: 2rem;
   display: flex;
   align-items: center;
 }
+
 .dashboard__changestudents__div {
   display: flex;
   flex-direction: column;
 }
+
 .dashboard__changestudents__form .button__secondary {
   margin-left: 3rem;
 }

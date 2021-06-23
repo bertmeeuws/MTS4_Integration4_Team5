@@ -121,7 +121,7 @@ export default function NewGame({ teacher }) {
                 name="gamename"
                 value={name}
                 placeholder="2HAc"
-                className="auth-input"
+                className="auth__input-register"
               />
             </div>
 
@@ -136,7 +136,7 @@ export default function NewGame({ teacher }) {
                   name="students"
                   value={addStudent}
                   placeholder="Bert Meeuws"
-                  className="auth-input"
+                  className="auth__input-register"
                 />
 
                 <a
@@ -175,8 +175,7 @@ export default function NewGame({ teacher }) {
             <input
               type="submit"
               className="button__primary"
-              value="Genereer link"
-              style={{ marginRight: "2rem" }}
+              value="maak link"
             />
             <a
               onClick={(e) => {
@@ -187,7 +186,7 @@ export default function NewGame({ teacher }) {
               className="button__secondary"
             >
               {" "}
-              Kopieer link
+              kopieer
             </a>
           </div>
         </form>

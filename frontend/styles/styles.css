@@ -220,6 +220,15 @@
   color: var(--white);
 }
 
+.mark-white{
+  background-color: var(--white);
+  border-radius: 10rem;
+  padding-left: 2rem;
+  margin-left: -2rem;
+  padding-right: 2rem;
+  color: var(--black);
+}
+
 .horzizontal-center {
   display: flex;
   flex-direction: column;

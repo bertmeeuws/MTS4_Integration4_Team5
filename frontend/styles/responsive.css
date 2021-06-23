@@ -50,6 +50,11 @@
         right: 5%;
         transform: scale(0.9);
     }
+
+    .dashboard__wrapper {
+        overflow: scroll;
+        padding-bottom: 15rem;
+    }
     
 }
 
@@ -160,6 +165,21 @@
 
     .form__login-container {
         margin-left: 4rem;
+    }
+
+    .game__info-new {
+        padding: 2rem;
+    }
+
+    .newGame-link-container {
+        margin-top: 2rem;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+
+    .dashboard-game-scores {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
     }
     
 }

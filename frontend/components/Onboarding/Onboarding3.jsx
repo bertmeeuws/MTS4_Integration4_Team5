@@ -9,38 +9,27 @@ export default function Onboarding3() {
   const nextRoute = useStoreActions((actions) => actions.nextRoute);
 
   return (
-    <section className="background-yellow stretch-container onboarding-1">
+
+    <section className="game__content-container">
+      
       <NavBar percent={6} />
-      <div className="onboarding-content-container">
-        <p style={{ color: "var(--blue)" }} className="text__m-bold">
-          3/3 boooh!
-        </p>
-        <h1 className="title__m-bold margin-top align-center">
-          Verlies volgers
-        </h1>
-        <p className="onboarding2__text text-center">
-          Wanneer je een situatie niet correct inschat verlies je volgers.
-        </p>
-        <div className="onboarding-progress-container">
-          <button
-            className="button__secondary text__m-bold button__game-next"
-            onClick={(e) => {
-              previousRoute();
-            }}
-          >
-            Stap terug
-          </button>
-          <button
-            onClick={(e) => {
-              nextRoute();
-            }}
-            className="button__primary text__m-bold button__game-next"
-          >
-            Start BuddyGram op
-          </button>
+
+        <div className="onboarding-content-container">
+          <p className="text__m-bold text__blue">3/3 boooh!</p>
+          <div className="spacer__xs"></div>
+          <h1 className="title__m-bold"><marker className="mark-white">verlies</marker>volgers.</h1>
+          <div className="spacer__s"></div>
+          <p className="text__m-normal">Wanneer je een situatie niet correct inschat verlies je volgers.</p>
         </div>
-        <ProgressBar step={3} />
-      </div>
+        
+        <div className="onboarding__button-container">
+          <button className="button__secondary" onClick={(e) => previousRoute()}>stap terug</button>
+          <button className="button__primary" onClick={(e) => nextRoute()}>start BuddyGram</button>
+        </div>
+
+      <ProgressBar step={3} />
+
     </section>
+
   );
 }
