@@ -79,7 +79,14 @@ export default function Dag2_2({ data }) {
             <div className="game__day2__container game__day2__container--hate">
               <div className="game__day2__profile game__day2__profile--hate">
                 <p className="game__day2__profile__name">Carl</p>
-                <div className="game__day2__profile__image"></div>
+                <div className="game__day2__profile__image">
+                  <img
+                    width="148"
+                    height="148"
+                    src="https://scontent-bru2-1.xx.fbcdn.net/v/t1.6435-9/95684925_3168754556469120_7774399673485230080_n.jpg?_nc_cat=110&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=xhdI-bdpQXsAX_5aNNZ&_nc_ht=scontent-bru2-1.xx&oh=425ec955859c372e24967f0e687aa9a6&oe=60D8479F"
+                    alt="Foto bert"
+                  />
+                </div>
               </div>
               <p className="text__m-normal game__day2__comment game__day2__comment__left">
                 Dit ga ik aan de leerkracht vertellen!
@@ -89,33 +96,34 @@ export default function Dag2_2({ data }) {
             ""
           )}
         </div>
-
-        {animate ? (
-          <button
-            onClick={(e) => setRoute(2)}
-            style={{ marginTop: "1rem" }}
-            className="button__primary text__m-bold button__game-next"
-          >
-            Feed afsluiten
-          </button>
-        ) : (
-          choices.map((choice) => {
-            return (
-              <button
-                style={{ marginTop: "1rem" }}
-                className="button__primary text__m-bold button__game-next"
-                onClick={(e) => {
-                  setFollowers(current_followers + choice.followers);
-                  setAnswer(choice);
-                  updateFollowers(choice.followers);
-                  choice?.action();
-                }}
-              >
-                {choice?.text}
-              </button>
-            );
-          })
-        )}
+        <div>
+          {animate ? (
+            <button
+              onClick={(e) => setRoute(2)}
+              style={{ marginTop: "1rem" }}
+              className="button__primary text__m-bold button__game-next"
+            >
+              Feed afsluiten
+            </button>
+          ) : (
+            choices.map((choice) => {
+              return (
+                <button
+                  style={{ marginTop: "1rem", marginLeft: "2rem" }}
+                  className="button__primary text__m-bold button__game-next"
+                  onClick={(e) => {
+                    setFollowers(current_followers + choice.followers);
+                    setAnswer(choice);
+                    updateFollowers(choice.followers);
+                    choice?.action();
+                  }}
+                >
+                  {choice?.text}
+                </button>
+              );
+            })
+          )}
+        </div>
       </div>
     </section>
   );
