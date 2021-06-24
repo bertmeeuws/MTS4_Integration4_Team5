@@ -16,11 +16,12 @@ export default function Dag1_2({ route }) {
 
   return (
     <section className="game__play-container">
-
       <div className="day__content-container">
         <h1 className="title__m-bold">Sleep je foto in de feed!</h1>
         <div className="spacer__s"></div>
-        <p className="text__m-normal">Grijp de foto met je muis en sleep deze in de feed.</p>
+        <p className="text__m-normal">
+          Grijp de foto met je muis en sleep deze in de feed.
+        </p>
       </div>
 
       <div className="game-wrapper">
@@ -45,12 +46,12 @@ export default function Dag1_2({ route }) {
       <div className="image__gridYellow">
         <img
           src="/assets/img/gridyellow.svg"
-            width={528}
-            height={671}
-            alt="grid illustratie"
+          width={528}
+          height={671}
+          alt="grid illustratie"
         />
       </div>
-
+      <Background />
     </section>
   );
 }

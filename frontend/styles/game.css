@@ -24,7 +24,7 @@
   z-index: 10;
 }
 
-.image__drag{
+.image__drag {
   border: 1rem solid var(--black);
   object-fit: cover;
   height: 20rem;
@@ -55,14 +55,14 @@
   position: relative;
 }
 
-.game__text-back{
+.game__text-back {
   position: absolute;
   text-align: center;
   margin-left: 5rem;
   margin-right: 5rem;
 }
 
-.game__picture{
+.game__picture {
   object-fit: cover;
   z-index: 10;
 }
@@ -91,7 +91,7 @@
   gap: 2rem;
 }
 
-.uploadimage__top{
+.uploadimage__top {
   justify-self: flex-end;
 }
 
@@ -219,14 +219,14 @@
   position: relative;
 }
 
-.image__gameSickersRightVar1{
+.image__gameSickersRightVar1 {
   pointer-events: none;
   position: absolute;
   right: 5%;
   top: 15%;
 }
 
-.image__gameSickersLeftVar1{
+.image__gameSickersLeftVar1 {
   pointer-events: none;
   position: absolute;
   left: 5%;
@@ -457,7 +457,7 @@
   overflow: scroll;
 }
 
-.list__window__item:nth-child(-n+3) {
+.list__window__item:nth-child(-n + 3) {
   font-weight: 700;
   color: var(--blue);
 }
@@ -602,11 +602,6 @@
 
 .game__day2__container:first-child {
   margin-bottom: 8rem;
-}
-
-.game__day2__container--hate {
-  opacity: 0;
-  scale: 0;
 }
 
 .game__day3__post {
@@ -764,6 +759,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 102;
 }
 
 .dashboard__popup {

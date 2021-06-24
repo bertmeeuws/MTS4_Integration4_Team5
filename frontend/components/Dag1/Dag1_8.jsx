@@ -3,19 +3,17 @@ import { useStoreActions, useStoreState } from "easy-peasy";
 import Background from "../Background/Background";
 
 export default function Dag1_8({ route }) {
-
   const nextRoute = useStoreActions((actions) => actions.nextRoute);
   const answer = useStoreState((state) => state.answer);
   const gamer = useStoreState((state) => state.current_gamer);
 
   return (
     <section className="game__play-container">
-      
-      <Background />
-
       <div className="day__content-container">
-        <h1 className="title__m-bold">Als iemand zijn negatieve mening geeft dan is het beter om daar
-          positief op te antwoorden. Hun doel is om je slecht te laten voelen.</h1>
+        <h1 className="title__m-bold">
+          Als iemand zijn negatieve mening geeft dan is het beter om daar
+          positief op te antwoorden. Hun doel is om je slecht te laten voelen.
+        </h1>
         <div className="spacer__s"></div>
       </div>
 
@@ -34,13 +32,11 @@ export default function Dag1_8({ route }) {
             </p>
           </div>
         </div>
-        <button
-          className="button__primary"
-          onClick={(e) => nextRoute()}
-        >
+        <button className="button__primary" onClick={(e) => nextRoute()}>
           Naar overzicht
         </button>
       </div>
+      <Background />
     </section>
   );
 }

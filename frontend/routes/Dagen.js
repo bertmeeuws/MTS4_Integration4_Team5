@@ -19,7 +19,6 @@ import Dag2_3 from "../components/Dag2/Dag2_3";
 import Dag2_4 from "../components/Dag2/Dag2_4";
 import Dag2_5 from "../components/Dag2/Dag2_5";
 import Dag2_6 from "../components/Dag2/Dag2_6";
-import Dag2_7 from "../components/Dag2/Dag2_7";
 
 import Dag3 from "../components/Dag3/Dag3";
 import Dag3_1 from "../components/Dag3/Dag3_1";
@@ -35,11 +34,8 @@ import Dag4_2 from "../components/Dag4/Dag4_2";
 import Dag4_3 from "../components/Dag4/Dag4_3";
 import Dag4_4 from "../components/Dag4/Dag4_4";
 import Dag4_5 from "../components/Dag4/Dag4_5";
-import Dag4_6 from "../components/Dag4/Dag4_6";
 
 import Dag5 from "../components/Dag5/Dag5";
-import Dag5_1 from "../components/Dag5/Dag5_1";
-import Dag5_2 from "../components/Dag5/Dag5_2";
 import Dag5_3 from "../components/Dag5/Dag5_3";
 import Dag5_4 from "../components/Dag5/Dag5_4";
 import Dag5_5 from "../components/Dag5/Dag5_5";
@@ -435,18 +431,6 @@ export const Dag4Routes = (game) => {
         </>
       ),
     },
-    /*
-    {
-      id: 19,
-      name: "Dag 4",
-      component: (
-        <>
-          <NavbarWithFollowers followers={100} text={"donderdag - 07:40"} />
-          <Dag4_6 data={game[0]} route={15} title={"Dag 4"} />
-        </>
-      ),
-    },
-    */
   ];
 };
 

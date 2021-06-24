@@ -16,20 +16,6 @@ export default function Dag2_2({ data }) {
   const setAnswer = useStoreActions((actions) => actions.setAnswer);
   const setRoute = useStoreActions((actions) => actions.setRouteAmount);
 
-  useEffect(() => {
-    TweenLite.from(".game__day2__container--first", 0.8, {
-      scale: 0,
-      opacity: 0,
-      ease: "power2",
-    });
-    TweenLite.from(".game__day2__profile--first", 0.8, {
-      scale: 0,
-      opacity: 0,
-      delay: 0.3,
-      ease: "power2",
-    });
-  }, []);
-
   const choices = [
     {
       followers: -20,
@@ -40,17 +26,6 @@ export default function Dag2_2({ data }) {
       button: "Wat had ik beter gedaan?",
       action: () => {
         setAnimate(true);
-        TweenLite.to(".game__day2__container--hate", 0.8, {
-          scale: 1,
-          opacity: 100,
-          ease: "power2",
-        });
-        TweenLite.to(".game__day2__profile--hate", 0.8, {
-          scale: 1,
-          opacity: 100,
-          delay: 0.3,
-          ease: "power2",
-        });
       },
     },
     {
@@ -100,20 +75,25 @@ export default function Dag2_2({ data }) {
               gestopt.
             </p>
           </div>
-          <div className="game__day2__container game__day2__container--hate">
-            <div className="game__day2__profile game__day2__profile--hate">
-              <p className="game__day2__profile__name">Carl</p>
-              <div className="game__day2__profile__image"></div>
+          {animate ? (
+            <div className="game__day2__container game__day2__container--hate">
+              <div className="game__day2__profile game__day2__profile--hate">
+                <p className="game__day2__profile__name">Carl</p>
+                <div className="game__day2__profile__image"></div>
+              </div>
+              <p className="text__m-normal game__day2__comment game__day2__comment__left">
+                Dit ga ik aan de leerkracht vertellen!
+              </p>
             </div>
-            <p className="text__m-normal game__day2__comment game__day2__comment__left">
-              Dit ga ik aan de leerkracht vertellen!
-            </p>
-          </div>
+          ) : (
+            ""
+          )}
         </div>
 
         {animate ? (
           <button
             onClick={(e) => setRoute(2)}
+            style={{ marginTop: "1rem" }}
             className="button__primary text__m-bold button__game-next"
           >
             Feed afsluiten
@@ -122,7 +102,8 @@ export default function Dag2_2({ data }) {
           choices.map((choice) => {
             return (
               <button
-                className="button__primary text__m-bold button__game-next"
+                style={{ marginTop: "1rem" }}
+                lassName="button__primary text__m-bold button__game-next"
                 onClick={(e) => {
                   setFollowers(current_followers + choice.followers);
                   setAnswer(choice);

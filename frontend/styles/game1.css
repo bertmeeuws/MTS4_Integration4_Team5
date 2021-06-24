@@ -62,14 +62,12 @@
   margin: 0 auto;
   max-width: 25.5rem;
 }
-.section__day4_1 {
-}
+
 .section__day4_2 .game-wrapper,
 .section__day4_5 .game-wrapper {
   height: 100%;
 }
-.section__day4_3 {
-}
+
 .section__day5_3 .button__primary {
   max-width: 55rem;
   margin: 0 auto;
@@ -79,4 +77,34 @@
 }
 .section__5_5 .game__privatechat__buttons .text__m-bold:first-child {
   float: left;
+}
+.section__day3_4 {
+  position: relative;
+}
+.section__day3_4 .game__background {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.game__background__thumbRed {
+  position: absolute;
+  left: 2rem;
+  bottom: 30%;
+}
+.game__background__blueCircle {
+  position: absolute;
+  left: -2rem;
+  top: 30%;
+}
+.game__background__bluePill {
+  position: absolute;
+  right: 15rem;
+  bottom: 0;
+}
+.game__background__yellowSmiley {
+  position: absolute;
+  right: 0;
+  bottom: 30%;
 }

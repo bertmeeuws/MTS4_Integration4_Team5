@@ -9,6 +9,7 @@
   justify-content: space-between;
   padding-left: 2rem;
   z-index: 100;
+  z-index: 15;
 }
 
 .nav__buddygram-close {

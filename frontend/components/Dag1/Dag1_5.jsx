@@ -5,7 +5,6 @@ import { API_URL } from "../../constants";
 import Background from "../Background/Background";
 
 export default function Dag1_5({ route }) {
-  
   const nextRoute = useStoreActions((actions) => actions.nextRoute);
   const user = useStoreState((state) => state.current_gamer);
   const current_followers = useStoreState((state) => state.followers);
@@ -78,7 +77,7 @@ export default function Dag1_5({ route }) {
   return (
     <section className="day__middle-center">
       <p className="hidden">1.5</p>
-      <Background />
+
       <div className="game-wrapper">
         <div className="post__comments__grid">
           <div onClick={(e) => nextRoute()} className="post__container">

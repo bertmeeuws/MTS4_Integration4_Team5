@@ -3,6 +3,7 @@ import { useStoreActions, useStoreState } from "easy-peasy";
 import { API_URL } from "../../constants/index";
 import ListWindow from "../ListWindow/ListWindow";
 import axios from "axios";
+import Background from "../Background/Background";
 
 export default function Dag1_1() {
   const nextRoute = useStoreActions((actions) => actions.nextRoute);
@@ -58,56 +59,64 @@ export default function Dag1_1() {
   };
 
   return (
-
     <section className="day__middle-center">
-
-        <form className="game__uploadimage" onSubmit={uploadImage}>
-
-            <div className="uploadimage__top">
-              {state && (
-                <button
-                  className="button__cancel"
-                  onClick={(event) => {
-                    setState(null);
-                    setBlob(null);
-                  }}
-                >verwijder</button>
-              )}
-            </div>
-
-            <div className="game__picture-container">
-              <p className="game__text-back title__s-bold">upload een foto met het knopje hier onder <br></br><br></br>
-              {error ? <span className="title__s-bold text__red">nog geen foto upgeload!</span> : ""}</p>
-              <img
-                className="game__picture"
-                id="output"
-                width="100%"
-                height="100%"
-                src={state} />
-            </div>
-
-            <div className="uploadimage__bottom">
-              <input
-              type="file"
-              className="custom-file-input"
-              id="input"
-              accept="image/*"
-              onChange={(event) => {
-                setState(URL.createObjectURL(event.target.files[0]));
-                setBlob(event.target.files[0]);
+      <form className="game__uploadimage" onSubmit={uploadImage}>
+        <div className="uploadimage__top">
+          {state && (
+            <button
+              className="button__cancel"
+              onClick={(event) => {
+                setState(null);
+                setBlob(null);
               }}
-              value=""
-              />
+            >
+              verwijder
+            </button>
+          )}
+        </div>
 
-              <input
-                className="button__primary"
-                type="submit"
-                value="foto gebruiken"
-              />
-            </div>
+        <div className="game__picture-container">
+          <p className="game__text-back title__s-bold">
+            upload een foto met het knopje hier onder <br></br>
+            <br></br>
+            {error ? (
+              <span className="title__s-bold text__red">
+                nog geen foto upgeload!
+              </span>
+            ) : (
+              ""
+            )}
+          </p>
+          <img
+            className="game__picture"
+            id="output"
+            width="100%"
+            height="100%"
+            src={state}
+          />
+        </div>
 
-        </form>
+        <div className="uploadimage__bottom">
+          <input
+            type="file"
+            className="custom-file-input"
+            id="input"
+            accept="image/*"
+            onChange={(event) => {
+              setState(URL.createObjectURL(event.target.files[0]));
+              setBlob(event.target.files[0]);
+            }}
+            value=""
+          />
+
+          <input
+            className="button__primary"
+            type="submit"
+            value="foto gebruiken"
+          />
+        </div>
+      </form>
+      <Background />
     </section>
-    
   );
 }
