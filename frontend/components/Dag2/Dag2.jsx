@@ -1,31 +1,34 @@
 import React from "react";
 import { useStoreActions } from "easy-peasy";
-import Background from "../Background/Background";
+import Image from "next/image";
 
 
 export default function Dag2() {
   const nextRoute = useStoreActions((actions) => actions.nextRoute);
 
   return (
-    <section className="background-yellow stretch-container">
-      <Background />
 
-      <div className="game-wrapper">
-        <div className="game__textBox">
-          <h1 className="title__m-bold">Nieuwe dag, nieuwe kansen</h1>
-          <p className="text__m-normal game__upload-subtext">
-            Het is dinsdag 7u30 ‘s ochtends. Klaar voor een nieuwe dag! Laten we
-            snel eens BuddyGram checken!
-          </p>
+    <section className="game__content-container">
+
+        <div className="onboarding-content-container">
+          <h1 className="title__m-bold">Nieuwe dag, nieuwe kansen.</h1>
+          <div className="spacer__s"></div>
+          <p className="text__m-normal">Het is dinsdag 7u30 ‘s ochtends. Klaar voor een nieuwe dag! Laten we snel eens BuddyGram checken!</p>
+        </div>
+        
+        <div className="onboarding__button-container">
+          <button className="button__primary" onClick={(e) => nextRoute()}>bekijk de feed</button>
         </div>
 
-        <button
-          className="button__primary text__m-bold button__game-next"
-          onClick={(e) => nextRoute()}
-        >
-          Bekijk de feed
-        </button>
+        <div className="image__clouds">
+          <Image
+            src="/assets/clouds.svg"
+            width={1468}
+            height={380}
+            alt="zwevende wolkjes"
+          />
       </div>
+
     </section>
   );
 }

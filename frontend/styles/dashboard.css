@@ -192,10 +192,14 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
-  grid-row-gap: 1rem;
-  grid-column-gap: 2rem;
+  row-gap: 2rem;
+  column-gap: 4rem;
   overflow-y: scroll;
   height: 10rem;
+}
+
+.newGame-students-full{
+  height: 50vh !important;
 }
 
 .newGame-student-item {

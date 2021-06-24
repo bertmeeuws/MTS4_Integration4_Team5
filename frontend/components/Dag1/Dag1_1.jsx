@@ -76,7 +76,8 @@ export default function Dag1_1() {
             </div>
 
             <div className="game__picture-container">
-              <p className="game__text-back title__s-bold">upload een foto met het knopje hier onder</p>
+              <p className="game__text-back title__s-bold">upload een foto met het knopje hier onder <br></br><br></br>
+              {error ? <span className="title__s-bold text__red">nog geen foto upgeload!</span> : ""}</p>
               <img
                 className="game__picture"
                 id="output"
@@ -104,7 +105,7 @@ export default function Dag1_1() {
                 value="foto gebruiken"
               />
             </div>
-            
+
         </form>
     </section>
     

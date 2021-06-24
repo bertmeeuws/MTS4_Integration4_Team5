@@ -16,7 +16,7 @@ export default function Dag4_4() {
         </h1>
 
         <button
-          className="button__primary text__m-bold button__game-next"
+          className="button__primary"
           onClick={(e) => nextRoute()}
         >
           Naar overzicht

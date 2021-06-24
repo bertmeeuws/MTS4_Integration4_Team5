@@ -12,7 +12,7 @@ export default function Dag5_1() {
       <div className="game-wrapper">
         <p></p>
         <button
-          className="button__primary text__m-bold button__game-next"
+          className="button__primary"
           onClick={(e) => nextRoute()}
         >
           Bekijk de foto

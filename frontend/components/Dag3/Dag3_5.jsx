@@ -19,7 +19,7 @@ export default function Dag3_5() {
           <h1 className="title__m-bold text-center">{answer?.penalty}</h1>
         </div>
         <button
-          className="button__primary text__m-bold button__game-next"
+          className="button__primary"
           onClick={(e) => nextRoute()}
         >
           {answer?.button}

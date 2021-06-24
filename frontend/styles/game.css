@@ -8,9 +8,27 @@
   padding-bottom: 4rem;
 }
 
+.game__play-container {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: 4rem;
+  background-color: var(--yellow);
+  height: 100vh;
+  width: 100vw;
+  padding-bottom: 4rem;
+}
+
 .day__content-container {
   margin-top: 15rem;
   margin-left: 5%;
+  z-index: 10;
+}
+
+.image__drag{
+  border: 1rem solid var(--black);
+  object-fit: cover;
+  height: 20rem;
+  width: 20rem;
 }
 
 .day__middle-center {
@@ -19,7 +37,8 @@
   align-items: center;
   align-self: center;
   justify-self: center;
-  height: 100vh;
+  flex-direction: column;
+  height: 100%;
   width: 100vw;
   background-color: var(--yellow);
 }
@@ -62,6 +81,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   z-index: 2;
 }
 
@@ -114,7 +134,7 @@
   max-width: 87rem;
   margin: 0 auto;
   position: relative;
-  padding-top: 8rem;
+  margin-bottom: 2rem;
 }
 
 .game__textBox-small {
@@ -166,29 +186,16 @@
   height: 100%;
 }
 
-.introduction {
-  padding-top: 12.6rem;
-}
-
-.introduction .title__m-bold {
-  margin-bottom: 2rem;
-}
-
-.introduction .text__m-normal {
-  margin-bottom: 8.6rem;
-}
-
 .introduction--list {
   background-color: var(--yellow);
-  padding-top: 6.5rem;
-  padding-bottom: 6.5rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
-
-  grid-column-gap: 10rem;
-  padding-left: 21.6rem;
-  padding-right: 21.6rem;
+  padding-left: 20%;
+  padding-right: 20%;
+  gap: 4rem;
   background: var(--yellow);
   background-image: linear-gradient(
       rgba(255, 255, 255, 0.322) 0.1em,
@@ -197,8 +204,33 @@
     linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0.1em, transparent 0.1em);
   background-size: 1em 1em;
 }
+
 .introduction-container {
   z-index: 5;
+  width: 108rem;
+  margin: 0 auto;
+  padding-bottom: 10rem;
+}
+
+.introduction__info {
+  z-index: 10;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+  position: relative;
+}
+
+.image__gameSickersRightVar1{
+  pointer-events: none;
+  position: absolute;
+  right: 5%;
+  top: 15%;
+}
+
+.image__gameSickersLeftVar1{
+  pointer-events: none;
+  position: absolute;
+  left: 5%;
+  top: 20%;
 }
 
 .onboarding-progress-container .button__game-next {
@@ -281,6 +313,7 @@
   cursor: pointer;
   transition: all 0.3s ease;
   margin-top: -5rem;
+  margin-bottom: 2rem;
 }
 
 .post__container:hover {
@@ -292,16 +325,17 @@
   height: 34.5rem;
   width: 34.5rem;
   border: 1rem solid var(--black);
+  margin-top: 1rem;
 }
 
 .post__comment__author {
-  margin-top: 3rem;
+  margin-top: 2rem;
 }
 
 .post__comment {
   border-radius: 0rem 2rem 2rem 2rem;
   border: 1rem solid var(--black);
-  margin-top: 2rem;
+  margin-top: 1rem;
   padding: 1rem 2rem;
   background-color: var(--white);
 }
@@ -319,6 +353,8 @@
   padding: 1rem 2rem;
   background-color: var(--white);
   box-shadow: -1rem 1rem var(--black);
+  cursor: pointer;
+  transition: 0.1s;
 }
 
 .post__comments__options--title {
@@ -360,7 +396,7 @@
 }
 
 .post__comment__option:hover {
-  transform: translateY(30);
+  transform: translateX(-2rem);
 }
 
 .post__comments__grid .post__container {
@@ -391,6 +427,7 @@
 .post__container__lesson {
   padding: 2.5rem;
   margin: 0 auto;
+  margin-bottom: 2rem;
 }
 
 .center-middle {
@@ -408,18 +445,25 @@
     ),
     linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0.1em, transparent 0.1em);
   background-size: 1em 1em;
-  padding-left: 7.5rem;
-  padding-right: 7.5rem;
+  padding-left: 8rem;
+  padding-right: 8rem;
   padding-top: 3rem;
   padding-bottom: 3rem;
   display: grid;
   grid-template-columns: 1fr;
   grid-row-gap: 3rem;
+  height: 50vh;
+  width: 108rem;
+  overflow: scroll;
+}
+
+.list__window__item:nth-child(-n+3) {
+  font-weight: 700;
+  color: var(--blue);
 }
 
 .list__window__item {
   background-color: var(--white);
-  box-shadow: -1rem 1rem var(--black);
   padding: 1.5rem 2.5rem;
   border: 1rem solid var(--black);
   display: flex;
@@ -707,6 +751,7 @@
   align-items: center;
   justify-content: space-around;
   width: 100%;
+  gap: 4rem;
 }
 
 .dashboard__popup__container {
@@ -747,14 +792,6 @@
 
 .dashboard__popup__students {
   margin-top: 3rem;
-}
-
-.dashboard__changestudents__input {
-  border: none;
-  border-bottom: 0.3rem solid var(--black);
-  outline: none;
-  padding: 1rem;
-  min-width: 40rem;
 }
 
 .dashboard__changestudents__form {

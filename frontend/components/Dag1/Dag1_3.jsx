@@ -30,7 +30,8 @@ export default function Dag1_3({ route, data }) {
   const nextRoute = useStoreActions((actions) => actions.nextRoute);
 
   return (
-    <section className="game__content-container">
+
+    <section className="game__play-container">
       <Background />
 
       <div className="day__content-container">
@@ -41,23 +42,18 @@ export default function Dag1_3({ route, data }) {
 
       <div className="day__middle-center">
           <p className="text__m-normal">aantal volgers</p>
-          <h1 className="title__l-bold">100</h1>
+          <h1 className="title__xl-bold">100</h1>
       </div>
 
-      <div className="game-wrapper">
+      <div className="onboarding__button-container">
+
         <button
           className="button__primary"
-          onClick={(e) => nextRoute()}
-        >
+          onClick={(e) => nextRoute()}>
           Bekijk je foto op de feed
         </button>
+
       </div>
-      <img
-        className="day3__raster__img"
-        src="/assets/raster.svg"
-        width="1040"
-        height="528"
-      />
     </section>
   );
 }

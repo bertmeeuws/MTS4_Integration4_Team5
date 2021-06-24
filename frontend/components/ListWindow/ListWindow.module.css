@@ -1,11 +1,13 @@
 .container {
   height: auto;
-
   box-shadow: -10px 9px 0px var(--black);
   border: 1rem solid var(--black);
-  margin-top: 2.2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
   position: relative;
+  z-index: 10;
 }
+
 .navigation {
   border-bottom: 1rem solid var(--black);
   position: absolute;
@@ -19,9 +21,11 @@
   padding-left: 2rem;
   background-color: var(--white);
 }
+
 .safezone {
   margin-top: 6rem;
 }
+
 .circle {
   width: 3rem;
   height: 3rem;
@@ -29,12 +33,15 @@
   margin-right: 1rem;
   border: 1rem solid var(--black);
 }
+
 .blue {
   background-color: var(--turquoise);
 }
+
 .yellow {
   background-color: var(--yellow);
 }
+
 .red {
   background-color: var(--red);
 }

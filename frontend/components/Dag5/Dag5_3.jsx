@@ -35,7 +35,7 @@ export default function Dag5_3() {
           }
         })}
         <button
-          className="button__primary text__m-bold button__game-next"
+          className="button__primary"
           onClick={(e) => {
             id === 3 ? nextRoute() : next();
           }}

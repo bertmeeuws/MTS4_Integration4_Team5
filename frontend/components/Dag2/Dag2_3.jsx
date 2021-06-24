@@ -37,9 +37,8 @@ export default function Dag2_3() {
           </p>
         </div>
         <button
-          className="button__primary text__m-bold button__game-next"
-          onClick={(e) => nextRoute()}
-        >
+          className="button__primary"
+          onClick={(e) => nextRoute()}>
           Feed afsluiten
         </button>
       </div>

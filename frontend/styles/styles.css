@@ -1,3 +1,10 @@
+.title__xl-bold {
+  font-size: 20rem;
+  font-family: lores-12;
+  line-height: 100%;
+  font-weight: 700;
+}
+
 .title__l-bold {
   font-size: 7.2rem;
   font-family: lores-12;

@@ -7,11 +7,12 @@ export default function Dag2_7() {
 
   return (
     <section className="background-yellow stretch-container">
+      
       <Background />
 
-      <p className="hidden">2.7</p>
       <h1 className="title__m-bold">OVERZICHT LIJST</h1>
       <button onClick={(e) => nextRoute()}>Dag afsluiten</button>
+      
     </section>
   );
 }

@@ -8,11 +8,13 @@ export default function Dag1_4({ route }) {
   const current_followers = useStoreState((state) => state.followers);
   const setFollowers = useStoreActions((actions) => actions.setFollowers);
   const picture = useStoreState((state) => state.profile_picture);
+  const gamer = useStoreState((state) => state.current_gamer);
 
   return (
-    <section className="section__post  background-yellow stretch-container">
+    <section className="day__middle-center">
       <Background />
       <div onClick={(e) => nextRoute()} className="post__container">
+        <p className="title__s-bold">{gamer?.name}</p>
         <div className="post__image--overflow">
           <img style={{ height: "34.5rem" }} src={picture} />
         </div>

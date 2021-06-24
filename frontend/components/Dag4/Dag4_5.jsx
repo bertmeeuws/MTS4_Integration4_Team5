@@ -6,31 +6,28 @@ import Background from "../Background/Background";
 import ListWindow from "../ListWindow/ListWindow";
 
 export default function Dag4_5({ data }) {
-  const nextRoute = useStoreActions((actions) => actions.nextRoute);
 
+  const nextRoute = useStoreActions((actions) => actions.nextRoute);
   const [students, setStudents] = useState([]);
 
   useEffect(async () => {
     try {
       const response = await axios.get(`${API_URL}/students?game=${data.id}`);
-      //console.log(response.data);
-
-      //const response = await axios.get(`${API_URL}?${query}`);
-
-      console.log(response.data);
 
       setStudents(response.data);
 
-      console.log(students);
     } catch (e) {}
   }, []);
 
   return (
-    <section className="section__day4_5 background-yellow stretch-container">
-      <p className="hidden">4.5</p>
+    <section className="day__middle-center">
+
       <Background />
+
       <div className="game-wrapper">
+
         <ListWindow text={`Leerlingen klas ${data.name}`}>
+
           <div className="list__window__container">
             {students.map((student) => {
               return (
@@ -44,10 +41,10 @@ export default function Dag4_5({ data }) {
             })}
           </div>
         </ListWindow>
+
         <button
-          className="button__primary text__m-bold button__game-next"
-          onClick={(e) => nextRoute()}
-        >
+          className="button__primary"
+          onClick={(e) => nextRoute()}>
           Dag afsluiten
         </button>
       </div>

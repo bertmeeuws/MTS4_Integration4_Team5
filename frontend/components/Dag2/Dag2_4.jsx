@@ -11,8 +11,9 @@ export default function Dag2_4() {
 
   return (
     <section className="center-middle background-yellow stretch-container">
+      
       <Background />
-      <p className="hidden">2.3</p>
+
       <div className="game-wrapper">
         <div className="game__textBox">
           <p className="game__box__followers__circle">
@@ -22,9 +23,8 @@ export default function Dag2_4() {
           <h1 className="title__m-bold text-center">{answer?.penalty}</h1>
         </div>
         <button
-          className="button__primary text__m-bold button__game-next"
-          onClick={(e) => nextRoute()}
-        >
+          className="button__primary"
+          onClick={(e) => nextRoute()}>
           Ga verder
         </button>
       </div>

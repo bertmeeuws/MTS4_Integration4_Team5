@@ -16,11 +16,11 @@ export default function Dag2_5() {
         </h1>
 
         <button
-          className="button__primary text__m-bold button__game-next"
-          onClick={(e) => nextRoute()}
-        >
+          className="button__primary"
+          onClick={(e) => nextRoute()}>
           Naar overzicht
         </button>
+        
       </div>
       <Background />
     </section>

@@ -18,13 +18,14 @@ export default function Introduction({ data }) {
   console.log(game);
 
   return (
-    <>
       <section className="introduction stretch-container">
+
         <div className="introduction-container">
-          <h1 className="title__m-bold">
-            Welkom op <marker className="mark-blue">BuddyGram!</marker>
-          </h1>
-          <p className="text__m-normal">Klik op je naam om door te gaan.</p>
+
+          <div className="introduction__info">
+            <h1 className="title__m-bold">Welkom op <marker className="mark-blue">BuddyGram!</marker></h1>
+            <p className="text__m-normal">Klik op je naam om door te gaan.</p>
+          </div>
 
           <div className="game-wrapper">
             <ListWindow text={`Leerlingen klas ${data[0].name}`}>
@@ -47,7 +48,26 @@ export default function Introduction({ data }) {
             </ListWindow>
           </div>
         </div>
+
+        <div className="image__gameSickersLeftVar1">
+          <img
+            src="/assets/img/gameSickersLeftVar1.svg"
+            width={218}
+            height={692}
+            alt="stickers illustratie"
+          />
+        </div>
+
+        <div className="image__gameSickersRightVar1">
+          <img
+            src="/assets/img/gameSickersRightVar1.svg"
+            width={314}
+            height={148}
+            alt="stickers illustratie"
+          />
+        </div>
       </section>
-    </>
   );
 }
+
+// gameSickersLeftVar1

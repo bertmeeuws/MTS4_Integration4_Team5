@@ -1,34 +1,29 @@
 import React, { useEffect, useState } from "react";
-import { useStoreActions, useStoreState } from "easy-peasy";
+import { useStoreActions} from "easy-peasy";
 import { API_URL } from "../../constants";
 import axios from "axios";
 import Background from "../Background/Background";
 import ListWindow from "../ListWindow/ListWindow";
 
 export default function Dag3_6({ data }) {
-  const nextRoute = useStoreActions((actions) => actions.nextRoute);
 
+  const nextRoute = useStoreActions((actions) => actions.nextRoute);
   const [students, setStudents] = useState([]);
 
   useEffect(async () => {
     try {
+
       const response = await axios.get(`${API_URL}/students?game=${data.id}`);
-      //console.log(response.data);
-
-      //const response = await axios.get(`${API_URL}?${query}`);
-
-      console.log(response.data);
-
       setStudents(response.data);
 
-      console.log(students);
     } catch (e) {}
   }, []);
 
   return (
-    <section className="section__day3_6 background-yellow stretch-container">
-      <p className="hidden">3.6</p>
+    <section className="day__middle-center">
+
       <Background />
+
       <div className="game-wrapper">
         <h1 className="title__m-bold hidden">Overzicht</h1>
         <ListWindow text={`Leerlingen klas ${data.name}`}>
@@ -45,12 +40,13 @@ export default function Dag3_6({ data }) {
             })}
           </div>
         </ListWindow>
+
         <button
-          className="button__primary text__m-bold button__game-next"
-          onClick={(e) => nextRoute()}
-        >
+          className="button__primary"
+          onClick={(e) => nextRoute()}>
           Dag afsluiten
         </button>
+
       </div>
     </section>
   );

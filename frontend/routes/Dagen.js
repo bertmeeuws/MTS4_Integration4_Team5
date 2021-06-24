@@ -11,7 +11,6 @@ import Dag1_9 from "../components/Dag1/Dag1_9";
 import Dag1_10 from "../components/Dag1/Dag1_10";
 import Dag1_11 from "../components/Dag1/Dag1_11";
 import Dag1_12 from "../components/Dag1/Dag1_12";
-import Dag1_13 from "../components/Dag1/Dag1_13";
 
 import Dag2 from "../components/Dag2/Dag2";
 import Dag2_1 from "../components/Dag2/Dag2_1";
@@ -44,9 +43,6 @@ import Dag5_2 from "../components/Dag5/Dag5_2";
 import Dag5_3 from "../components/Dag5/Dag5_3";
 import Dag5_4 from "../components/Dag5/Dag5_4";
 import Dag5_5 from "../components/Dag5/Dag5_5";
-import Dag5_6 from "../components/Dag5/Dag5_6";
-import Dag5_7 from "../components/Dag5/Dag5_7";
-import Dag5_8 from "../components/Dag5/Dag5_8";
 
 import Reflectie from "../components/Reflectie/Reflectie";
 
@@ -279,18 +275,6 @@ export const Dag2Routes = (game) => {
         </>
       ),
     },
-    /*
-    {
-      id: 19,
-      name: "Dag 2",
-      component: (
-        <>
-          <NavbarWithFollowers followers={100} text={"dinsdag - 07:30"} />
-          <Dag2_7 data={game[0]} route={15} title={"Dag 2"} />
-        </>
-      ),
-    },
-    */
   ];
 };
 

@@ -1,4 +1,16 @@
 @media only screen and (max-width: 1200px) {
+
+    .game-wrapper {
+        width: 80vw;
+    }
+
+    .list__window__container {
+        width: 80vw;
+    }
+
+    .introduction-container {
+        width: 80vw;
+    }
     
     .nav-container {
         width: 90vw;
@@ -181,10 +193,27 @@
         grid-template-columns: 1fr;
         grid-template-rows: auto auto;
     }
+
+    .introduction-container {
+        width: 90vw;
+    }
+
+    .game-wrapper {
+        width: 90vw;
+    }
+
+    .list__window__container {
+        width: 90vw;
+    }
     
 }
 
 @media only screen and (max-width: 640px) {
+
+    .introduction--list{
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
 
     .header__content {
         width: 90vw;

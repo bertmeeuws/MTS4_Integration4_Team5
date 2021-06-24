@@ -8,6 +8,7 @@
   align-items: center;
   justify-content: space-between;
   padding-left: 2rem;
+  z-index: 100;
 }
 
 .nav__buddygram-close {

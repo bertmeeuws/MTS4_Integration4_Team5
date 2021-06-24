@@ -7,7 +7,7 @@ export default function Dag2_1() {
   const nextRoute = useStoreActions((actions) => actions.nextRoute);
 
   return (
-    <section className="background-yellow stretch-container">
+    <section className="day__middle-center">
       <p className="hidden">2.1</p>
       <div className="game-wrapper">
         <h1 className="title__m-bold game__textBox">

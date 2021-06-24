@@ -8,7 +8,7 @@ export default function Dag3_1() {
 
   return (
     <section className="section__day3.1 center-middle background-yellow stretch-container">
-      <p className="hidden">3.1</p>
+
       <Background />
 
       <div onClick={(e) => nextRoute()} className="game__day3__post">

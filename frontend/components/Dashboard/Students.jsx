@@ -108,7 +108,7 @@ export default function Students({ teacher, game, setId }) {
           <input
             name="student"
             id="student"
-            className="dashboard__changestudents__input text__s-normal"
+            className="auth__input-login"
             placeholder="Naam van de student"
             value={input}
             onChange={(e) => setInput(e.currentTarget.value)}
@@ -120,7 +120,7 @@ export default function Students({ teacher, game, setId }) {
           value="toevoegen"
         />
       </form>
-      <ul className="newGame-students">
+      <ul className="newGame-students newGame-students-full">
         <PacmanLoader
           loading={loading}
           color={"var(--blue)"}

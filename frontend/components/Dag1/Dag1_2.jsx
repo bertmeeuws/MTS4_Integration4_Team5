@@ -15,7 +15,7 @@ export default function Dag1_2({ route }) {
   };
 
   return (
-    <section className="game__content-container">
+    <section className="game__play-container">
 
       <div className="day__content-container">
         <h1 className="title__m-bold">Sleep je foto in de feed!</h1>
@@ -29,19 +29,28 @@ export default function Dag1_2({ route }) {
             <div
               style={{
                 overflow: "none",
-                height: "14.8rem",
-                width: "14.8rem",
+                height: "20rem",
+                width: "20rem",
                 zIndex: "8",
               }}
             >
-              <img id="output" style={{ height: "14.8rem" }} src={image} />
+              <img id="output" className="image__drag" src={image} />
             </div>
           </Draggable>
           <Image src="/dragarrow.svg" height={178} width={178} />
           <Image src="/globe.svg" height={178} width={178} />
         </div>
       </div>
-      <Image src="/assets/raster.svg" width={1040} height={528} />
+
+      <div className="image__gridYellow">
+        <img
+          src="/assets/img/gridyellow.svg"
+            width={528}
+            height={671}
+            alt="grid illustratie"
+        />
+      </div>
+
     </section>
   );
 }

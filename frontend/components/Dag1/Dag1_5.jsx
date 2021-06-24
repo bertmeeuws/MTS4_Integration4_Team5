@@ -5,14 +5,14 @@ import { API_URL } from "../../constants";
 import Background from "../Background/Background";
 
 export default function Dag1_5({ route }) {
+  
   const nextRoute = useStoreActions((actions) => actions.nextRoute);
   const user = useStoreState((state) => state.current_gamer);
-
   const current_followers = useStoreState((state) => state.followers);
   const setFollowers = useStoreActions((actions) => actions.setFollowers);
   const setAnswer = useStoreActions((actions) => actions.setAnswer);
   const setRoute = useStoreActions((actions) => actions.setRouteAmount);
-
+  const gamer = useStoreState((state) => state.current_gamer);
   const picture = useStoreState((state) => state.profile_picture);
 
   const choices = [
@@ -76,12 +76,13 @@ export default function Dag1_5({ route }) {
   };
 
   return (
-    <section className="background-yellow stretch-container">
+    <section className="day__middle-center">
       <p className="hidden">1.5</p>
       <Background />
       <div className="game-wrapper">
         <div className="post__comments__grid">
           <div onClick={(e) => nextRoute()} className="post__container">
+            <p className="title__s-bold">{gamer?.name}</p>
             <div className="post__image--overflow">
               <img style={{ height: "34.5rem" }} src={picture} />
             </div>

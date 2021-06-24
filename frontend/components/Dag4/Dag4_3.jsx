@@ -20,7 +20,7 @@ export default function Dag4_3() {
         </div>
 
         <button
-          className="button__primary text__m-bold button__game-next"
+          className="button__primary"
           onClick={(e) => nextRoute()}
         >
           {answer?.button}
