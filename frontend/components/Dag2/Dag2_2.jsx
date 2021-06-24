@@ -103,7 +103,7 @@ export default function Dag2_2({ data }) {
             return (
               <button
                 style={{ marginTop: "1rem" }}
-                lassName="button__primary text__m-bold button__game-next"
+                className="button__primary text__m-bold button__game-next"
                 onClick={(e) => {
                   setFollowers(current_followers + choice.followers);
                   setAnswer(choice);
