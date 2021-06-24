@@ -1,34 +1,45 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Team 5 - Integration 4
 
-## Getting Started
+**Instructions in order to start the project**
+Run yarn in both the front end folder and the strapi folder
 
-First, run the development server:
+    yarn
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+Then copy and paste the `.env.local.example` en rename the duplicated file to `.env.local`
+After you've done that, go into the file and change the URL to your URL's
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+    NEXTAUTH_URL = Your website adress or just your localhost
+    NEXT_PUBLIC_API_URL = Your Strapi URL
+    NEXT_PUBLIC_WEBSITE_URL = Your website adress or just your localhost
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+The addresses in the `.example` file are the default values
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+> WARNING: Do not put a "/" behind the URL's
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+If this is all set and done, then you can navigate to front end and run
 
-## Learn More
+    yarn dev
 
-To learn more about Next.js, take a look at the following resources:
+And than navigate to strapi and run
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+    yarn develop
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+If you for some reason still have problems than you can delete the `.cache` folder in the `strapi` folder
 
-## Deploy on Vercel
+**Strapi admin login**
+bertmeeuws27@gmail.com
+Test123456
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+**Members:**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+1.  Maxim Quidousse
+2.  Jens Legrou
+3.  Bert Meeuws
+
+**Stack**
+
+- NextJS
+- NextAuth voor authenticatie (Voor gebruik van sessions en roles)
+- Easy Peasy Store for statemanagement (persistency localstorage)
+- Strapi backend
+- SQLite database (Oorspronkelijk gekozen voor Postgres maar SqlLite is een betere optie voor demo purposes)
